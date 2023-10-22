@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+main {
+    height: 100vh;
+}
+
+#loginPageFormBackgroundMain {
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
+}
+
+#loginPageFormBackgroundOne {
+    height: 73vh;
+    border-radius: 20px 0 0 20px;
+}
+
+#loginPageFormBackgroundTwo {
+    height: 73vh;
+    border-radius: 0 20px 20px 0;
+    background: #D1D7E0;
+}
+
+#LoginPageFormHeaderText {
+    width: 20vw;
+}
+
+#LoginPageFormWhiteJeep {
+    z-index: 10;
+    width: 30vw;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+#LoginFormContent {
+    margin-top: 50px;
+}
+
+#loginPageFormHeader {
+    color: #2D283D;
+    font-family: 'Smooch Sans';
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+
+#loginPageFormHeaderDescription {
+    color: #4C495D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+#loginPageFormHeaderDescription p {
+    width: 70%;
+    margin: auto;
+}
+
+#txtUserName {
+    width: 418px;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid #6D6D7E;
+    background: #D1D7E0;
+}
+
+#txtUserName {
+    color: #4C495D;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+#txtUserPassword {
+    width: 418px;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid #6D6D7E;
+    background: #D1D7E0;
+}
+
+#txtUserPassword {
+    color: #4C495D;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+p#lblForgotYourPassword {
+    color: #4C495D;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+#btnSignIn {
+    width: 154px;
+    height: 51px;
+    border-radius: 10px;
+    background: linear-gradient(93deg, #802BB1 0%, #323232 100%);
+    color: #D1D7E0;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.32px;
+}
+
+#paraSignUpTxt {
+    color: #4C495D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}
+
+#aSignUpLink {
+    color: #4C495D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.9px;
+}

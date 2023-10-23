@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+main {
+    height: 100vh;
+}
+
+#loginPageFormBackgroundMainOne {
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
+    background-color: #E8E8E8;
+}
+
+.registerForm {
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
+    background-color: #E8E8E8;
+    height: 73vh;
+}
+
+#loginPageFormBackgroundCol1 {
+    height: 10vh;
+}
+
+label {
+    background-color: #E8E8E8;
+}
+
+#customerRegFormPageHeaderImg {
+    width: 100%;
+    margin: auto;
+}
+
+#customerRegFormPageHeader {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.input {
+    border: 2px solid transparent;
+    height: 2.2em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+
+#btnCustomerRegisterSaveCancel {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2D283D 0.3%, #D70000 99.72%);
+    font-family: Roboto;
+    color: #D1D7E0;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.32px;
+    width: 140px;
+    height: 51px;
+    flex-shrink: 0;
+}
+
+#btnCustomerRegisterSave {
+    border-radius: 10px;
+    background: linear-gradient(93deg, #802BB1 0%, #323232 100%);
+    color: #D1D7E0;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.32px;
+
+    width: 222px;
+    height: 51px;
+    flex-shrink: 0;
+}
+
+label {
+    color: #4C495D;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}

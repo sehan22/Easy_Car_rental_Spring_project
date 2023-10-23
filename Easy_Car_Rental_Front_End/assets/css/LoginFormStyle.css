@@ -10,7 +10,7 @@ main {
 }
 
 #loginPageFormBackgroundOne {
-    height: 73vh;
+    height: 84vh;
     border-radius: 20px 0 0 20px;
 }
 
@@ -21,18 +21,18 @@ main {
 }
 
 #LoginPageFormHeaderText {
-    width: 20vw;
+    width: 25vw;
 }
 
 #LoginPageFormWhiteJeep {
     z-index: 10;
-    width: 30vw;
-    margin-left: 50px;
+    width: 40vw;
+    margin-left: 80px;
     margin-top: -20px;
 }
 
 #LoginFormContent {
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 #loginPageFormHeader {

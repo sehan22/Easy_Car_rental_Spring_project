@@ -69,7 +69,7 @@
 
 /*First Container*/
 .aboutUsContainer {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .aboutTopicTxt {
@@ -128,7 +128,7 @@
 
 /*thirdContainer*/
 .carCarContainer {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .carCard {
@@ -215,4 +215,49 @@
     font-weight: 300;
     line-height: normal;
     letter-spacing: 0.72px;
+}
+
+/*fourth container*/
+.companyDetailsContainer {
+    margin-top: 150px;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.25));
+}
+
+.companyDetailsContainerTopic {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.8px;
+}
+
+.companyDetailsBox {
+    background: #D1D7E0;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+.companyDetailsBoxDescriptionPurple {
+    color: #7A2CA7;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.companyDetailsBoxDescriptionBlack {
+    color: #2D283D;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.fifthContainer {
+    margin-top: 100px;
 }

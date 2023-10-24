@@ -122,5 +122,97 @@
 }
 
 .btnGradientBlack {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2D283D 0.3%, rgba(0, 148, 255, 0.72) 99.72%);
+}
 
+/*thirdContainer*/
+.carCarContainer {
+    margin-top: 150px;
+}
+
+.carCard {
+    border-radius: 30px;
+    background: #D1D7E0;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+.carCarTitle {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.8px;
+}
+
+.carCardUlList li h4,
+.carCardUlList li h5 {
+    display: inline;
+}
+
+.carCardUlList {
+    list-style-type: none;
+}
+
+.carCardUlList h4 {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.32px;
+}
+
+.carCardUlList h5 {
+    color: #2D283D;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.carCarToneList {
+    margin-top: 3%;
+}
+
+.carCarToneList li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carCarToneList li h4 {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.32px;
+}
+
+.carCarMoreDetailsList li img,
+.carCarMoreDetailsList li h5 {
+    display: inline;
+}
+
+.carCarMoreDetailsList li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carCarMoreDetailsList li h5 {
+    color: #2D283D;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.72px;
 }

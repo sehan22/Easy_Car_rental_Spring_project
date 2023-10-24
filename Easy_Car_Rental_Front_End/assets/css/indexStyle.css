@@ -71,3 +71,56 @@
 .aboutUsContainer {
     margin-top: 150px;
 }
+
+.aboutTopicTxt {
+    color: #2D283D;
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+}
+
+.aboutDescriptionTxt {
+    color: #2D283D;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+.aboutDescriptionTxtList {
+    color: #2D283D;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+.aboutDescriptionTxtList li {
+    margin-bottom: 10px;
+}
+
+.aboutDescriptionTxtSocialMediaList li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.aboutDescriptionTxtSocialMediaList i {
+    font-size: 30px;
+}
+
+.btnGradientPurple {
+    border-radius: 10px;
+    background: linear-gradient(93deg, #802BB1 0%, #323232 100%);
+}
+
+.btnGradientBlack {
+
+}

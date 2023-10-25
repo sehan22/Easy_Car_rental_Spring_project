@@ -17,11 +17,11 @@ function saveLastView(clickedID) {
         case "myAccountContent":
             localStorage.setItem("view", "MYACCOUNT");
             break;
-        case "reservations":
+        case "resrvationContent":
             localStorage.setItem("view", "RESERVATIONS");
             break;
 
-        case "paymentsDetailsContent":
+        case "paymentDetailsContent":
             localStorage.setItem("view", "PAYMENTS");
             break;
     }
@@ -79,22 +79,3 @@ $("#lnkReservations").click(function () {
 $("#lnkPayments").click(function () {
     setView($("#paymentDetailsContent"));
 });
-
-/*
-sitBannerContent
-infoContainerBoxContent
-aboutUsContainerContent
-BookingDescriptionContainerContent
-carCardContainersContent
-businessDetailsContainerContent
-descriptionsOfThanksContainerContent
-contactUsContainerContent
-*/
-
-/*
-homeContent
-dealsContent
-myAccountContent
-resrvationContent
-paymentDetailsContent
-*/

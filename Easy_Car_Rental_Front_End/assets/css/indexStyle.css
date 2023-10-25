@@ -342,7 +342,6 @@
 
 .input::placeholder {
     color: #999;
-    font-style: italic;
 }
 
 .carTypeTopic {
@@ -386,3 +385,8 @@
     line-height: normal;
     letter-spacing: 4.2px;
 }
+
+.btnGradientRed {
+    background: linear-gradient(90deg, #2D283D 0.3%, rgba(215, 69, 69, 0.91) 99.72%);
+}
+

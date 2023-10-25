@@ -1,34 +1,28 @@
-sitBannerContent
-infoContainerBoxContent
-aboutUsContainerContent
-BookingDescriptionContainerContent
-carCardContainersContent
-businessDetailsContainerContent
-descriptionsOfThanksContainerContent
-contactUsContainerContent
-
-//logics for SPA
 initiateUI();
 
 function initiateUI() {
     clearAll();
-    $("#dashboardContent").css("display", "block");
+    $("#homeContent").css("display", "block");
     setTheLastView();
 }
 
 function saveLastView(clickedID) {
     switch (clickedID) {
-        case "dashboardContent":
+        case "homeContent":
             localStorage.setItem("view", "HOME");
             break;
-        case "customerContent":
-            localStorage.setItem("view", "CUSTOMER");
+        case "dealsContent":
+            localStorage.setItem("view", "DEALS");
             break;
-        case "itemContent":
-            localStorage.setItem("view", "ITEM");
+        case "myAccountContent":
+            localStorage.setItem("view", "MYACCOUNT");
             break;
-        case "orderContent":
-            localStorage.setItem("view", "ORDER");
+        case "reservations":
+            localStorage.setItem("view", "RESERVATIONS");
+            break;
+
+        case "paymentsDetailsContent":
+            localStorage.setItem("view", "PAYMENTS");
             break;
     }
 }
@@ -37,24 +31,27 @@ function setTheLastView() {
     let view = localStorage.getItem("view");
     switch (view) {
         case "HOME":
-            setView($("#dashboardContent"));
+            setView($("#homeContent"));
             break;
-        case "ITEM":
-            setView($("#itemContent"));
+        case "DEALS":
+            setView($("#dealsContent"));
             break;
-        case "CUSTOMER":
-            setView($("#customerContent"));
+        case "MYACCOUNT":
+            setView($("#myAccountContent"));
             break;
-        case "ORDER":
-            setView($("#orderContent"));
+        case "RESERVATIONS":
+            setView($("#resrvationContent"));
+            break;
+        case "PAYMENTS":
+            setView($("#paymentDetailsContent"));
             break;
         default:
-            setView($("#dashboardContent"));
+            setView($("#homeContent"));
     }
 }
 
 function clearAll() {
-    $("#dashboardContent,#customerContent,#itemContent,#orderContent").css('display', 'none');
+    $("#homeContent,#dealsContent,#myAccountContent,#resrvationContent,#paymentDetailsContent").css('display', 'none');
 }
 
 function setView(viewOb) {
@@ -64,21 +61,40 @@ function setView(viewOb) {
     console.log(viewOb.get(0).id);
 }
 
-//bind events
 $("#lnkHome").click(function () {
-    setView($("#dashboardContent"));
+    setView($("#homeContent"));
 });
 
-$("#lnkCustomer").click(function () {
-    setView($("#customerContent"));
+$("#lnkDeals").click(function () {
+    setView($("#dealsContent"));
 });
 
-$("#lnkItem").click(function () {
-    setView($("#itemContent"));
+$("#lnkMyAccount").click(function () {
+    setView($("#myAccountContent"));
 });
 
-$("#lnkOrders").click(function () {
-    setView($("#orderContent"));
+$("#lnkReservations").click(function () {
+    setView($("#resrvationContent"));
+});
+$("#lnkPayments").click(function () {
+    setView($("#paymentDetailsContent"));
 });
 
-//end of logics for SPA
+/*
+sitBannerContent
+infoContainerBoxContent
+aboutUsContainerContent
+BookingDescriptionContainerContent
+carCardContainersContent
+businessDetailsContainerContent
+descriptionsOfThanksContainerContent
+contactUsContainerContent
+*/
+
+/*
+homeContent
+dealsContent
+myAccountContent
+resrvationContent
+paymentDetailsContent
+*/

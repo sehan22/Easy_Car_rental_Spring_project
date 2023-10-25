@@ -340,6 +340,11 @@
     transition: all 0.5s;
 }
 
+.input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
 .carTypeTopic {
     margin-top: 80px;
     color: #26242E;
@@ -359,4 +364,25 @@
     font-weight: 200;
     line-height: normal;
     letter-spacing: 1px;
+}
+
+/*MyAccount*/
+.registerForm label {
+    color: #4C495D;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+
+.myAccountOwnerCard {
+    color: #2D283D;
+    font-family: Smooch Sans;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 4.2px;
 }

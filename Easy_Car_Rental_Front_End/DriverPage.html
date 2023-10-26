@@ -15,8 +15,9 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/indexStyle.css">
+
 </head>
-<body>
+<body style="background-color: #D1D7E0">
 <header>
     <nav class="navbar navbar-expand-lg"
          style="background: linear-gradient(270deg, #26242E 0%, #562874 47.4%, #26242E 100%);">
@@ -47,45 +48,28 @@
 
 <main style="background-color: #D1D7E0">
     <!--Schedule Table Content-->
-    <div class="container" id="paymentDetailsContent" style="padding-top: 100px;">
+    <div class="container rounded-4 w-100 mt-5" id="paymentDetailsContent" style="box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh;">
         <div>
-            <h2>
+            <h6 class="pt-3">
                 Your Schedule
-            </h2>
+            </h6>
         </div>
 
-        <div>
-            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+        <div class="ps-3 pe-3">
+            <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll;">
                 <table class="table table-bordered text-white">
                     <thead style="background-color: #564F6F; font-size: 15px">
                     <tr>
-                        <th>Car Registration Number</th>
+                        <th style="width: 18%">Car Registration Number</th>
                         <th>Car Brand</th>
-                        <th>Driver(Yes/No)</th>
-                        <th>Waiver Amount</th>
+                        <th>PickUp Date</th>
+                        <th>Return Date</th>
+                        <th>Customer Name</th>
+                        <th>Contact Number</th>
                     </tr>
                     </thead>
                     <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F">
-                    <tr>
-                        <th>Car Registration Number</th>
-                        <th>Car Brand</th>
-                        <th>Driver(Yes/No)</th>
-                        <th>Waiver Amount</th>
-                    </tr>
 
-                    <tr>
-                        <th>Car Registration Number</th>
-                        <th>Car Brand</th>
-                        <th>Driver(Yes/No)</th>
-                        <th>Waiver Amount</th>
-                    </tr>
-
-                    <tr>
-                        <th>Car Registration Number</th>
-                        <th>Car Brand</th>
-                        <th>Driver(Yes/No)</th>
-                        <th>Waiver Amount</th>
-                    </tr>
                     </tbody>
                 </table>
             </div>

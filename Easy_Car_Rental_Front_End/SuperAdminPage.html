@@ -70,8 +70,9 @@
 </header>
 
 <main>
+    <!--Dashboard Content-->
     <div class="container-fluid" id="dashBoardContent" style="">
-        
+
         <div class="container mt-4 mb-4 d-flex align-items-center justify-content-evenly">
             <div class="d-flex align-items-center justify-content-center w-50">
                 <img src="assets/images/superadminpage/adminUserIcon.png" alt="">
@@ -91,7 +92,8 @@
 
                 <div class="ms-2 d-flex align-items-center" style="height: 10vh;">
                     <input class="m-auto input" type="text" placeholder="Type Here">
-                    <img class="me-2 ms-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt="" style="height: 40%">
+                    <img class="me-2 ms-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 40%">
                 </div>
             </div>
         </div>
@@ -290,6 +292,111 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="container mt-5" style="height: 9vh">
+            <div class="d-flex align-items-center w-100 h-100">
+                <div class="d-flex justify-content-end w-75 h-50">
+                    <img class="mt-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 80%">
+                    <input class="input h-100 w-25 ms-2" type="text" placeholder="Search">
+                </div>
+
+                <div class="ms-2" style="height: 55%; width: 20%;">
+                    <select class="input form-control h-100" id="selectReservationType"
+                            style="font-size: 18px; color: #999;">
+                        <option value="2">All Payment Type</option>
+                        <option value="1">Incomplete Payment Details</option>
+                        <option value="2">Complete Payment Details</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Today Rent Details</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Driver Y/N</th>
+                            <th>Car Reg Number</th>
+                            <th>Return Date</th>
+                            <th>Waiver Payment Balance</th>
+                            <th style="width: 15%">Customer Tel</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="todayRentDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Today Rent Details</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Driver Y/N</th>
+                            <th>Car Reg Number</th>
+                            <th>Return Date</th>
+                            <th>Waiver Payment Balance</th>
+                            <th style="width: 15%">Customer Tel</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="weeklyRentDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Today Rent Details</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Driver Y/N</th>
+                            <th>Car Reg Number</th>
+                            <th>Return Date</th>
+                            <th>Waiver Payment Balance</th>
+                            <th style="width: 15%">Customer Tel</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="weekRentDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 

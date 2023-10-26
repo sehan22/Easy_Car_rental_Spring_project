@@ -2,9 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Easy Car Rental Pvt Ltd - Admin</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Smooch Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/SuperAdminPageStyle.css">
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg"
+         style="background: linear-gradient(270deg, #26242E 0%, #562874 47.4%, #26242E 100%);">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #D1D7E0">Easy Car Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav" style="font-size: 18px">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="lnlDashBoard" aria-current="page" href="#"
+                           style="color: #D1D7E0">DashBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkCustomers" href="#" style="color: #D1D7E0">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkCars" href="#" style="color: #D1D7E0">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkDrivers" href="#" style="color: #D1D7E0">Drivers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkRentalRequests" href="#" style="color: #D1D7E0">Rental Requests</a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnlRentals" href="#" style="color: #D1D7E0">Rentals</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkPayments" href="#" style="color: #D1D7E0">Payments</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkMaintenance" href="#" style="color: #D1D7E0">Maintenance</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnlIncomeReports" href="#" style="color: #D1D7E0">Income Reports</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse justify-content-center">
+                <form class="d-flex justify-content-end text-end" role="search">
+                    <button class="btn border-0" type="button" id="btnAdminAccount"><a href="#"
+                                                                                       style="text-decoration: none; color: #D1D7E0;">
+                        Name</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid bg-dark mt-5" id="dashBoardContent" style="height: 10px">DashBoard</div>
+
+    <div class="container-fluid bg-dark mt-5" id="customersContent" style="height: 10px">Customers</div>
+
+    <div class="container-fluid bg-dark mt-5" id="carsContent" style="height: 10px">Cars</div>
+
+    <div class="container-fluid bg-dark mt-5" id="driversContent" style="height: 10px">Drivers</div>
+
+    <div class="container-fluid bg-dark mt-5" id="rentalRequestsContent" style="height: 10px">RentRequests</div>
+
+    <div class="container-fluid bg-dark mt-5" id="rentalsContent" style="height: 10px">Rentals</div>
+
+    <div class="container-fluid bg-dark mt-5" id="paymentsContent" style="height: 10px">Payments</div>
+
+    <div class="container-fluid bg-dark mt-5" id="maintenanceContent" style="height: 10px">Maintenance</div>
+
+    <div class="container-fluid bg-dark mt-5" id="incomeReportsContent" style="height: 10px">Income Reports</div>
+
+    <div class="container-fluid bg-dark mt-5" id="adminAccountContent" style="height: 10px">Admin Account</div>
+</main>
+
+<footer></footer>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="controllers/AdminDashBoardController.js"></script>
 </body>
 </html>

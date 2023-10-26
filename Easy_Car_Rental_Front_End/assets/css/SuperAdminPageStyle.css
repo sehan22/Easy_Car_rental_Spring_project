@@ -162,4 +162,15 @@
     letter-spacing: 0.8px;
 }
 
+.input {
+    border: 2px solid transparent;
+    height: 2.2em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
 

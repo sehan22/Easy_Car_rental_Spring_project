@@ -1,1 +1,104 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+.dashboardPanelMainCard {
+
+}
+
+.dashboardPanelIncomeCard {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.dashboardCount {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dashboardCountList {
+    width: 80%;
+    list-style: none;
+    margin: auto;
+}
+
+.dashboardCountList img {
+    width: 10%;
+    object-fit: scale-down;
+}
+
+.dashboardCountList h6 {
+    text-align: right;
+    margin: auto;
+    color: #26242E;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+.dashboardCountList h5 {
+    border-radius: 10%;
+    padding: 5px 12px;
+    margin-bottom: auto;
+    color: #564F6F;
+    font-family: Smooch Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.dashboardCountList img,
+.dashboardCountList h6,
+.dashboardCountList h5 {
+    display: inline-block;
+}
+
+.dashboardOtherDetailsCount {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.dashboardOtherDetailsCountContent img,
+.dashboardOtherDetailsCountContent h6,
+.dashboardOtherDetailsCountContent h5 {
+    display: inline-block;
+}
+
+.dashboardOtherDetailsCountContent img {
+    object-fit: scale-down;
+}
+
+.dashboardOtherDetailsCountContent h6 {
+    color: #26242E;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin: auto;
+}
+
+.dashboardOtherDetailsCountContent h5 {
+    color: #26242E;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin: auto;
+}
+
+.dashboardOtherDetailsCountContent h4 {
+    color: #26242E;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+

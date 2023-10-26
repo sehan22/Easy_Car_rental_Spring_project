@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/SuperAdminPageStyle.css">
 </head>
-<body>
+<body style="background-color: #D1D7E0">
 <header>
     <nav class="navbar navbar-expand-lg"
          style="background: linear-gradient(270deg, #26242E 0%, #562874 47.4%, #26242E 100%);">
@@ -70,7 +70,151 @@
 </header>
 
 <main>
-    <div class="container-fluid bg-dark mt-5" id="dashBoardContent" style="height: 10px">DashBoard</div>
+    <div class="container-fluid" id="dashBoardContent" style="">
+        <div class="container d-flex w-100 justify-content-center align-items-center dashboardPanel">
+            <div class="m-1 p-2 d-flex flex-column" style="width: 38%; height: 70vh">
+                <div class="w-100 h-50 rounded-2 dashboardPanelIncomeCard"></div>
+
+                <div class="w-100 h-50 mt-4 rounded-2 dashboardPanelIncomeCard" style=""></div>
+            </div>
+
+            <div class="m-1 p-2 d-flex flex-column" style="width: 38%; height: 70vh">
+                <div class="w-100 d-flex align-items-center rounded-2 dashboardCount" style="height: 40%">
+
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList bg">
+                            <img src="assets/images/superadminpage/Users.png" alt="">
+                            <h6>Registered Users</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList" style="margin-top: 30px;">
+                            <img src="assets/images/superadminpage/Drivers.png" alt="">
+                            <h6>Drivers Count</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList" style="margin-top: 30px;">
+                            <img src="assets/images/superadminpage/car.png" alt="">
+                            <h6>Cars Count</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 mt-4 d-flex align-items-center rounded-2 dashboardCount" style="height: 60%">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList">
+                            <img src="assets/images/superadminpage/TodayBooking.png" alt="">
+                            <h6>Today Booking Count</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList" style="margin-top: 30px;">
+                            <img src="assets/images/superadminpage/BookingActiveTodayCount.png" alt="">
+                            <h6>Booking Active Today Count</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList" style="margin-top: 30px;">
+                            <img src="assets/images/superadminpage/TotalBooking.png" alt="">
+                            <h6>Total Bookings</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center dashboardCountList" style="margin-top: 30px;">
+                            <img src="assets/images/superadminpage/PendingBooking.png" alt="">
+                            <h6>Pending Bookings</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-1 p-2 d-flex flex-column justify-content-center" style="width: 24%; height: 70vh">
+                <div class="w-100 rounded-2 d-flex align-items-center justify-content-center dashboardOtherDetailsCount" style="height: 25%">
+                    <div class="w-100 p-3 align-items-center">
+                        <div class="w-100 dashboardOtherDetailsCountContent">
+                            <h4>Cars</h4>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/purpleTick.png" alt="">
+                            <h6 class="w-100 ms-1">Available Cars</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/blackTick.png" alt="">
+                            <h6 class="w-100 ms-1">Reserved cars</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 rounded-2 mt-2 d-flex align-items-center justify-content-center dashboardOtherDetailsCount" style="height: 25%">
+                    <div class="w-100 p-3 align-items-center">
+                        <div class="w-100 dashboardOtherDetailsCountContent">
+                            <h4>Drivers</h4>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/purpleTick.png" alt="">
+                            <h6 class="w-100 ms-1">Available Drivers</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/blackTick.png" alt="">
+                            <h6 class="w-100 ms-1">Occupied Drivers</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 rounded-2 mt-2 d-flex align-items-center justify-content-center dashboardOtherDetailsCount" style="height: 25%">
+                    <div class="w-100 p-3 align-items-center">
+                        <div class="w-100 dashboardOtherDetailsCountContent">
+                            <h4>Car maintenance</h4>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/purpleTick.png" alt="">
+                            <h6 class="w-100 ms-1">Need Maintenance</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/blackTick.png" alt="">
+                            <h6 class="w-100 ms-1">Under Maintenance</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 rounded-2 mt-2 d-flex align-items-center justify-content-center dashboardOtherDetailsCount" style="height: 25%">
+                    <div class="w-100 p-3 align-items-center">
+                        <div class="w-100 dashboardOtherDetailsCountContent">
+                            <h4>Rental Requests</h4>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/purpleTick.png" alt="">
+                            <h6 class="w-100 ms-1">Accept Requests</h6>
+                            <h5>00</h5>
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-between dashboardOtherDetailsCountContent">
+                            <img src="assets/images/superadminpage/blackTick.png" alt="">
+                            <h6 class="w-100 ms-1">Decline Requests</h6>
+                            <h5>00</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container-fluid bg-dark mt-5" id="customersContent" style="height: 10px">Customers</div>
 

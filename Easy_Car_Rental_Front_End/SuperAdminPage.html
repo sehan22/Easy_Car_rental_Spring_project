@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/SuperAdminPageStyle.css">
+    <link rel="stylesheet" href="assets/css/indexStyle.css">
+    <link rel="stylesheet" href="assets/css/ReservationPageStyle.css">
 </head>
 <body style="background-color: #D1D7E0">
 <header>
@@ -345,7 +347,7 @@
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Today Rent Details</h1>
+                Weekly Rent Details</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
                     <table class="table table-bordered text-white">
@@ -373,7 +375,7 @@
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Today Rent Details</h1>
+                Monthly Rent Details</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
                     <table class="table table-bordered text-white">
@@ -396,11 +398,204 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <!--Customer Content-->
+    <div class="container-fluid mt-5" id="customersContent">
+        <div class="container" style="height: 9vh">
+            <div class="d-flex align-items-center w-100 h-100">
+                <div class="d-flex justify-content-end w-75 h-50">
+                    <img class="mt-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 80%">
+                    <input class="input h-100 w-25 ms-2" type="text" placeholder="Search">
+                </div>
+
+                <div class="ms-2" style="height: 55%; width: 20%;">
+                    <select class="input form-control h-100" id="selectReservationType"
+                            style="font-size: 18px; color: #999;">
+                        <option value="1">Pending Customers</option>
+                        <option value="2">Registered Customers</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center rounded-4 w-100 Customerform">
+            <form style="width: 90%; height: 90vh">
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-5">
+                    <div class="w-50">
+                        <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
+                    </div>
+
+                    <div class="w-50">
+                        <h6 class="text text-center mt-1">Customer Details Form</h6>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Customer ID:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-50">
+                        <div class="form-group w-100  m-auto coolinput">
+                            <label for="txtInput" class="text">Customer Name:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Customer Address:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-50">
+                        <div class="form-group w-100 m-auto coolinput">
+                            <label for="txtInput" class="text">Customer Email:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Customer Contact Number:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-50">
+                        <div class="form-group w-100 m-auto coolinput">
+                            <label for="txtInput" class="text">Nic Number:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Driving License Number:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
+                     style="border: 2px solid #564F6F; border-radius: 5px;">
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center w-100 mt-4">
+                    <div class="w-100 d-flex justify-content-center me-4">
+                        <div class="form-group m-auto">
+                            <button type="submit" class="btn text-light ms-2 me-2 btnGradientPurple" style="border: none">Clear</button>
+                            <button type="submit" class="btn text-light btnGradientGreen" style="border: none">Accept</button>
+                            <button type="submit" class="btn ms-2 text-light btnGradientRed" style="border: none">Decline</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3" style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Pending Customers</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>NIC Number</th>
+                            <th>Driving License Number</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="pendingCustomersTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3" style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Registered Customers</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Contact Number</th>
+                            <th>NIC Number</th>
+                            <th>Driving License Number</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="RegisteredCustomersTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    <div class="container-fluid bg-dark mt-5" id="customersContent" style="height: 10px">Customers</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="container-fluid bg-dark mt-5" id="carsContent" style="height: 10px">Cars</div>
 

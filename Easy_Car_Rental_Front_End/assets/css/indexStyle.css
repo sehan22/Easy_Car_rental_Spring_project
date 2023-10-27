@@ -117,16 +117,19 @@
 
 .btnGradientGreen {
     border-radius: 10px;
+    border: none;
     background: linear-gradient(93deg, #2bb132 0%, #323232 100%);
 }
 
 .btnGradientPurple {
     border-radius: 10px;
+    border: none;
     background: linear-gradient(93deg, #802BB1 0%, #323232 100%);
 }
 
 .btnGradientBlack {
     border-radius: 10px;
+    border: none;
     background: linear-gradient(90deg, #2D283D 0.3%, rgba(0, 148, 255, 0.72) 99.72%);
 }
 
@@ -393,5 +396,6 @@
 
 .btnGradientRed {
     background: linear-gradient(90deg, #2D283D 0.3%, rgba(215, 69, 69, 0.91) 99.72%);
+    border: none;
 }
 

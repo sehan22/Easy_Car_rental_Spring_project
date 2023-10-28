@@ -29,5 +29,5 @@ public class Customer {
     private String cusDrivingLicenseBackFilePath;
 
     @OneToOne(cascade = CascadeType.ALL)
-    User user;
+    private User user;
 }

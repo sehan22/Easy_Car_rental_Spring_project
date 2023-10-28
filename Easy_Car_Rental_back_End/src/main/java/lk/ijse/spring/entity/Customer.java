@@ -30,7 +30,4 @@ public class Customer {
 
     @OneToOne(cascade = CascadeType.ALL)
     User user;
-
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    private List<RentRequest> rentRequests = new ArrayList<>();
 }

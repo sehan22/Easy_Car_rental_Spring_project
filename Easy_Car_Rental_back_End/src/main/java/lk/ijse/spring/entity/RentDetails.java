@@ -5,13 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@IdClass(RentalDetails_PK.class)
-public class RentDetails {
+//@IdClass(RentalDetails_PK.class)
+public class RentDetails implements Serializable {
     @Id
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "rentRequestId", referencedColumnName = "RentRequestId", nullable = false)

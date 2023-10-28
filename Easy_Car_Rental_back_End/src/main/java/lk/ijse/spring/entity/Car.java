@@ -36,7 +36,4 @@ public class Car {
     private String carBackViewImgFilePath;
     private String carSideViewImgFilePath;
     private String carInteriorViewImgFilePath;
-
-    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
-    private List<Service> services = new ArrayList<>();
 }

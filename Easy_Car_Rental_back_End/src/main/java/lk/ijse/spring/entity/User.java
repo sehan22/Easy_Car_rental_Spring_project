@@ -23,7 +23,4 @@ public class User {
     private String userPassword;
     private String userRole;
     private String status;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Login> loginDetailsList = new ArrayList<>();
 }

@@ -19,7 +19,7 @@ public class Login {
     private String logInId;
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "userName", referencedColumnName = "userName", nullable = false)
+//    @JoinColumn(name = "userName", referencedColumnName = "userName", nullable = false)
     private User user;
 
     private LocalDate loginDate;

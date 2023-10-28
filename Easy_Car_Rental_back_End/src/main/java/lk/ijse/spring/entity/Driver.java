@@ -17,6 +17,7 @@ import javax.persistence.OneToOne;
 @ToString
 public class Driver {
     @Id
+    private String driverId;
     private int driverNicNumber;
     private String driverName;
     private String driverAddress;

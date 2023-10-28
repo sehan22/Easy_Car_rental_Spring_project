@@ -5,8 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -19,5 +20,17 @@ public class Customer {
     private String cusName;
     private String cusAddress;
     private String cusEmail;
+    private int cusNicNumber;
+    private int cusDrivingLicenseNumber;
+    private int cusTelNumber;
     private String cusNicFrontFilePath;
+    private String cusNicBackFilePath;
+    private String cusDrivingLicenseFrontFilePath;
+    private String cusDrivingLicenseBackFilePath;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    User user;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<RentRequest> rentRequests = new ArrayList<>();
 }

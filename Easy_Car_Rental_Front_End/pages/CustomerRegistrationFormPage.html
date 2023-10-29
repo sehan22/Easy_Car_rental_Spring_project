@@ -30,119 +30,96 @@
         </div>
     </div>
 
-    <div class="container mt-5 d-flex pb-5 registerForm" style="background-color: #E8E8E8; width: 50%;height: 120vh;">
-        <form class="m-5" id="customerRegistraionForm">
+    <div class="container mt-2 d-flex registerForm" style="background-color: #E8E8E8; width: 50%;height: 72vh;">
+        <form class="m-5" id="customerRegistraionForm" role="form" action="/customer" enctype="multipart/form-data">
+            <div class="form-group d-flex flex-column w-100 justify-content-around" style="background-color: #E8E8E8;">
+                <label for="txtCustomerId" class="ms-auto">Customer ID</label>
+                <input class="form-control input ms-auto" placeholder="Customer Id" id="txtCustomerId" type="text"
+                       name="cusId" style="width: 30%">
+                <span class="control-error" id="lblCustomerId"></span>
+            </div>
+
             <div class="form-group" style="background-color: #E8E8E8;">
-                <label for="txtCusFullName">Full Name</label>
-                <input class="form-control input" id="txtCusFullName" type="text" name="id" style="width: 100%">
-                <span class="control-error" id="lblCusFullName"></span>
+                <label for="txtCustomerName">Full Name</label>
+                <input class="form-control input" id="txtCustomerName" type="text" name="cusName" style="width: 100%">
+                <span class="control-error" id="lblCustomerName"></span>
             </div>
 
             <div class="d-flex">
                 <div class="form-group w-50" style=" background-color: #E8E8E8;">
-                    <label for="txtCusUserName">UserName</label>
-                    <input class="form-control input" id="txtCusUserName" type="text" name="id">
-                    <span class="control-error" id="lblCusUserName"></span>
+                    <label for="txtCustomerAddress">Address</label>
+                    <input class="form-control input" id="txtCustomerAddress" type="text" name="cusAddress">
+                    <span class="control-error" id="lblCustomerAddress"></span>
                 </div>
 
                 <div class="form-group ml-3" style=" background-color: #E8E8E8;">
-                    <label for="txtCusCreateNewPassword">Create New Password</label>
-                    <input class="form-control input" id="txtCusCreateNewPassword" type="text" name="id">
-                    <span class="control-error" id="lblCusCreateNewPassword"></span>
+                    <label for="txtCustomerEmail">Email</label>
+                    <input class="form-control input" id="txtCustomerEmail" type="text" name="cusEmail">
+                    <span class="control-error" id="lblCustomerEmail"></span>
                 </div>
 
                 <div class="form-group ml-3" style=" background-color: #E8E8E8;">
-                    <label for="txtCusReEnterPassword">Re-Enter Password</label>
-                    <input class="form-control input" id="txtCusReEnterPassword" type="text" name="id">
-                    <span class="control-error" id="lblCusReEnterPassword"></span>
+                    <label for="txtCustomerNICNumber">Nic Number</label>
+                    <input class="form-control input" id="txtCustomerNICNumber" type="text" name="cusNicNumber">
+                    <span class="control-error" id="lblCustomerNICNumber"></span>
                 </div>
             </div>
 
             <div class="d-flex">
-                <div class="form-group w-25" style="background-color: #E8E8E8">
-                    <label for="txtCustomerAddress">Address</label>
-                    <input class="form-control input" id="txtCustomerAddress" type="text" name="id">
-                    <span class="control-error" id="lblCustomerAddress"></span>
+                <div class="form-group w-50" style="background-color: #E8E8E8">
+                    <label for="txtCustomerDrivingLicenseNumber">Driving License Number</label>
+                    <input class="form-control input" id="txtCustomerDrivingLicenseNumber" type="text" name="cusDrivingLicenseNumber">
+                    <span class="control-error" id="lblCustomerDrivingLicenseNumber"></span>
                 </div>
 
-                <div class="form-group ml-3 w-75" style="background-color: #E8E8E8">
-                    <label for="txtCusEmail">Email</label>
-                    <input class="form-control input" id="txtCusEmail" type="text" name="id">
-                    <span class="control-error" id="lblCusEmail"></span>
+                <div class="form-group ml-3 w-50" style="background-color: #E8E8E8">
+                    <label for="txtCustomerTelNumber">Contact Number</label>
+                    <input class="form-control input" id="txtCustomerTelNumber" type="text" name="cusTelNumber">
+                    <span class="control-error" id="lblCustomerTelNumber"></span>
                 </div>
             </div>
 
-            <div>
-                <div class="form-group w-50" style="background-color: #E8E8E8">
-                    <label for="txtCustomerID">Contact Number</label>
-                    <input class="form-control input" id="txtCustomerID" type="text" name="id">
-                    <span class="control-error" id="lblcusid"></span>
+            <div class="d-flex">
+                <div class="form-group mb-3">
+                    <label for="customerFileNicFrontView" class="form-label">NIC Front View</label>
+                    <input class="form-control input" type="file" id="customerFileNicFrontView" style="font-size: 18px" name="cusNicFrontFilePath">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="customerFileNicBackView" class="form-label">NIC Back View</label>
+                    <input class="form-control input" type="file" id="customerFileNicBackView" style="font-size: 18px" name="cusNicBackFilePath">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="customerFileLicenseFrontView" class="form-label">Driving License Front View</label>
+                    <input class="form-control input" type="file" id="customerFileLicenseFrontView" style="font-size: 18px" name="cusDrivingLicenseFrontFilePath">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="customerFileLicenseBackView" class="form-label">Driving License Back View</label>
+                    <input class="form-control input" type="file" id="customerFileLicenseBackView" style="font-size: 18px" name="cusDrivingLicenseBackFilePath">
                 </div>
             </div>
 
             <div class="d-flex">
                 <div class="form-group w-50">
-                    <label for="txtCusNicNumber">NIC Number</label>
-                    <input class="form-control input" id="txtCusNicNumber" type="text" name="id">
-                    <span class="control-error" id="lblCusNicNumber"></span>
+                    <label for="txtCustomerUserName">UserName</label>
+                    <input class="form-control input" id="txtCustomerUserName" type="text" name="userName">
+                    <span class="control-error" id="lblCustomerUserName"></span>
                 </div>
 
-                <div class="form-group ml-3 w-50" style="background-color: #E8E8E8">
-                    <label for="txtCusDrivingLicenseNumber">Driving License Number</label>
-                    <input class="form-control input" id="txtCusDrivingLicenseNumber" type="text" name="id">
-                    <span class="control-error" id="lblCusDrivingLicenseNumber"></span>
-                </div>
-            </div>
-
-            <div class="d-flex">
-                <div class="form-group mb-3">
-                    <label for="fileNicFrontView" class="form-label">NIC Front View</label>
-                    <input class="form-control input" type="file" id="fileNicFrontView">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="fileNicBackView" class="form-label">NIC Back View</label>
-                    <input class="form-control input" type="file" id="fileNicBackView">
-                </div>
-            </div>
-
-            <div class="d-flex">
-                <div class="form-group ms-4 w-50">
-                    <div style="background-color:rgba(227,227,227,0.97); border-radius: 10px; height: 18vh;width: 18vw"></div>
-                </div>
-
-                <div class="form-group ms-4 w-50">
-                    <div style="background-color:rgba(227,227,227,0.97); border-radius: 10px; height: 18vh;width: 18vw"></div>
-                </div>
-            </div>
-
-            <div class="d-flex">
-                <div class="form-group mb-3">
-                    <label for="fileLicenseFrontView" class="form-label">Driving License Front View</label>
-                    <input class="form-control input" type="file" id="fileLicenseFrontView">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="fileLicenseBackView" class="form-label">Driving License Back View</label>
-                    <input class="form-control input" type="file" id="fileLicenseBackView">
-                </div>
-            </div>
-
-            <div class="d-flex">
-                <div class="form-group ms-4 w-50" style="background-color: #E8E8E8">
-                    <div style="background-color:rgba(227,227,227,0.97); border-radius: 10px; height: 18vh;width: 18vw"></div>
-                </div>
-
-                <div class="form-group ms-4 w-50" style="background-color: #E8E8E8">
-                    <div style="background-color:rgba(227,227,227,0.97); border-radius: 10px; height: 18vh;width: 18vw"></div>
+                <div class="form-group w-50" style="background-color: #E8E8E8">
+                    <label for="txtCustomerUserAccountPassword">Password</label>
+                    <input class="form-control input" id="txtCustomerUserAccountPassword" type="text" name="userPassword">
+                    <span class="control-error" id="lblCustomerUserAccountPassword"></span>
                 </div>
             </div>
 
             <div class="d-flex pb-5 flex-row mt-4 justify-content-center">
                 <div class="form-group">
-                    <button type="button" class="btn btn-primary">Back</button>
-                    <button type="button" class="btn btn-danger ms-2 me-2">Cancel</button>
-                    <button type="button" class="btn btn-success">Register Now</button>
+                    <button type="button" id="btnBack" class="btn btn-primary">Back</button>
+                    <button type="button" id="btnCancel" class="btn btn-danger ms-2 me-2">Cancel</button>
+                    <button type="button" id="btnRegisterNow" class="btn btn-success">Register Now</button>
                 </div>
             </div>
         </form>

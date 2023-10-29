@@ -28,6 +28,6 @@ public class RentDetails implements Serializable {
     private Payment paymentId;
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "driverNicNumber", referencedColumnName = "driverNicNumber", nullable = true)
-    private Driver driverNicNumber;
+    @JoinColumn(name = "driverId", referencedColumnName = "driverId", nullable = true)
+    private Driver driverId;
 }

@@ -20,9 +20,9 @@ public class Customer {
     private String cusName;
     private String cusAddress;
     private String cusEmail;
-    private int cusNicNumber;
-    private int cusDrivingLicenseNumber;
-    private int cusTelNumber;
+    private String cusNicNumber;
+    private String cusDrivingLicenseNumber;
+    private String cusTelNumber;
     private String cusNicFrontFilePath;
     private String cusNicBackFilePath;
     private String cusDrivingLicenseFrontFilePath;

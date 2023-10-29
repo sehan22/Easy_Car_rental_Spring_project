@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <form id="customerForm" role="form" action="/customer" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="txtCustomerId">Customer ID</label>
+            <input type="text" class="form-control" id="txtCustomerId" name="cusId" aria-describedby="emailHelp"
+                   placeholder="Enter name">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerName">Customer Name</label>
+            <input type="text" class="form-control" id="txtCustomerName" name="cusName" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerAddress">Customer Address</label>
+            <input type="text" class="form-control" id="txtCustomerAddress" name="cusAddress" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerEmail">Customer Email</label>
+            <input type="text" class="form-control" id="txtCustomerEmail" name="cusEmail" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerNICNumber">Customer NIC Number</label>
+            <input type="text" class="form-control" id="txtCustomerNICNumber" name="cusNicNumber" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerDrivingLicenseNumber">Customer Driving License Number</label>
+            <input type="text" class="form-control" id="txtCustomerDrivingLicenseNumber" name="cusDrivingLicenseNumber" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerTelNumber">Customer Telephone Number</label>
+            <input type="text" class="form-control" id="txtCustomerTelNumber" name="cusTelNumber" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="fileCustomerFileNicFrontView">Select NIC Front Image</label>
+            <input type="file" class="form-control" id="fileCustomerFileNicFrontView" name="cusNicFrontFilePath">
+        </div>
+
+        <div class="form-group">
+            <label for="fileCustomerFileNicBackView">Select NIC Back Image</label>
+            <input type="file" class="form-control" id="fileCustomerFileNicBackView" name="cusNicBackFilePath">
+        </div>
+
+        <div class="form-group">
+            <label for="fileCustomerFileLicenseFrontView">Select Driving License Front Image</label>
+            <input type="file" class="form-control" id="fileCustomerFileLicenseFrontView" name="cusDrivingLicenseFrontFilePath">
+        </div>
+
+        <div class="form-group">
+            <label for="fileCustomerFileLicenseBackView">Select Driving License Back Image</label>
+            <input type="file" class="form-control" id="fileCustomerFileLicenseBackView" name="cusDrivingLicenseBackFilePath">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerUserName">UserName</label>
+            <input type="text" class="form-control" id="txtCustomerUserName" name="userName" placeholder="Enter address">
+        </div>
+
+        <div class="form-group">
+            <label for="txtCustomerUserAccountPassword">Password</label>
+            <input type="text" class="form-control" id="txtCustomerUserAccountPassword" name="userPassword"
+                   placeholder="Enter address">
+        </div>
+
+        <div class="form-group mt-2">
+            <button type="button" id="btnCustomer" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+<script>
+
+    $("#btnCustomer").click(function () {
+        var formData = new FormData($("#customerForm")[0]);
+        $.ajax({
+            url: "http://localhost:8080/easycarrental/customer",
+            method: "post",
+            data: $("#customerForm").serialize(),
+            async: true,
+            success: function (res) {
+                alert(res.message);
+            },
+            error: function (error) {
+                alert(error.responseJSON.message);
+            }
+        });
+    });
+
+</script>
+
+<!--$('#btnCustomer').click(function () {-->
+<!--let formData = new FormData($("#driverRegForm")[0]);-->
+<!--console.log(formData);-->
+
+<!--});-->
+
+
+</body>
+</html>

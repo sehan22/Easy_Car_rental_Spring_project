@@ -23,4 +23,9 @@ public class User {
     private String userPassword;
     private String userRole;
     private String status;
+
+    /*
+    SQL Query For Admin
+    INSERT INTO User (userName, userPassword, userRole, status) VALUES ('admin', 'admin12345@', 'ADMIN', 'ACTIVE');
+    */
 }

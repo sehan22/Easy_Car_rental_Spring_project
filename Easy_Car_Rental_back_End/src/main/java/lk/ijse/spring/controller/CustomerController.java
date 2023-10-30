@@ -19,12 +19,10 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @Autowired
-    UserService userService;
-
     @GetMapping
     public ResponseUtil getCustomer(){
-        return new ResponseUtil("Ok","Customer Successfully Added",null);
+        System.out.println(customerService.getAllCustomer());
+        return new ResponseUtil("Ok","Customer Successfully Added",customerService.getAllCustomer());
     }
 
     @PostMapping

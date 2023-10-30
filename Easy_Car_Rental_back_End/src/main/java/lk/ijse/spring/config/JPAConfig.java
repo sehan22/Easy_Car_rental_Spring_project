@@ -36,7 +36,7 @@ public class JPAConfig {
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/carrentaldb30?createDatabaseIfNotExist=true");
+        ds.setUrl("jdbc:mysql://localhost:3306/carrentaldb?createDatabaseIfNotExist=true");
         ds.setUsername("root");
         ds.setPassword("Sehan1234@");
         return ds;

@@ -19,9 +19,9 @@ public class Test {
     private String cusNicNumber;
     private String cusDrivingLicenseNumber;
     private String cusTelNumber;
-    private MultipartFile cusNicFrontFilePath;
-    private MultipartFile cusNicBackFilePath;
-    private MultipartFile cusDrivingLicenseFrontFilePath;
-    private MultipartFile cusDrivingLicenseBackFilePath;
+//    private MultipartFile cusNicFrontFilePath;
+//    private MultipartFile cusNicBackFilePath;
+//    private MultipartFile cusDrivingLicenseFrontFilePath;
+//    private MultipartFile cusDrivingLicenseBackFilePath;
     private User user;
 }

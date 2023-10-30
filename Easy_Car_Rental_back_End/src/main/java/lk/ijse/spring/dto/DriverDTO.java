@@ -19,8 +19,6 @@ public class DriverDTO {
     private int driverDrivingLicenseNumber;
     private int driverTelNumber;
     private String driverNicFrontFilePath;
-    private String driverNicBackFilePath;
     private String driverDrivingLicenseFrontFilePath;
-    private String driverDrivingLicenseBackFilePath;
     private User user;
 }

@@ -24,9 +24,7 @@ public class Customer {
     private String cusDrivingLicenseNumber;
     private String cusTelNumber;
     private String cusNicFrontFilePath;
-    private String cusNicBackFilePath;
     private String cusDrivingLicenseFrontFilePath;
-    private String cusDrivingLicenseBackFilePath;
 
     @OneToOne(cascade = CascadeType.ALL)
     private User user;

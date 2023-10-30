@@ -25,9 +25,7 @@ public class Driver {
     private int driverDrivingLicenseNumber;
     private int driverTelNumber;
     private String driverNicFrontFilePath;
-    private String driverNicBackFilePath;
     private String driverDrivingLicenseFrontFilePath;
-    private String driverDrivingLicenseBackFilePath;
 
     @OneToOne(cascade = CascadeType.ALL)
     private User user;

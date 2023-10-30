@@ -1,6 +1,7 @@
 package lk.ijse.spring.controller;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.CustomerImgDTO;
 import lk.ijse.spring.dto.Test;
 import lk.ijse.spring.dto.UserDTO;
 import lk.ijse.spring.service.CustomerService;
@@ -23,9 +24,9 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseUtil addCustomer(@ModelAttribute Test test) {
+    public ResponseUtil addCustomer(@ModelAttribute CustomerDTO customerDTO, @ModelAttribute UserDTO userDTO) {
         System.out.println("PostMapping");
-        System.out.println(test);
-        return new ResponseUtil("OK", "Account Create Successfully!", test);
+        System.out.println(customerDTO.toString() + " " + userDTO.toString());
+        return new ResponseUtil("OK", "Account Create Successfully!", customerDTO);
     }
 }

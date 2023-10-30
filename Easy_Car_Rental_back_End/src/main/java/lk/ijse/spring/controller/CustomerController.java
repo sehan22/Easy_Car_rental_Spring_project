@@ -27,6 +27,11 @@ public class CustomerController {
     public ResponseUtil addCustomer(@ModelAttribute CustomerDTO customerDTO, @ModelAttribute UserDTO userDTO) {
         System.out.println("PostMapping");
         System.out.println(customerDTO.toString() + " " + userDTO.toString());
+        System.out.println(customerDTO.getCusNicFrontFilePath());
+        System.out.println(customerDTO.getCusDrivingLicenseFrontFilePath());
+
+
+
         return new ResponseUtil("OK", "Account Create Successfully!", customerDTO);
     }
 }

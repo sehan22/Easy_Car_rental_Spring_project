@@ -13,8 +13,8 @@ $("#btnRegisterNow").click(function () {
         success: function (res) {
             alert(res.message);
         },
-        error: function (error) {
-            alert(error.message);
+        error: function (err) {
+            alert(JSON.parse(err.responseText).message);
         }
     });
 });

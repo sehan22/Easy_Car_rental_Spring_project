@@ -21,5 +21,5 @@ public class CustomerDTO {
     private String cusTelNumber;
     private MultipartFile cusNicFrontFilePath;
     private MultipartFile cusDrivingLicenseFrontFilePath;
-    private User user;
+    private UserDTO user;
 }

@@ -14,7 +14,8 @@ $("#btnRegisterNow").click(function () {
             alert(res.message);
         },
         error: function (err) {
-            alert(JSON.parse(err.responseText).message);
+            let errMessage = JSON.parse(err.responseText);
+            alert(errMessage.message)
         }
     });
 });

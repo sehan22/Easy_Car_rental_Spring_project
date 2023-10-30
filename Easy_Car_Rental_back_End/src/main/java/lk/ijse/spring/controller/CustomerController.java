@@ -5,6 +5,7 @@ import lk.ijse.spring.dto.CustomerImgDTO;
 import lk.ijse.spring.dto.Test;
 import lk.ijse.spring.dto.UserDTO;
 import lk.ijse.spring.service.CustomerService;
+import lk.ijse.spring.service.UserService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,6 +19,9 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
+    @Autowired
+    UserService userService;
+
     @GetMapping
     public ResponseUtil getCustomer(){
         return new ResponseUtil("Ok","Customer Successfully Added",null);
@@ -25,13 +29,8 @@ public class CustomerController {
 
     @PostMapping
     public ResponseUtil addCustomer(@ModelAttribute CustomerDTO customerDTO, @ModelAttribute UserDTO userDTO) {
-        System.out.println("PostMapping");
-        System.out.println(customerDTO.toString() + " " + userDTO.toString());
-        System.out.println(customerDTO.getCusNicFrontFilePath());
-        System.out.println(customerDTO.getCusDrivingLicenseFrontFilePath());
-
-
-
-        return new ResponseUtil("OK", "Account Create Successfully!", customerDTO);
+        customerDTO.setUser(userDTO);
+        customerService.saveCustomer(customerDTO);
+        return new ResponseUtil("OK", "Account Create Successfully!", null);
     }
 }

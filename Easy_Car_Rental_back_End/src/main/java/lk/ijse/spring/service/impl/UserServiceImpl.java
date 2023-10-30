@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -18,12 +20,22 @@ public class UserServiceImpl implements UserService {
     ModelMapper modelMapper;
 
     @Override
+    public ArrayList<UserDTO> getAllUsers() {
+        return null;
+    }
+
+    @Override
     public void saveUser(UserDTO userDTO) {
 
     }
 
     @Override
     public void updateUser(UserDTO userDTO) {
+
+    }
+
+    @Override
+    public void deleteUser(String userName, UserDTO userDTO) {
 
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="carrentaldb30@localhost" uuid="a97c5cf4-a731-49e5-a53e-be5d3a38acd6">
+    <data-source source="LOCAL" name="carrentaldb@localhost" uuid="c8f74063-5b7b-44a7-9355-d396fb5b8c0a">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/carrentaldb30</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/carrentaldb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

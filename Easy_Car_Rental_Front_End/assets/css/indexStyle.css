@@ -121,6 +121,12 @@
     background: linear-gradient(93deg, #2bb132 0%, #323232 100%);
 }
 
+.btnGradientYellow {
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(93deg, #c9c622 0%, #323232 100%);
+}
+
 .btnGradientPurple {
     border-radius: 10px;
     border: none;

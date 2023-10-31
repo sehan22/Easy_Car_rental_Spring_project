@@ -22,7 +22,7 @@ public class CustomerController {
     @GetMapping
     public ResponseUtil getCustomer(){
         System.out.println(customerService.getAllCustomer());
-        return new ResponseUtil("Ok","Customer Successfully Added",customerService.getAllCustomer());
+        return new ResponseUtil("Ok","Customers Successfully Loaded",customerService.getAllCustomer());
     }
 
     @PostMapping

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,13 +13,14 @@ import lombok.ToString;
 @ToString
 public class DriverDTO {
     private String driverId;
-    private int driverNicNumber;
+    private String driverNicNumber;
     private String driverName;
     private String driverAddress;
     private String driverEmail;
-    private int driverDrivingLicenseNumber;
-    private int driverTelNumber;
-    private String driverNicFrontFilePath;
-    private String driverDrivingLicenseFrontFilePath;
-    private User user;
+    private String driverDrivingLicenseNumber;
+    private String driverTelNumber;
+    private String driverStatus;
+    private MultipartFile driverNicFrontFilePath;
+    private MultipartFile driverDrivingLicenseFrontFilePath;
+    private UserDTO user;
 }

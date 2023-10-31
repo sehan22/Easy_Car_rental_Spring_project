@@ -18,12 +18,13 @@ import javax.persistence.OneToOne;
 public class Driver {
     @Id
     private String driverId;
-    private int driverNicNumber;
+    private String driverNicNumber;
     private String driverName;
     private String driverAddress;
     private String driverEmail;
-    private int driverDrivingLicenseNumber;
-    private int driverTelNumber;
+    private String driverDrivingLicenseNumber;
+    private String driverTelNumber;
+    private String driverStatus;
     private String driverNicFrontFilePath;
     private String driverDrivingLicenseFrontFilePath;
 

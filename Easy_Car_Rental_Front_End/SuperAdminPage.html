@@ -588,7 +588,7 @@
     <!--Cars Content-->
     <div class="container-fluid mt-5" id="carsContent">
         <div class="container d-flex justify-content-center rounded-4 w-100 carForm">
-            <form style="width: 90%">
+            <form id="CarForm" role="form" enctype="multipart/form-data" style="width: 90%">
 
                 <div class="d-flex justify-content-between align-items-center w-100 mt-5">
                     <div class="w-50">
@@ -643,7 +643,8 @@
                     <div class="w-50">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
                             <label for="txtCarRegistraionNumber" class="text">Car Registration Number:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarRegistraionNumber"
+                            <input type="text" placeholder="Write here..." class="inputTextFiled"
+                                   id="txtCarRegistraionNumber"
                                    name="carRegistraionNumber" style="padding: 11px 10px;">
                             <span class="control-error" id="spnCarRegistraionNumber"></span>
                         </div>
@@ -784,19 +785,34 @@
 
                 <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
                      style="border: 2px solid #564F6F; border-radius: 5px;">
-                    <div class="w-25 m-2 rounded-2 align-items-center" id="carFrontView" style="height: 150px">Car Front View</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" id="carBackView" style="height: 150px">Car Back View</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" id="carSideView" style="height: 150px">Car Side View</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" id="carInteriorView" style="height: 150px">Car Interior View</div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" id="carFrontView" style="height: 150px">Car Front
+                        View
+                    </div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" id="carBackView" style="height: 150px">Car Back
+                        View
+                    </div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" id="carSideView" style="height: 150px">Car Side
+                        View
+                    </div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" id="carInteriorView" style="height: 150px">Car
+                        Interior View
+                    </div>
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center w-100 mt-4">
                     <div class="w-100 d-flex justify-content-center me-4">
                         <div class="form-group">
-                            <button type="button" id="btnCarFormCancel" class="btn text-light ms-2 me-2 btnGradientBlack">Cancel</button>
-                            <button type="button" id="btnCarFormDelete" class="btn text-light btnGradientRed">Delete</button>
-                            <button type="button" id="btnCarFormUpdate" class="btn text-light btnGradientPurple">Update</button>
-                            <button type="button" id="btnCarFormRegisteredNow" class="btn text-light btnGradientGreen">Register Now</button>
+                            <button type="button" id="btnCarFormCancel"
+                                    class="btn text-light ms-2 me-2 btnGradientBlack">Cancel
+                            </button>
+                            <button type="button" id="btnCarFormDelete" class="btn text-light btnGradientRed">Delete
+                            </button>
+                            <button type="button" id="btnCarFormUpdate" class="btn text-light btnGradientPurple">
+                                Update
+                            </button>
+                            <button type="button" id="btnCarFormRegisteredNow" class="btn text-light btnGradientGreen">
+                                Register Now
+                            </button>
                         </div>
                     </div>
                 </div>

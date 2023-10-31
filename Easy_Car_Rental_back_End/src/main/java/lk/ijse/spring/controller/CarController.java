@@ -15,7 +15,8 @@ public class CarController {
 
     @GetMapping
     public ResponseUtil getAllCars() {
-        return new ResponseUtil("Ok","Cars Successfully Loaded",null);
+        System.out.println(carService.getAllCars());
+        return new ResponseUtil("Ok","Cars Successfully Loaded",carService.getAllCars());
     }
 
     @PostMapping

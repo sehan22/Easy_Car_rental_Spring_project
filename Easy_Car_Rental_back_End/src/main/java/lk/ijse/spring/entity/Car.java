@@ -19,19 +19,21 @@ import java.util.List;
 @ToString
 public class Car {
     @Id
-    private String carRegistraionNumber;
+    private String carId;
     private String carBrand;
-    private String carTone;
-    private String transmissionType;
     private String carType;
+    private String waiverPaymentAmount;
+    private String carRegistraionNumber;
+    private String transmissionType;
+    private String numberOfPassengers;
     private String fuelType;
-    private int numberOfPassengers;
-    private int freeMileageForPrice;
-    private int currentMileage;
-    private Double waiverPaymentAmount;
-    private Double priceForExtraKM;
-    private Double priceForDailyRent;
-    private Double priceForMonthlyRent;
+    private String carTone;
+    private String priceForDailyRent;
+    private String priceForMonthlyRent;
+    private String freeMileageForPrice;
+    private String priceForExtraKM;
+    private String currentMileage;
+    private String carStatus;
     private String carFrontViewImgFilePath;
     private String carBackViewImgFilePath;
     private String carSideViewImgFilePath;

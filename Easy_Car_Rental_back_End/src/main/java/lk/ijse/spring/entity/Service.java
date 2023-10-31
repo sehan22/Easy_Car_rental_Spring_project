@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -27,6 +28,6 @@ public class Service {
     private Double serviceCost;
     private String serviceStatus;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Car car;
 }

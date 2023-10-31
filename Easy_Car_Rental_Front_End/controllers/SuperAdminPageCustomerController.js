@@ -1,6 +1,6 @@
 loadRegisteredCustomers();
 
-/*get all customers functions*/
+/*get all registered customers functions*/
 function loadRegisteredCustomers() {
     $('#registeredCustomersTable').empty();
 
@@ -13,7 +13,7 @@ function loadRegisteredCustomers() {
                 $('#registeredCustomersTable').append(regCusRow);
             }
             loadDataTableRowToInput();
-            setValuesForTextFields("", "", "", "", "", "", "", "", "", "")
+            setValuesForTextFields("", "", "", "", "", "", "", "", "", "");
         },
         error: function (err) {
             alert(err.message)
@@ -23,6 +23,11 @@ function loadRegisteredCustomers() {
 
 $("#btnCustomerGetAll").click(function () {
     loadRegisteredCustomers();
+});
+
+$("#btnCustomerFormClear").click(function () {
+    alert("Customer Registrations Canceled!");
+    setValuesForTextFields("", "", "", "", "", "", "", "", "", "");
 });
 
 /*load data to table row to input*/
@@ -46,8 +51,11 @@ function loadDataTableRowToInput() {
         $('#txtCusNicNumber').val(cusNicNumber);
         $('#txtCusDrivingLicenseNumber').val(cusDrivingLicenseNumber);
         $('#txtCusTelNumber').val(cusTelNumber);
-        $('#divCusNicView').val(cusTelNumber);
+
+        //Image not working (not correct method)
+        $('#divCusNicView').val(cusNicFrontFilePath);
         $('#divCusLicenseView').val(cusNicFrontFilePath);
+
         $('#txtCusAccountStatus').val(cusStatus);
     });
 }

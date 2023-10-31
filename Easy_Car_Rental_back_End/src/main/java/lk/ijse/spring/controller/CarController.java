@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/car")
 @CrossOrigin
 public class CarController {
-/*    @Autowired
-    CarService carService;*/
+    @Autowired
+    CarService carService;
 
     @GetMapping
     public ResponseUtil getAllCars() {
@@ -21,6 +21,7 @@ public class CarController {
     @PostMapping
     public ResponseUtil saveCar(@ModelAttribute CarDTO carDTO) {
         System.out.println(carDTO.toString());
+        carService.saveCar(carDTO);
         return new ResponseUtil("OK", "Car Registration Successfully!", null);
     }
 }

@@ -17,7 +17,7 @@ import java.time.LocalTime;
 public class Maintenance {
     @Id
     private String serviceId;
-    private LocalDate serviceDate;
+    private String serviceDate;
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "carId",referencedColumnName = "carId",nullable = false)

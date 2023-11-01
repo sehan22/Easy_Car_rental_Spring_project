@@ -55,6 +55,8 @@ function loadRegisteredDrivers() {
                 $('#registeredDriverDetailsTable').append(regDriversRow);
             }
             loadDataDriverTableToInput('registeredDriverDetailsTable');
+            loadDataDriverTableToInput('availableDriverDetailsTable');
+            loadDataDriverTableToInput('occupiedDriverDetailsTable');
             setValuesForDriverFormInputs("", "", "", "", "", "", "", "", "", "", "", "");
         },
         error: function (err) {
@@ -121,3 +123,5 @@ function setValuesForDriverFormInputs(driverId, driverNicNumber, driverName, dri
     $('#txtDriverUserPassword').val(driverPassword);
     $('#txtDriverStatus').val(driverStatus);
 }
+
+

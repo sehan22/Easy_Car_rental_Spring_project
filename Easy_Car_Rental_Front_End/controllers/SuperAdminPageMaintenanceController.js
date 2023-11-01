@@ -36,6 +36,13 @@ $('#btnServiceFormAddToRepair').click(function () {
     });
 });
 
-/*load maintenances*/
 
+/*
+maintainingDetailsTable
+*/
+
+/*load maintenances*/
+$('#btnDriverFormGeatAll').click(function () {
+    loadRegisteredDrivers();
+});
 

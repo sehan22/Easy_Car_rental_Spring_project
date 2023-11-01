@@ -22,6 +22,8 @@ function loadRegisteredCustomers() {
                 $('#registeredAdnPendingCustomersTable').append(regCusRow);
 
             }
+            loadDataTableRowToInput('pendingCustomersTable');
+            loadDataTableRowToInput('registeredCustomersTable');
             loadDataTableRowToInput('registeredAdnPendingCustomersTable');
             setValuesForTextFields("", "", "", "", "", "", "", "", "", "");
         },

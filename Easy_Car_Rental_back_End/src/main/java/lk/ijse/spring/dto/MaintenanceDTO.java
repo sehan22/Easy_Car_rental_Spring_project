@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @ToString
 public class MaintenanceDTO {
     private String serviceId;
-    private LocalDate serviceDate;
+    private String serviceDate;
     private String carId;
     private int mileageAtService;
     private int nextServiceMileage;

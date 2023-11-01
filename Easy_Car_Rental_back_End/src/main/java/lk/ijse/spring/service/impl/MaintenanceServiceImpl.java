@@ -1,5 +1,6 @@
 package lk.ijse.spring.service.impl;
 
+import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.dto.MaintenanceDTO;
 import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.entity.Maintenance;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -25,6 +27,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 
     @Autowired
     ModelMapper modelMapper;
+
 
     @Override
     public ArrayList<MaintenanceDTO> getAllMaintenances() {

@@ -1,10 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CarDTO;
-import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.entity.Car;
-import lk.ijse.spring.entity.Customer;
-import lk.ijse.spring.entity.User;
 import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.service.CarService;
 import org.modelmapper.ModelMapper;
@@ -28,7 +25,8 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public ArrayList<CarDTO> getAllCars() {
-        return modelMapper.map(carRepo.findAll(), new TypeToken<ArrayList<CarDTO>>() {}.getType());
+        return modelMapper.map(carRepo.findAll(), new TypeToken<ArrayList<CarDTO>>() {
+        }.getType());
     }
 
     @Override

@@ -21,11 +21,11 @@ public class Maintenance {
 
     @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "carId",referencedColumnName = "carId",nullable = false)
-    private Car carId;
+    private Car car;
 
-    private int mileageAtService;
-    private int nextServiceMileage;
+    private String mileageAtService;
+    private String nextServiceMileage;
     private String serviceStatus;
     private String serviceDetails;
-    private Double serviceCost;
+    private String serviceCost;
 }

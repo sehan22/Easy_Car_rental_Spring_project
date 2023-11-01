@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registered Customer Page</title>
+
+    <!--Link FontAwesome-->
+    <link href="assets/fontAwesome/css/all.min.css" rel="stylesheet"/>
+
+    <!--font smooch-->
+    <link href='https://fonts.googleapis.com/css?family=Smooch Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/indexStyle.css">
+    <link rel="stylesheet" href="assets/css/ReservationPageStyle.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg"
+         style="background: linear-gradient(270deg, #26242E 0%, #562874 47.4%, #26242E 100%);">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #D1D7E0">Easy Car Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="lnkHome" aria-current="page" href="#"
+                           style="color: #D1D7E0">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkDeals" href="#" style="color: #D1D7E0">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkReservations" href="#" style="color: #D1D7E0">Reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkPayments" href="#" style="color: #D1D7E0">Payments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkMyAccount" href="#" style="color: #D1D7E0">Account</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="lnkAboutUs" href="#" style="color: #D1D7E0">About Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse justify-content-center">
+                <form class="d-flex justify-content-end text-end" role="search">
+                    <button class="btn jus" type="button" id="loginOrSignUpButton">SEHAN</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main style="background-color: #D1D7E0">
+
+    <!--Banner-->
+    <div class="container-fluid d-flex align-items-center" id="sitBannerContent"
+         style="background: url('assets/images/index/banner/banerbackground.png'); height: 800px; background-size: cover">
+        <div class="container d-flex align-items-center">
+            <div class="h-100 mt-5 pt-5" style="width: 50%">
+                <h1 id="bannerText1" class="w-100" style="margin-top: -150px; margin-left: -50px">Navigate Life's
+                    Highways</h1>
+
+                <div class="d-flex align-items-center w-100 mt-4">
+                    <h4 id="bannerText2">with Our</h4>
+                    <h4 id="bannerText3" class="ms-2">Hassle-Free</h4>
+                </div>
+
+                <h4 id="bannerText4">Car Rentals</h4>
+
+                <div class="mt-4" style="height: 3px; width: 70%; background: #564F6F; margin-left: -50px"></div>
+
+                <div class="d-flex mt-4" style="margin-left: -50px">
+                    <div>
+                        <button type="button" class="btn" style="background-color: #802BB1;color: #D1D7E0;">Find a
+                            car<img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                    </div>
+                    <div class="ms-4">
+                        <button type="button" class="btn" style="color: #D1D7E0;">Learn More<img class="rotate-90"
+                                                                                                 src="assets/images/index/banner/Arrow_Left_SM.png"
+                                                                                                 alt="arrow">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex mt-4">
+                    <div>
+                        <a class="aText" href="#" aria-label="whatsapp" target="_blank">
+                            <i class="fa-brands fa-whatsapp" style="color: #D1D7E0"></i>
+                        </a>
+                    </div>
+
+                    <div class="ms-4 me-4">
+                        <a class="aText" href="#" aria-label="whatsapp" target="_blank">
+                            <i class="fa-brands fa-facebook" style="color: #D1D7E0;"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a class="aText" href="#" aria-label="whatsapp" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #D1D7E0;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="" style="width: 50%"><img class="" src="assets/images/index/banner/car.png"
+                                                  style="width: 900px; margin-left: -200px"></div>
+        </div>
+    </div>
+
+    <div class="container justify-content-center text-center align-items-center" id="infoContainerBoxContent"
+         style="height: 180px; width: 1000px; margin-top: -90px; border-radius: 20px;">
+        <div class="d-flex">
+            <div style="width: 30%" class="h-100 m-auto">
+                <img src="assets/images/index/banner/carrentalicon.png" alt="lineimg">
+                <h6 class="mt-1">Effortless Rental<br> Process</h6>
+            </div>
+
+            <div style="width: 5%;height: 100%" class="m-auto">
+                <img src="assets/images/index/banner/line.png" style="height: 180px" alt="lineimg">
+            </div>
+
+            <div style="width: 30%" class="h-100 m-auto">
+                <img src="assets/images/index/banner/usericon.png" alt="usericon">
+                <h6 class="mt-1">User Registration and<br> Profile Management</h6>
+            </div>
+
+            <div style="width: 5%;height: 100%" class="m-auto">
+                <img src="assets/images/index/banner/line.png" style="height: 180px" alt="lineimg">
+            </div>
+
+            <div style="width: 30%" class="h-100 m-auto">
+                <img src="assets/images/index/banner/caricon.png" alt="lineimg">
+                <h6 class="mt-1">Car Selection and<br> Booking</h6>
+            </div>
+        </div>
+    </div>
+
+    <!--Home Content-->
+    <div class="jumbotron" id="homeContent">
+
+        <div class="container aboutUsContainer" id="aboutUsContainerContent" style="height: 60vh;">
+            <div class="d-flex w-100 h-100 align-items-center align-middle">
+                <div class="d-flex w-50 h-100">
+                    <div class="h-100 mt-4 pt-2 pb-2" style="width: 40%">
+                        <img class="ms-3" src="assets/images/index/home/firstContainer/bgImageOne.png" alt=""
+                             style="height: 55%; width: 90%">
+                        <img class="ms-3" src="assets/images/index/home/firstContainer/exBgImg.png" alt=""
+                             style="height: 35%; width: 90%">
+                    </div>
+
+                    <div class="h-100" style="width: 60%;">
+                        <img src="assets/images/index/home/firstContainer/bgMainImg.png" alt=""
+                             style="width: 100%; height: 100%">
+                    </div>
+                </div>
+
+                <div class="w-50 ms-4" style="height: 95%">
+                    <h1 class="aboutTopicTxt">About Us</h1>
+
+                    <p class="aboutDescriptionTxt">At <b>Easy Car Rental,</b> we've embraced innovation to make your car
+                        rental
+                        journey effortless. <b>As a registered user,</b> enjoy the simplicity of browsing
+                        through our diverse fleet, selecting your <b>preferred car,</b> and specifying pick-up
+                        details-all at your fingertips.</p>
+
+                    <p class="aboutDescriptionTxt mt-4">Why Choose Easy Car Rental</p>
+
+                    <div class="d-flex w-100 justify-content-center m-auto aboutDescriptionTxtList">
+                        <div class="w-50">
+                            <ul style="list-style-type: none;">
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">User-Friendly
+                                    Online
+                                    Registration
+                                </li>
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">Secure Document
+                                    Upload
+                                </li>
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">Random Driver
+                                    Assignment
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="w-50">
+                            <ul style="list-style-type: none;">
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">Swift Payment
+                                    Process
+                                </li>
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">Flexible Booking
+                                </li>
+                                <li><img src="assets/images/index/home/firstContainer/tick.png" alt="">Transparent
+                                    Return
+                                    Process
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="aboutDescriptionTxt mt-3">At <b>Easy Car Rental,</b> we prioritize your comfort and aim to
+                        redefine your
+                        car rental expectations. Join us in embracing a new era of convenience and
+                        reliability in every journey you take.</p>
+
+                    <div class="d-flex w-100">
+                        <div style="height: 35%">
+                            <ul class="mt-2 me-3 aboutDescriptionTxtSocialMediaList" style="list-style-type: none;">
+                                <li><i class="fa-brands fa-whatsapp" style="color: #2D283D"></i></li>
+                                <li><i class="fa-brands fa-facebook" style="color: #2D283D;"></i></li>
+                                <li><i class="fa-brands fa-instagram" style="color: #2D283D;"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="w-50">
+                            <button type="button" class="btn btnGradientPurple" style="color: #D1D7E0;">Contact Us<img
+                                    class="rotate-90" src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="BookingDescriptionContainerContent"
+             style="background: url('assets/images/index/home/secoundContainer/bgImg.png'); height: 250px; background-size: cover; margin-top: 100px">
+            <div class="container d-flex align-items-center w-100 h-100">
+                <div class="align-items-center" style="width: 35%">
+                    <h1 class="aboutTopicTxt ms-5">
+                        Seamless Rides,<br>
+                        Effortless Booking
+                    </h1>
+                </div>
+
+                <div style="width: 65%">
+                    <img class="" src="assets/images/index/home/secoundContainer/secoundContainerDescription.png"
+                         alt="">
+                    <button type="button" class="btn btnGradientBlack"
+                            style="color: #D1D7E0; margin-left: 10%; height: 48px; margin-top: 2%">Contact Us
+                        <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container carCarContainer" id="carCardContainersContent">
+            <div class="d-flex justify-content-evenly">
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/home/thirdContainer/i8car.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">BMW i8 Special Edition</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/home/thirdContainer/benzcar.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Mercedes-Benz CLS Coupe</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/home/thirdContainer/premiocar.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Axio NKR 165</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.300,000</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="m-auto" style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Automatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4 companyDetailsContainer" id="businessDetailsContainerContent"
+             style="background: url('assets/images/index/home/secoundContainer/bgImg.png'); background-size: cover; height: 45vh;">
+            <div class="container w-100 h-100">
+                <div class="d-flex justify-content-evenly h-50 w-100">
+                    <div class="mt-5" style="width: 60%">
+                        <img class="w-100" src="assets/images/index/home/fouthContainer/BusinessDetailsDescription.png"
+                             alt="">
+                    </div>
+
+                    <div class="mt-5 ms-5 companyDetailsContainerTopic" style="width: 38%">Numbers Speak Truth</div>
+                </div>
+
+                <div class="d-flex justify-content-evenly h-50 w-100 m-auto">
+                    <div class="m-auto align-items-center rounded-4 companyDetailsBox text-center"
+                         style="width: 15%; height: 60%">
+                        <h4 class="mt-3">549+</h4>
+                        <h5 class="companyDetailsBoxDescriptionBlack">Happy Customers</h5>
+                    </div>
+
+                    <div class="m-auto align-items-center rounded-4 companyDetailsBox text-center"
+                         style="width: 15%; height: 60%">
+                        <h4 class="mt-3">50+</h4>
+                        <h5 class="companyDetailsBoxDescriptionPurple">Number Of Cars</h5>
+                    </div>
+
+                    <div class="m-auto align-items-center rounded-4 companyDetailsBox text-center"
+                         style="width: 15%; height: 60%">
+                        <h4 class="mt-3">35+</h4>
+                        <h5 class="companyDetailsBoxDescriptionBlack">Number Of Drivers</h5>
+                    </div>
+
+                    <div class="m-auto align-items-center rounded-4 companyDetailsBox text-center"
+                         style="width: 15%; height: 60%">
+                        <h4 class="mt-3">15+</h4>
+                        <h5 class="companyDetailsBoxDescriptionPurple">Car Renter Centers</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Deals Content-->
+    <div class="container-fluid" id="dealsContent">
+        <div class="container mt-5" style="height: 9vh">
+            <div class="d-flex align-items-center w-100 h-100">
+                <div class="d-flex justify-content-center w-75 h-50">
+                    <img class="mt-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 80%">
+                    <input class="input h-100 w-75 ms-2" type="text" placeholder="Search">
+                </div>
+
+                <div class="w-25 ms-2" style="height: 60%">
+                    <select class="input form-control h-100" id="selectCusID">
+                        <option value="1">General Cars</option>
+                        <option value="2">Premium Cars</option>
+                        <option value="2">Luxury Cars</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="carTypeTopic">General Cars</h1>
+            <h5 class="carTypeDescription"><img src="assets/images/index/deals/tick.png" alt=""> Explore our diverse
+                fleet of reliable and comfortable general cars, perfect for every journey. From
+                compact efficiency to spacious convenience, find the ideal ride for your travel needs.</h5>
+
+        </div>
+
+        <div class="container carCarContainer">
+            <div class="d-flex justify-content-evenly">
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-5" src="assets/images/index/deals/cars/altoPremium.png"
+                         style="width: 95%;object-fit: scale-down;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Suzuki Alto - Premium</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.64,350.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.2500.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.30.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Manual</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/altoK10.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Suzuki Alto K10</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.71,390.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.3000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.35.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Automatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/celerio.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Suzuki Celerio</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.77,220.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.3300.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.35.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="m-auto" style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Automatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container carCarContainer">
+            <div class="d-flex justify-content-center">
+                <div class="carCard me-5" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/perodua.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Perodua (Daihatsu) Axia</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.90,200.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.3800.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.35.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard ms-4" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/prius.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Prius C/ Aqua</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.110,330.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.5000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.49.50</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="carTypeTopic">Premium Cars</h1>
+            <h5 class="carTypeDescription"><img src="assets/images/index/deals/tick.png" alt=""> Elevate your travel
+                experience with our exclusive fleet of premium cars. From luxurious sedans to
+                high-performance SUVs, explore the epitome of comfort and style for an unforgettable journey.</h5>
+
+        </div>
+
+        <div class="container carCarContainer">
+            <div class="d-flex justify-content-evenly">
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-4" src="assets/images/index/deals/cars/corolla.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Corolla Axio/ NZE141</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.120,330.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.5500.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.49.50</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-4" src="assets/images/index/deals/cars/bezza.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Perodua Bezza Prime Sedan</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.120,330.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.5500.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.49.50</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/allion.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Allion NZT 260</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs155,760.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.5800.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.60.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="m-auto" style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Automatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container carCarContainer">
+            <div class="d-flex justify-content-center">
+                <div class="carCard me-5" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-3" src="assets/images/index/deals/cars/axio.png"
+                         style="width: 95%; object-fit: cover">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Axio NKR 165</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.175,230.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.6000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.65.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard ms-4" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/deals/cars/vitz.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Vitz 2013</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.175,230.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.6000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.65.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="carTypeTopic">Luxury Cars</h1>
+            <h5 class="carTypeDescription"><img src="assets/images/index/deals/tick.png" alt=""> Indulge in Opulence:
+                Explore Our Fleet of Exquisite Luxury Cars. Elevate Your Travel Experience with
+                Unparalleled<br> Comfort and Style.</h5>
+
+        </div>
+
+        <div class="container carCarContainer">
+            <div class="d-flex justify-content-evenly">
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/home/thirdContainer/i8car.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">BMW i8 Special Edition</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.300,000.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.18,000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.100.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 2</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5" src="assets/images/index/home/thirdContainer/benzcar.png"
+                         style="width: 95%;">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Mercedes-Benz CLS Coupe</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.300,000.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.18,000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.100.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="justify-content-center m-auto"
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Autonmatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carCard" style="width: 25%; height: 550px">
+                    <img class="h-50 ms-5 pb-2" src="assets/images/index/deals/cars/premio.png"
+                         style="width: 95%; object-fit: scale-down">
+
+                    <div style="margin-top: -50px">
+                        <div class="w-100">
+                            <h2 class="text-center carCarTitle">Toyota Premio</h2>
+                        </div>
+
+                        <div>
+                            <ul class="carCardUlList">
+                                <li>
+                                    <h4>Rs.227,150.00</h4>
+                                    <h5>/Monthly Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.10,000.00</h4>
+                                    <h5>/Daily Rate</h5>
+                                </li>
+                                <li>
+                                    <h4>Rs.85.00</h4>
+                                    <h5>/Price per Extra Km</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="m-auto" style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 65%"></div>
+
+                        <div>
+                            <ul class="carCarToneList" style="margin-left: 5%">
+                                <li>
+                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=""
+                             style="background: rgba(0, 0, 0, 0.10); height: 3px; width: 75%; margin: -5% auto auto auto;"></div>
+
+                        <div>
+                            <ul class="carCarMoreDetailsList mt-2" style="margin-left: -10px">
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/userIcon.png" alt="">
+                                    <h5>Seats 4</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/fuelTypeIcon.png" alt="">
+                                    <h5>Petrol</h5>
+                                </li>
+
+                                <li>
+                                    <img src="assets/images/index/home/thirdContainer/transmissionTypeIcon.png" alt="">
+                                    <h5>Automatic</h5>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button type="button" class="btn btnGradientPurple"
+                                    style="color: #D1D7E0; height: 48px; margin-left: 25%; margin-top: -3%">Book Now
+                                <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--My Account Content-->
+    <div class="container-fluid" id="myAccountContent">
+        <div class="container" style="margin-top: 80px">
+            <div class="d-flex 75 align-items-center">
+                <div>
+                    <img src="assets/images/index/myaccount/usericon.png" alt="">
+                </div>
+
+                <div class="w-50 ms-2">
+                    <div class="d-flex myAccountOwnerCard">
+                        <h1>Hi, </h1>
+                        <h1>sehanlk</h1>
+                    </div>
+
+                    <h6 style="margin-top: -3.5%">Welcome Back</h6>
+                </div>
+            </div>
+
+            <h1 class="mt-2"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                "Optimize, organize, and own your digital journey with MyAccount.</h1>
+        </div>
+
+        <div class="container d-flex pb-5 registerForm rounded-4 bg-light"
+             style="margin-top: 100px; background-color: #0a58ca; width: 50%;height: 113vh; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);">
+            <form class="m-5">
+                <div id="customerUpdateFormPageHeader">Update Your Account</div>
+
+                <div>
+                    <div class="form-group">
+                        <label for="txtCusFullName">Full Name</label>
+                        <input class="form-control input" id="txtCusFullName" type="text" name="id" style="width: 100%">
+                        <span class="control-error" id="lblCusFullName"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group w-50">
+                        <label for="txtCusUserName">UserName</label>
+                        <input class="form-control input" id="txtCusUserName" type="text" name="id">
+                        <span class="control-error" id="lblCusUserName"></span>
+                    </div>
+
+                    <div class="form-group w-50">
+                        <label for="txtCustomerAddress">Address</label>
+                        <input class="form-control input" id="txtCustomerAddress" type="text" name="id">
+                        <span class="control-error" id="lblCustomerAddress"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group w-50">
+                        <label for="txtCustomerID">Contact Number</label>
+                        <input class="form-control input" id="txtCustomerID" type="text" name="id">
+                        <span class="control-error" id="lblcusid"></span>
+                    </div>
+
+                    <div class="form-group ml-3 w-50">
+                        <label for="txtCusEmail">Email</label>
+                        <input class="form-control input" id="txtCusEmail" type="text" name="id">
+                        <span class="control-error" id="lblCusEmail"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group w-50">
+                        <label for="txtCusNicNumber">NIC Number</label>
+                        <input class="form-control input" id="txtCusNicNumber" type="text" name="id">
+                        <span class="control-error" id="lblCusNicNumber"></span>
+                    </div>
+
+                    <div class="form-group ml-3 w-50">
+                        <label for="txtCusDrivingLicenseNumber">Driving License Number</label>
+                        <input class="form-control input" id="txtCusDrivingLicenseNumber" type="text" name="id">
+                        <span class="control-error" id="lblCusDrivingLicenseNumber"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group mb-3">
+                        <label for="fileNicFrontView" class="form-label">NIC Front View</label>
+                        <input class="form-control input" type="file" id="fileNicFrontView">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="fileNicBackView" class="form-label">NIC Back View</label>
+                        <input class="form-control input" type="file" id="fileNicBackView">
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group ms-4 w-50">
+                        <div style="box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;; border-radius: 10px; height: 18vh;width: 18vw"></div>
+                    </div>
+
+                    <div class="form-group ms-4 w-50">
+                        <div style="box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;; border-radius: 10px; height: 18vh;width: 18vw"></div>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group mb-3">
+                        <label for="fileLicenseFrontView" class="form-label">Driving License Front View</label>
+                        <input class="form-control input" type="file" id="fileLicenseFrontView">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="fileLicenseBackView" class="form-label">Driving License Back View</label>
+                        <input class="form-control input" type="file" id="fileLicenseBackView">
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="form-group ms-4 w-50">
+                        <div style="box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset; border-radius: 10px; height: 18vh;width: 18vw"></div>
+                    </div>
+
+                    <div class="form-group ms-4 w-50">
+                        <div style="box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset; border-radius: 10px; height: 18vh;width: 18vw"></div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row mt-3 justify-content-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn ms-2 me-2 text-light btnGradientRed">Cancel</button>
+                        <button type="submit" class="btn text-light btnGradientPurple">Update Now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container mt-5 d-flex pb-5 registerForm rounded-4 bg-light"
+             style="background-color: #D1D7E0; width: 50%;height: 42vh; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);">
+            <form class="m-5 w-100">
+                <div id="customerRegFormPageHeader">Update Your Account Password</div>
+
+                <div class="d-flex w-100 align-items-end">
+                    <div class="form-group w-50 mb-1">
+                        <label for="txtCusCurrentPassword">Current Password</label>
+                        <input class="form-control input" id="txtCusCurrentPassword" type="text" name="id">
+                        <span class="control-error" id="lblCusCurrentPassword"></span>
+                    </div>
+
+                    <div class="w-50 ms-4">
+                        <h6 style="margin-left: -6%; margin-top: -9.5%; color: #4C495D;font-family: Roboto; font-size: 15px; font-style: normal; font-weight: 300; line-height: normal; letter-spacing: 0.9px;"
+                        >Forgot Password?</h6>
+                    </div>
+                </div>
+
+                <div class="d-flex w-100">
+                    <div class="form-group w-50">
+                        <label for="txtCusCreateNewPassword">Create New Password</label>
+                        <input class="form-control input" id="txtCusCreateNewPassword" type="text" name="id">
+                        <span class="control-error" id="lblCusCreateNewPassword"></span>
+                    </div>
+
+                    <div class="form-group w-50 ms-4">
+                        <label for="txtCusReEnterPassword">Re-Enter Password</label>
+                        <input class="form-control input" id="txtCusReEnterPassword" type="text" name="id">
+                        <span class="control-error" id="lblCusReEnterPassword"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row mt-4 justify-content-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn text-light ms-2 me-2 btnGradientRed">Cancel</button>
+                        <button type="submit" class="btn text-light btnGradientPurple">Update Now</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Reservations Content -->
+    <div class="container-fluid" id="resrvationContent">
+        <div class="container mt-5" style="height: 9vh">
+            <div class="d-flex align-items-center w-100 h-100">
+                <div class="d-flex justify-content-end w-75 h-50">
+                    <img class="mt-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 80%">
+                    <input class="input h-100 w-25 ms-2" type="text" placeholder="Search">
+                </div>
+
+                <div class="ms-2" style="height: 55%; width: 20%;">
+                    <select class="input form-control h-100" id="selectReservationType"
+                            style="font-size: 18px; color: #999;">
+                        <option value="2">All Rental Requests</option>
+                        <option value="1">Pending Rental Requests</option>
+                        <option value="2">Accepted Rental Requests</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img class="w-100" src="assets/images/index/reservations/reservationTopicAndDescription.png" alt=""
+                 style="margin-top: 50px">
+        </div>
+
+        <div class="container d-flex justify-content-center rounded-4 w-100 reservationform">
+            <form style="width: 90%">
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-5">
+                    <div class="w-50">
+                        <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group m-auto coolinput">
+                            <label for="txtInput" class="text">Rental Request ID:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group m-auto coolinput">
+                            <label for="txtInput" class="text">Rental Request Date:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                    <h6 class="text text-center mt-1">Reserve your cars now</h6>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Car Brand:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100  m-auto coolinput">
+                            <label for="txtInput" class="text">Type:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100 ps-2 m-auto coolinput">
+                            <label for="txtInput" class="text">Waiver Payment:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Car Registration Number:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div style="width: 16.2%">
+                        <div class="form-group m-auto coolinput">
+                            <label for="txtInput" class="text">Transmission Type:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input" style="width: 100%">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="ms-2" style="width: 16.2%">
+                        <div class="form-group m-auto coolinput">
+                            <label for="txtInput" class="text">Passengers Count:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input" style="width: 100%">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="ms-2" style="width: 16.2%">
+                        <div class="form-group m-auto coolinput">
+                            <label for="txtInput" class="text">Fuel Type:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input" style="width: 100%">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Car Tone :</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100  m-auto coolinput">
+                            <label for="txtInput" class="text">Daily Rate:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100 ps-2 m-auto coolinput">
+                            <label for="txtInput" class="text">Monthly Rate:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Driving License Number:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100  m-auto coolinput">
+                            <label for="txtInput" class="text">Free Mileage:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group w-100 ps-2 m-auto coolinput">
+                            <label for="txtInput" class="text">Price For Extra Km:</label>
+                            <input type="text" class="inputTextFiled" id="txtInput"
+                                   name="input">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="w-50">
+                        <div class="form-group w-100 pe-5 m-auto coolinput">
+                            <label for="txtInput" class="text">Waiver Payment Bill Image:</label>
+                            <input type="file" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                   name="input" style="padding: 11px 10px;">
+                            <span class="control-error" id="lblInput"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group-text mt-3 text-center">
+                            <label for="inputWantDriver" class="text"
+                                   style="color: #4C495D; font-family: Roboto; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; letter-spacing: 0.72px;">Need
+                                a driver? "Drive with us!"</label>
+                            <input class="form-check-input mt-1 me-4" type="checkbox" value=""
+                                   aria-label="Checkbox for following text input" id="inputWantDriver">
+                        </div>
+                    </div>
+
+                    <div class="w-25">
+                        <div class="form-group mt-3">
+                            <button type="submit" class="btn text-light ms-2 me-2 btnGradientRed">Cancel</button>
+                            <button type="submit" class="btn text-light btnGradientPurple">Add Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
+                     style="border: 2px solid #564F6F; border-radius: 5px;">
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px"></div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px"></div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px"></div>
+                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px"></div>
+                </div>
+
+                <!--table-->
+                <div>
+                    <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                        <table class="table table-bordered text-white">
+                            <thead style="background-color: #564F6F; font-size: 15px">
+                            <tr>
+                                <th>Car Registration Number</th>
+                                <th>Car Brand</th>
+                                <th>Driver(Yes/No)</th>
+                                <th>Waiver Amount</th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-light" id="orderTable" style="font-size: 15px; color: #564F6F">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center w-100 mt-4">
+                    <div class="w-25 ms-5 totalDetails">
+                        <h5>Total Waiver Amount</h5>
+                        <h5>0.00</h5>
+                    </div>
+
+                    <div class="w-25 me-4">
+                        <div class="form-group">
+                            <button type="submit" class="btn text-light ms-2 me-2 btnGradientRed">Cancel</button>
+                            <button type="submit" class="btn text-light btnGradientPurple">Request Now</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-start ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Accepted Rental Requests</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Waiver Payment Amount</th>
+                            <th>PickUp Date</th>
+                            <th>Return Date</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-start ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Pending Rental Requests</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Waiver Payment Amount</th>
+                            <th>PickUp Date</th>
+                            <th>Return Date</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-start ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Decline Rental Requests</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Rent Id</th>
+                            <th>Waiver Payment Amount</th>
+                            <th>PickUp Date</th>
+                            <th>Return Date</th>
+                            <th>Decline Reason</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Paymnets Details Content-->
+    <div class="container-fluid" id="paymentDetailsContent">
+        <div class="container mt-5" style="height: 9vh">
+            <div class="d-flex align-items-center w-100 h-100">
+                <div class="d-flex justify-content-end w-75 h-50">
+                    <img class="mt-1" src="assets/images/index/deals/searchbar/searchIcon.png" alt=""
+                         style="height: 80%">
+                    <input class="input h-100 w-25 ms-2" type="text" placeholder="Search">
+                </div>
+
+                <div class="ms-2" style="height: 55%; width: 20%;">
+                    <select class="input form-control h-100" id="selectReservationType"
+                            style="font-size: 18px; color: #999;">
+                        <option value="2">All Payment Type</option>
+                        <option value="1">Incomplete Payment Details</option>
+                        <option value="2">Complete Payment Details</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-start ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Your Incomplete Payment Details</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Payment Id</th>
+                            <th>Rent Id</th>
+                            <th>Mileage</th>
+                            <th>Extra Mileage Payment</th>
+                            <th>Loss Damage Waiver Payment</th>
+                            <th>Waiver Payment Balance</th>
+                            <th style="width: 15%">Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-start ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Your Payment details completed</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Payment Id</th>
+                            <th>Rent Id</th>
+                            <th>Mileage</th>
+                            <th>Extra Mileage Payment</th>
+                            <th>Loss Damage Waiver Payment</th>
+                            <th>Waiver Payment Balance</th>
+                            <th style="width: 15%">Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid fifthContainer" id="descriptionsOfThanksContainerContent">
+        <div class="container w-100 h-100 justify-content-center d-flex">
+            <img class="w-50" src="assets/images/index/home/fifthContainer/bgImg.png" alt=""
+                 style="background-size: cover">
+        </div>
+    </div>
+
+    <div class="container contactDetailsContainer" id="contactUsContainerContent" style="height: 20vh">
+        <div class="d-flex justify-content-center align-items-center text-center m-auto rounded-4 w-75 h-100 contactDetailsContainerBox">
+            <div class="w-25" style="height: 90%; background: #D1D7E0; border-bottom-left-radius: 10px">
+                <img class="mt-4" class="m-auto" src="assets/images/index/home/sixthContainer/Phone.svg" alt=""
+                     style="width: 25%; background-size: cover;">
+                <h3>Telephone<br>
+                    +9411 234 1354</h3>
+            </div>
+
+            <div class="row justify-content-center align-items-center"
+                 style="width: 10%; height: 90%; background: #D1D7E0;">
+                <img class="h-75 w-75" src="assets/images/index/home/sixthContainer/line.png" alt="">
+            </div>
+
+            <div class="w-25" style="height: 90%; background: #D1D7E0;">
+                <img class="mt-4" src="assets/images/index/home/sixthContainer/Mail.svg" alt=""
+                     style="width: 25%; background-size: cover;">
+                <h3>Email<br>
+                    info@easycarrental.com</h3>
+            </div>
+
+            <div class="row justify-content-center align-items-center"
+                 style="width: 10%; height: 90%; background: #D1D7E0;">
+                <img class="h-75 w-75" src="assets/images/index/home/sixthContainer/line.png" alt="">
+            </div>
+
+            <div class="w-25" style="height: 90%; background: #D1D7E0; border-bottom-right-radius: 10px">
+                <img class="mt-4" src="assets/images/index/home/sixthContainer/map.png" alt=""
+                     style="width: 20%; background-size: cover;">
+                <h3>No. 200, Gall<br> Road, Panadura</h3>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container-fluid footer bg-dark"
+         style="background: url('assets/images/index/footer/Footer.png'); background-size: cover;height: 50vh">
+
+        <div class="container">
+            <div>
+                <h1 class="text-center" style="opacity: 0">Easy Car Rental Pvt Ltd.</h1>
+            </div>
+
+            <div>
+                <h4 class="text-center" style="opacity: 0">Easy Car Rental Pvt Ltd.</h4>
+            </div>
+
+            <div>
+                <h1 class="text-center mb-3 footerCompanyName">Easy Car Rental Pvt Ltd.</h1>
+            </div>
+
+            <div class="d-flex justify-content-evenly w-100 h-100">
+                <div class="w-25">
+                    <h3></h3>
+
+                    <ul class="footerDetailsList">
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>Home</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>About Us</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>Deals</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>Reservations</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>Payments</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-25">
+                    <h3></h3>
+
+                    <ul class="footerDetailsList">
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>info@easycarrental.com</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>No. 200, Galle Road, Panadura.</h4>
+                        </li>
+
+                        <li>
+                            <img src="assets/images/index/footer/dot.png" alt="">
+                            <h4>+9411 234 1354</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-25">
+                    <h3></h3>
+
+                    <ul class="footerDetailsSocialMediaList">
+                        <li>
+                            <i class="fa-brands fa-whatsapp" style="color: #D1D7E0;"></i>
+                        </li>
+
+                        <li>
+                            <i class="fa-brands fa-facebook" style="color: #D1D7E0;"></i>
+                        </li>
+
+                        <li>
+                            <i class="fa-brands fa-instagram" style="color: #D1D7E0;"></i>
+                        </li>
+
+                        <li>
+                            <i class="fa-brands fa-twitter" style="color: #D1D7E0;"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 class="text-end" style="color: #D1D7E0; font-size: 15px">Developed By Sehan Ranaweera 2023</h4>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="controllers/DashBoardController.js"></script>
+</body>
+</html>

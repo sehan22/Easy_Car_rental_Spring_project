@@ -22,8 +22,8 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     @Autowired
     MaintenanceRepo maintenanceRepo;
 
-    @Autowired
-    CarRepo carRepo;
+/*    @Autowired
+    CarRepo carRepo;*/
 
     @Autowired
     ModelMapper modelMapper;
@@ -43,7 +43,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 
         Maintenance maintenance = modelMapper.map(maintenanceDTO, Maintenance.class);
         System.out.println("Entity : " + maintenance);
-
+/*
         Car car = carRepo.findById(maintenanceDTO.getCarId()).get();
 
         if (car.getCarStatus().equals("MAINTAIN")) {
@@ -55,12 +55,12 @@ public class MaintenanceServiceImpl implements MaintenanceService {
         }
 
         if (car.getCarStatus().equals("AVAILABLE")) {
-            /*save maintenance*/
-            maintenanceRepo.save(maintenance);
+            *//*save maintenance*//*
 
-            /*update car status*/
+            *//*update car status*//*
             car.setCarStatus("MAINTAIN");
-        }
+        }*/
+        maintenanceRepo.save(maintenance);
     }
 
     @Override

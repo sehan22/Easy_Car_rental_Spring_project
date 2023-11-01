@@ -1,9 +1,11 @@
 package lk.ijse.spring.service.impl;
 
+import lk.ijse.spring.dto.CarDTO;
 import lk.ijse.spring.dto.UserDTO;
 import lk.ijse.spring.repo.UserRepo;
 import lk.ijse.spring.service.UserService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +23,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ArrayList<UserDTO> getAllUsers() {
-        return null;
+        return modelMapper.map(userRepo.findAll(), new TypeToken<ArrayList<UserDTO>>() {
+        }.getType());
     }
 
     @Override

@@ -1,6 +1,6 @@
 /*save Car Service*/
 $('#btnServiceFormAddToRepair').click(function () {
-    let serviceId = $('#txtServiceId').val();
+/*    let serviceId = $('#txtServiceId').val();
     let serviceDate = $('#txtServiceDate').val();
     let carId = $('#txtServiceCarId').val();
     let mileageAtService = $('#txtCarMileageAtService').val();
@@ -18,14 +18,13 @@ $('#btnServiceFormAddToRepair').click(function () {
         serviceStatus: serviceStatus,
         serviceDetails: serviceDetails,
         serviceCost: serviceCost
-    }
-
+    }*/
     $.ajax({
         url: 'http://localhost:8080/easycarrental/maintenance',
         method: "POST",
-        data: JSON.stringify(maintenance),
-        dataType: 'json',
-        contentType: "application/json",
+        data: $('#carMaintenanceForm').serialize(),
+        // dataType: 'json',
+        // contentType: "application/json",
         success: function (res) {
             alert(res.message);
         },
@@ -42,7 +41,7 @@ maintainingDetailsTable
 */
 
 /*load maintenances*/
-$('#btnDriverFormGeatAll').click(function () {
+$('#btnServiceFormGetAll').click(function () {
     loadRegisteredDrivers();
 });
 

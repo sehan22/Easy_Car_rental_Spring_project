@@ -14,9 +14,9 @@ import java.time.LocalDate;
 public class MaintenanceDTO {
     private String serviceId;
     private String serviceDate;
-    private String carId;
-    private int mileageAtService;
-    private int nextServiceMileage;
+    private CarDTO car;
+    private String mileageAtService;
+    private String nextServiceMileage;
     private String serviceStatus;
     private String serviceDetails;
     private Double serviceCost;

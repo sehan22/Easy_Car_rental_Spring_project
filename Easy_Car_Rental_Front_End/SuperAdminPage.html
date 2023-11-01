@@ -1188,224 +1188,349 @@
         </div>
     </div>
 
-    <!--Rental Requests-->
-    <div class="container-fluid mt-5" id="rentalRequestsContent" style="height: 10px">
-        <div class="container d-flex justify-content-center rounded-4 w-100 rentalreuquestform">
-            <form style="width: 90%">
+    <!--    &lt;!&ndash;Rental Requests&ndash;&gt;
+        <div class="container-fluid mt-5" id="rentalRequestsContent" style="height: 10px">
+            <div class="container d-flex justify-content-center rounded-4 w-100 rentalreuquestform">
+                <form style="width: 90%">
 
-                <div class="d-flex justify-content-center align-items-center w-100 mt-5">
-                    <div class="w-50">
-                        <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
-                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-5">
+                        <div class="w-50">
+                            <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
+                        </div>
 
-                    <div class="w-25">
-                        <div class="form-group m-auto coolinput">
-                            <label for="txtInput" class="text">Rental Request ID:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
+                        <div class="w-25">
+                            <div class="form-group m-auto coolinput">
+                                <label for="txtInput" class="text">Rental Request ID:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-25">
+                            <div class="form-group m-auto coolinput">
+                                <label for="txtInput" class="text">Rental Request Date:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="w-25">
-                        <div class="form-group m-auto coolinput">
-                            <label for="txtInput" class="text">Rental Request Date:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
+                    &lt;!&ndash;Customer Details&ndash;&gt;
 
-                <!--Customer Details-->
-
-                <div class="row justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
-                    <h6 class="text text-center mt-1">Rental Request Customer Details</h6>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-25">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Customer Id:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
+                    <div class="row justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                        <h6 class="text text-center mt-1">Rental Request Customer Details</h6>
                     </div>
 
-                    <div class="w-75">
-                        <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Customer Name:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-25">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Customer Id:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">NIC:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
+                        <div class="w-75">
+                            <div class="form-group w-100  m-auto coolinput">
+                                <label for="txtInput" class="text">Customer Name:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="w-50">
-                        <div class="form-group w-100 ps-2 m-auto coolinput">
-                            <label for="txtInput" class="text">License ID:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
-                     style="border: 2px solid #564F6F; border-radius: 5px;">
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
-                </div>
-
-                <!--Car Details-->
-                <div class="row justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
-                    <h6 class="text text-center mt-1">Rental Request Car Details</h6>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-25">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Car Id:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div style="width: 37%">
-                        <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Car Registrations Number:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div style="width: 37%">
-                        <div class="form-group w-100 ps-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Car Brand:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div style="width: 35%">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Car PickUp Date :</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div style="width: 35%">
-                        <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Car Return Date:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div style="width: 15%">
-                        <div class="form-group w-100 ps-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Waiver Amount:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Driver Details-->
-                <div class="row justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
-                    <h6 class="text text-center mt-1">Rental Request Driver Details</h6>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-25">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Driver Id:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div class="w-75">
-                        <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Driver Name:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">NIC:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div class="w-50">
-                        <div class="form-group w-100 ps-2 m-auto coolinput">
-                            <label for="txtInput" class="text">License ID:</label>
-                            <input type="text" class="inputTextFiled" id="txtInput"
-                                   name="input">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
-                     style="border: 2px solid #564F6F; border-radius: 5px;">
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
-                </div>
-
-                <!--Waiver Payment Details-->
-                <div class="row justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
-                    <h6 class="text text-center mt-1">Rental Request Waiver Payment Details</h6>
-                </div>
-
-                <div class="d-flex justify-content-evenly align-items-center w-100 mt-4">
-                    <div class="w-50 d-flex flex-column m-auto">
-                        <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Status:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
                             <div class="form-group w-100 m-auto coolinput">
-                                <label for="txtInput" class="text">Customer Paid Waiver Payment:</label>
+                                <label for="txtInput" class="text">NIC:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100 ps-2 m-auto coolinput">
+                                <label for="txtInput" class="text">License ID:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
+                         style="border: 2px solid #564F6F; border-radius: 5px;">
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
+                    </div>
+
+                    &lt;!&ndash;Car Details&ndash;&gt;
+                    <div class="row justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                        <h6 class="text text-center mt-1">Rental Request Car Details</h6>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-25">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Car Id:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div style="width: 37%">
+                            <div class="form-group w-100  m-auto coolinput">
+                                <label for="txtInput" class="text">Car Registrations Number:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div style="width: 37%">
+                            <div class="form-group w-100 ps-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Car Brand:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div style="width: 35%">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Car PickUp Date :</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div style="width: 35%">
+                            <div class="form-group w-100  m-auto coolinput">
+                                <label for="txtInput" class="text">Car Return Date:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div style="width: 15%">
+                            <div class="form-group w-100 ps-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Waiver Amount:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    &lt;!&ndash;Driver Details&ndash;&gt;
+                    <div class="row justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                        <h6 class="text text-center mt-1">Rental Request Driver Details</h6>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-25">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Driver Id:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-75">
+                            <div class="form-group w-100  m-auto coolinput">
+                                <label for="txtInput" class="text">Driver Name:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
+                            <div class="form-group w-100 m-auto coolinput">
+                                <label for="txtInput" class="text">NIC:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100 ps-2 m-auto coolinput">
+                                <label for="txtInput" class="text">License ID:</label>
+                                <input type="text" class="inputTextFiled" id="txtInput"
+                                       name="input">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
+                         style="border: 2px solid #564F6F; border-radius: 5px;">
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
+                        <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
+                    </div>
+
+                    &lt;!&ndash;Waiver Payment Details&ndash;&gt;
+                    <div class="row justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                        <h6 class="text text-center mt-1">Rental Request Waiver Payment Details</h6>
+                    </div>
+
+                    <div class="d-flex justify-content-evenly align-items-center w-100 mt-4">
+                        <div class="w-50 d-flex flex-column m-auto">
+                            <div class="form-group w-100 m-auto coolinput">
+                                <label for="txtInput" class="text">Status:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+
+                                <div class="form-group w-100 m-auto coolinput">
+                                    <label for="txtInput" class="text">Customer Paid Waiver Payment:</label>
+                                    <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                           name="input" style="padding: 11px 10px;">
+                                    <span class="control-error" id="lblInput"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-50 ps-2">
+                            <div class="d-flex text-center w-50 mt-4 carView"
+                                 style="border: 2px solid #564F6F; border-radius: 5px;">
+                                <div class="w-100 m-2 rounded-2 align-items-center" style="height: 150px">Waiver Payment
+                                    Bill
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    &lt;!&ndash;Buttons&ndash;&gt;
+                    <div class="d-flex justify-content-between align-items-center w-100 mt-5">
+                        <div class="w-100 d-flex justify-content-center me-4">
+                            <div class="form-group">
+                                <button type="submit" class="btn text-light btnGradientBlack">Cancel</button>
+                                <button type="submit" class="btn text-light ms-2 btnGradientGreen">Accept</button>
+                                <button type="submit" class="btn text-light ms-2 btnGradientPurple">Update</button>
+                                <button type="submit" class="btn text-light ms-2 btnGradientRed">Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container rounded-4"
+                 style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+                <h1 class="text-center ps-3 pt-3"
+                    style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                    Pending Rental Requests</h1>
+                <div class="ps-3 pe-3">
+                    <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                        <table class="table table-bordered text-white">
+                            <thead style="background-color: #564F6F; font-size: 15px">
+                            <tr>
+                                <th>Rent Id</th>
+                                <th>Car Id</th>
+                                <th>Customer Id</th>
+                                <th>Driver Id</th>
+                                <th>PickUp Date Date</th>
+                                <th>Return Date</th>
+                                <th>Waiver Amount</th>
+                                <th>Rent Date</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        &lt;!&ndash;Rental Details&ndash;&gt;
+        <div class="container-fluid mt-5" id="rentalsContent" style="height: 10px">
+            <div class="container rounded-4"
+                 style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+                <h1 class="text-center ps-3 pt-3"
+                    style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                    Car Rentals</h1>
+                <div class="ps-3 pe-3">
+                    <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                        <table class="table table-bordered text-white">
+                            <thead style="background-color: #564F6F; font-size: 15px">
+                            <tr>
+                                <th>Rent Id</th>
+                                <th>Car Id</th>
+                                <th>Customer Id</th>
+                                <th>Driver Id</th>
+                                <th>PickUp Date Date</th>
+                                <th>Return Date</th>
+                                <th>Waiver Amount</th>
+                                <th>Rent Date</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-light" id="rentDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        &lt;!&ndash;Payments Details&ndash;&gt;
+        <div class="container-fluid mt-5" id="paymentsContent" style="height: 10px">
+            <div class="container d-flex justify-content-center rounded-4 w-100 paymentsform">
+                <form style="width: 90%; height: 90vh">
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-5">
+                        <div class="w-50">
+                            <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
+                        </div>
+
+                        <div class="w-50">
+                            <h6 class="text text-center mt-1">Payments Details Form</h6>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-5 m-auto coolinput">
+                                <label for="txtInput" class="text">Payment ID:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100  m-auto coolinput">
+                                <label for="txtInput" class="text">Payment Date:</label>
                                 <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
                                        name="input" style="padding: 11px 10px;">
                                 <span class="control-error" id="lblInput"></span>
@@ -1413,247 +1538,132 @@
                         </div>
                     </div>
 
-                    <div class="w-50 ps-2">
-                        <div class="d-flex text-center w-50 mt-4 carView"
-                             style="border: 2px solid #564F6F; border-radius: 5px;">
-                            <div class="w-100 m-2 rounded-2 align-items-center" style="height: 150px">Waiver Payment
-                                Bill
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-5 m-auto coolinput">
+                                <label for="txtInput" class="text">Paid Waiver Amount:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100 m-auto coolinput">
+                                <label for="txtInput" class="text">Waiver Deduction:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!--Buttons-->
-                <div class="d-flex justify-content-between align-items-center w-100 mt-5">
-                    <div class="w-100 d-flex justify-content-center me-4">
-                        <div class="form-group">
-                            <button type="submit" class="btn text-light btnGradientBlack">Cancel</button>
-                            <button type="submit" class="btn text-light ms-2 btnGradientGreen">Accept</button>
-                            <button type="submit" class="btn text-light ms-2 btnGradientPurple">Update</button>
-                            <button type="submit" class="btn text-light ms-2 btnGradientRed">Reject</button>
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-5 m-auto coolinput">
+                                <label for="txtInput" class="text">Mileage:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100 m-auto coolinput">
+                                <label for="txtInput" class="text">Extra Mileage Payment:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
 
-        <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
-            <h1 class="text-center ps-3 pt-3"
-                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Pending Rental Requests</h1>
-            <div class="ps-3 pe-3">
-                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
-                        <thead style="background-color: #564F6F; font-size: 15px">
-                        <tr>
-                            <th>Rent Id</th>
-                            <th>Car Id</th>
-                            <th>Customer Id</th>
-                            <th>Driver Id</th>
-                            <th>PickUp Date Date</th>
-                            <th>Return Date</th>
-                            <th>Waiver Amount</th>
-                            <th>Rent Date</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Full Payment:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
 
-                        </tbody>
-                    </table>
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Paid Payment:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+
+                        <div class="w-50">
+                            <div class="form-group w-100 pe-2 m-auto coolinput">
+                                <label for="txtInput" class="text">Balance:</label>
+                                <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
+                                       name="input" style="padding: 11px 10px;">
+                                <span class="control-error" id="lblInput"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center w-100 mt-5">
+                        <div class="w-100 d-flex justify-content-center me-4">
+                            <div class="form-group">
+                                <button type="submit" class="btn text-light ms-2 me-2 btnGradientBlack">Cancel</button>
+                                <button type="submit" class="btn text-light btnGradientGreen">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container rounded-4"
+                 style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+                <h1 class="text-center ps-3 pt-3"
+                    style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                    Payments Details</h1>
+                <div class="ps-3 pe-3">
+                    <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                        <table class="table table-bordered text-white">
+                            <thead style="background-color: #564F6F; font-size: 15px">
+                            <tr>
+                                <th>Payment Id</th>
+                                <th>Rent Id</th>
+                                <th>Car Id</th>
+                                <th>Customer Id</th>
+                                <th>Driver Id</th>
+                                <th>PickUp Date Date</th>
+                                <th>Return Date</th>
+                                <th>Waiver Amount</th>
+                                <th>Rent Date</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-light" id="paymentDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>-->
 
-    <!--Rental Details-->
-    <div class="container-fluid mt-5" id="rentalsContent" style="height: 10px">
-        <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
-            <h1 class="text-center ps-3 pt-3"
-                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Car Rentals</h1>
-            <div class="ps-3 pe-3">
-                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
-                        <thead style="background-color: #564F6F; font-size: 15px">
-                        <tr>
-                            <th>Rent Id</th>
-                            <th>Car Id</th>
-                            <th>Customer Id</th>
-                            <th>Driver Id</th>
-                            <th>PickUp Date Date</th>
-                            <th>Return Date</th>
-                            <th>Waiver Amount</th>
-                            <th>Rent Date</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-light" id="rentDetailsTable" style="font-size: 15px; color: #564F6F;">
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--Payments Details-->
-    <div class="container-fluid mt-5" id="paymentsContent" style="height: 10px">
-        <div class="container d-flex justify-content-center rounded-4 w-100 paymentsform">
-            <form style="width: 90%; height: 90vh">
 
-                <div class="d-flex justify-content-center align-items-center w-100 mt-5">
-                    <div class="w-50">
-                        <img class="w-75 ms-4" src="assets/images/index/reservations/FormTopic.png" alt="">
-                    </div>
 
-                    <div class="w-50">
-                        <h6 class="text text-center mt-1">Payments Details Form</h6>
-                    </div>
-                </div>
 
-                <div class="row justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-75" style="height: 5px;background: rgba(76, 73, 93, 0.20);"></div>
-                </div>
 
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Payment ID:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
 
-                    <div class="w-50">
-                        <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Payment Date:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Paid Waiver Amount:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
 
-                    <div class="w-50">
-                        <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Waiver Deduction:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Mileage:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div class="w-50">
-                        <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Extra Mileage Payment:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Full Payment:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Paid Payment:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-
-                    <div class="w-50">
-                        <div class="form-group w-100 pe-2 m-auto coolinput">
-                            <label for="txtInput" class="text">Balance:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center w-100 mt-5">
-                    <div class="w-100 d-flex justify-content-center me-4">
-                        <div class="form-group">
-                            <button type="submit" class="btn text-light ms-2 me-2 btnGradientBlack">Cancel</button>
-                            <button type="submit" class="btn text-light btnGradientGreen">Register Now</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
-            <h1 class="text-center ps-3 pt-3"
-                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Payments Details</h1>
-            <div class="ps-3 pe-3">
-                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
-                        <thead style="background-color: #564F6F; font-size: 15px">
-                        <tr>
-                            <th>Payment Id</th>
-                            <th>Rent Id</th>
-                            <th>Car Id</th>
-                            <th>Customer Id</th>
-                            <th>Driver Id</th>
-                            <th>PickUp Date Date</th>
-                            <th>Return Date</th>
-                            <th>Waiver Amount</th>
-                            <th>Rent Date</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-light" id="paymentDetailsTable" style="font-size: 15px; color: #564F6F;">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--maintenance-->
     <div class="container-fluid mt-5" id="maintenanceContent" style="height: 10px">
         <div class="container d-flex justify-content-center rounded-4 w-100 Customerform">
-            <form style="width: 90%; height: 90vh">
+            <form id="carMaintenanceForm" style="width: 90%; height: 90vh">
 
                 <div class="d-flex justify-content-center align-items-center w-100 mt-5">
                     <div class="w-50">
@@ -1672,19 +1682,19 @@
                 <div class="d-flex justify-content-center align-items-center w-100 mt-4">
                     <div class="w-50">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Maintenance ID:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtServiceId" class="text">Maintenance ID:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtServiceId"
+                                   name="serviceId" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnServiceId"></span>
                         </div>
                     </div>
 
                     <div class="w-50">
                         <div class="form-group w-100  m-auto coolinput">
-                            <label for="txtInput" class="text">Maintenance Date:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtServiceDate" class="text">Maintenance Date:</label>
+                            <input type="date" placeholder="Write here..." class="inputTextFiled" id="txtServiceDate"
+                                   name="serviceDate" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnServiceDate"></span>
                         </div>
                     </div>
                 </div>
@@ -1692,19 +1702,19 @@
                 <div class="d-flex justify-content-center align-items-center w-100 mt-4">
                     <div class="w-50">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Maintenance Car ID:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtServiceCarId" class="text">Maintenance Car ID:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtServiceCarId"
+                                   name="carId" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnServiceCarId"></span>
                         </div>
                     </div>
 
                     <div class="w-50">
                         <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Maintenance Car Brand:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtServiceCarBrand" class="text">Maintenance Car Brand:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtServiceCarBrand"
+                                   name="carBrand" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnServiceCarBrand"></span>
                         </div>
                     </div>
                 </div>
@@ -1712,28 +1722,28 @@
                 <div class="d-flex justify-content-center align-items-center w-100 mt-4">
                     <div style="width: 30%">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Mileage At Maintenance:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtCarMileageAtService" class="text">Mileage At Maintenance:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarMileageAtService"
+                                   name="mileageAtService" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnCarMileageAtService"></span>
                         </div>
                     </div>
 
                     <div style="width: 30%">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Next Maintenance Mileage:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtCarNextServiceMileage" class="text">Next Maintenance Mileage:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarNextServiceMileage"
+                                   name="nextServiceMileage" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnCarNextServiceMileage"></span>
                         </div>
                     </div>
 
                     <div style="width: 40%">
                         <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Status:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtCarServiceStatus" class="text">Status:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarServiceStatus"
+                                   name="serviceStatus" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnCarServiceStatus"></span>
                         </div>
                     </div>
                 </div>
@@ -1741,38 +1751,31 @@
                 <div class="d-flex justify-content-center align-items-center w-100 mt-4">
                     <div class="w-50">
                         <div class="form-group w-100 pe-5 m-auto coolinput">
-                            <label for="txtInput" class="text">Repair Details:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtCarServiceDetails" class="text">Repair Details:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarServiceDetails"
+                                   name="serviceDetails" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnCarServiceDetails"></span>
                         </div>
                     </div>
 
                     <div class="w-50">
                         <div class="form-group w-100 m-auto coolinput">
-                            <label for="txtInput" class="text">Repair Cost:</label>
-                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtInput"
-                                   name="input" style="padding: 11px 10px;">
-                            <span class="control-error" id="lblInput"></span>
+                            <label for="txtCarServiceCost" class="text">Repair Cost:</label>
+                            <input type="text" placeholder="Write here..." class="inputTextFiled" id="txtCarServiceCost"
+                                   name="serviceCost" style="padding: 11px 10px;">
+                            <span class="control-error" id="spnCarServiceCost"></span>
                         </div>
                     </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center text-center w-100 mt-4 carView"
-                     style="border: 2px solid #564F6F; border-radius: 5px;">
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">NIC Back</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Front</div>
-                    <div class="w-25 m-2 rounded-2 align-items-center" style="height: 150px">License Back</div>
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center w-100 mt-4">
                     <div class="w-100 d-flex justify-content-center me-4">
                         <div class="form-group">
-                            <button type="submit" class="btn text-light ms-2 me-2 btnGradientBlack">Cancel</button>
-                            <button type="submit" class="btn text-light btnGradientGreen">Add To Repair</button>
-                            <button type="submit" class="btn text-light btnGradientRed">Delete</button>
-                            <button type="submit" class="btn text-light btnGradientPurple">Update</button>
+                            <button type="button" id="btnServiceFormCancel" class="btn text-light ms-2 me-2 btnGradientBlack">Cancel</button>
+                            <button type="button" id="btnServiceFormGetAll" class="btn text-light ms-2 me-2 btnGradientYellow">Get-All</button>
+                            <button type="button" id="btnServiceFormDelete" class="btn text-light btnGradientRed">Delete</button>
+                            <button type="button" id="btnServiceFormUpdate" class="btn text-light btnGradientPurple">Update</button>
+                            <button type="button" id="btnServiceFormAddToRepair" class="btn text-light btnGradientGreen">Add To Repair</button>
                         </div>
                     </div>
                 </div>
@@ -1841,7 +1844,7 @@
         </div>
     </div>
 
-    <!--Income Reports-->
+<!--    &lt;!&ndash;Income Reports&ndash;&gt;
     <div class="container-fluid mt-5" id="incomeReportsContent">
         <div class="container d-flex w-100 justify-content-center align-items-center dashboardPanel">
             <div class="m-1 p-2 d-flex w-100 justify-content-evenly" style="width: 38%; height: 35vh">
@@ -1957,7 +1960,7 @@
         </div>
     </div>
 
-    <!--Admin Account-->
+    &lt;!&ndash;Admin Account&ndash;&gt;
     <div class="container-fluid mt-5" id="adminAccountContent">
         <div class="container" style="margin-top: 80px">
             <div class="d-flex 75 align-items-center">
@@ -2028,7 +2031,7 @@
 
             </form>
         </div>
-    </div>
+    </div>-->
 </main>
 
 <footer></footer>
@@ -2038,5 +2041,6 @@
 <script src="controllers/SuperAdminPageCustomerController.js"></script>
 <script src="controllers/SusperAdminPageDriverController.js"></script>
 <script src="controllers/SuperAdminPageCarController.js"></script>
+<script src="controllers/SuperAdminPageMaintenanceController.js"></script>
 </body>
 </html>

@@ -33,9 +33,9 @@ public class CarServiceImpl implements CarService {
     public void saveCar(CarDTO carDTO) {
         Car car = modelMapper.map(carDTO, Car.class);
 
-        if (carRepo.existsById(carDTO.getCarId())) {
-            throw new RuntimeException("Car ID Duplicated.");
-        }
+//        if (carRepo.existsById(carDTO.getCarId())) {
+//            throw new RuntimeException("Car ID Duplicated.");
+//        }
 
         try {
             String path = System.getProperty("user.dir");
@@ -109,9 +109,9 @@ public class CarServiceImpl implements CarService {
     public void updateCar(CarDTO carDTO) {
         Car car = modelMapper.map(carDTO, Car.class);
 
-        if (!carRepo.existsById(carDTO.getCarId())) {
+/*        if (!carRepo.existsById(carDTO.getCarId())) {
             throw new RuntimeException("Car ID Not Define.");
-        }
+        }*/
 
         try {
             String path = System.getProperty("user.dir");

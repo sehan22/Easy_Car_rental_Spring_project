@@ -22,6 +22,28 @@ $('#btnCarFormRegisteredNow').click(function () {
     });
 });
 
+/*update car*/
+$('#btnCarFormUpdate').click(function () {
+    let updateCarFormData = new FormData($('#CarForm')[0]);
+
+    $.ajax({
+        url: 'http://localhost:8080/easycarrental/car',
+        method: "POST",
+        async: true,
+        contentType: false,
+        processData: false,
+        data: updateCarFormData,
+        success: function (res) {
+            alert(res.message);
+            loadAllRegisteredCars();
+        },
+        error: function (err) {
+            let errMessage = JSON.parse(err.responseText);
+            alert(errMessage.message)
+        }
+    });
+});
+
 $('#btnCarFormGetAll').click(function () {
     loadAllRegisteredCars();
 });

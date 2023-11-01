@@ -25,4 +25,11 @@ public class CarController {
         carService.saveCar(carDTO);
         return new ResponseUtil("OK", "Car Registration Successfully!", null);
     }
+
+    @PutMapping
+    public ResponseUtil updateCar(@ModelAttribute CarDTO carDTO) {
+        System.out.println(carDTO.toString());
+        carService.updateCar(carDTO);
+        return new ResponseUtil("OK", "Car Registration Successfully!", carDTO);
+    }
 }

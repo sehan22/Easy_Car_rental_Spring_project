@@ -1,3 +1,5 @@
+loadAllRegisteredCars();
+
 /*save car*/
 $('#btnCarFormRegisteredNow').click(function () {
     let carFormData = new FormData($('#CarForm')[0]);
@@ -21,6 +23,11 @@ $('#btnCarFormRegisteredNow').click(function () {
 
 $('#btnCarFormGetAll').click(function () {
     loadAllRegisteredCars();
+});
+
+$('#btnCarFormClear').click(function () {
+    alert("Driver Registrations Canceled!");
+    setValuesForCarFormInputs("", "", "", "","", "","", "","", "",)
 });
 
 /*load Registered Cars*/
@@ -54,6 +61,9 @@ function loadAllRegisteredCars() {
                         <td>` + car.carInteriorViewImgFilePath + `</td>
                     </tr>`;
                 $('#registeredCarDetailsTable').append(carRegRow)
+
+                loadDataCarTableToInput();
+                setValuesForCarFormInputs("", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
             }
         },
         error: function (err) {
@@ -62,7 +72,65 @@ function loadAllRegisteredCars() {
     });
 }
 
+function loadDataCarTableToInput() {
+    $('#registeredCarDetailsTable>tr').click(function () {
+        let carId = $(this).children(":eq(0)").text();
+        let carBrand = $(this).children(":eq(1)").text();
+        let carType = $(this).children(":eq(2)").text();
+        let waiverPaymentAmount = $(this).children(":eq(3)").text();
+        let carRegistraionNumber = $(this).children(":eq(4)").text();
+        let transmissionType = $(this).children(":eq(5)").text();
+        let numberOfPassengers = $(this).children(":eq(6)").text();
+        let fuelType = $(this).children(":eq(7)").text();
+        let carTone = $(this).children(":eq(8)").text();
+        let priceForDailyRent = $(this).children(":eq(9)").text();
+        let priceForMonthlyRent = $(this).children(":eq(10)").text();
+        let freeMileageForPrice = $(this).children(":eq(11)").text();
+        let priceForExtraKM = $(this).children(":eq(12)").text();
+        let currentMileage = $(this).children(":eq(13)").text();
+        let carStatus = $(this).children(":eq(14)").text();
+        let carFrontViewImgFilePath = $(this).children(":eq(15)").text();
+        let carBackViewImgFilePath = $(this).children(":eq(16)").text();
+        let carSideViewImgFilePath = $(this).children(":eq(17)").text();
+        let carInteriorViewImgFilePath = $(this).children(":eq(18)").text();
 
-$('#btnCarFormGetAll').click(function () {
+        $('#txtCarId').val(carId);
+        $('#txtCarBrand').val(carBrand);
+        $('#txtCarType').val(carType);
+        $('#txtWaiverPaymentAmount').val(waiverPaymentAmount);
+        $('#txtCarRegistraionNumber').val(carRegistraionNumber);
+        $('#txtTransmissionType').val(transmissionType);
+        $('#txtNumberOfPassengers').val(numberOfPassengers);
+        $('#txtFuelType').val(fuelType);
+        $('#txtCarTone').val(carTone);
+        $('#txtPriceForDailyRent').val(priceForDailyRent);
+        $('#txtPriceForMonthlyRent').val(priceForMonthlyRent);
+        $('#txtFreeMileageForPrice').val(freeMileageForPrice);
+        $('#txtPriceForExtraKM').val(priceForExtraKM);
+        $('#txtCurrentMileage').val(currentMileage);
+        $('#txtCarStatus').val(carStatus);
 
-});
+        $('#carFrontView').val(carFrontViewImgFilePath);
+        $('#carBackView').val(carBackViewImgFilePath);
+        $('#carSideView').val(carSideViewImgFilePath);
+        $('#carInteriorView').val(carInteriorViewImgFilePath);
+    });
+}
+
+function setValuesForCarFormInputs(carId, carBrand, carType, waiverPaymentAmount, carRegistraionNumber, transmissionType, numberOfPassengers, fuelType, carTone, priceForDailyRent, priceForMonthlyRent, freeMileageForPrice, priceForExtraKM, currentMileage, carStatus) {
+    $('#txtCarId').val(carId);
+    $('#txtCarBrand').val(carBrand);
+    $('#txtCarType').val(carType);
+    $('#txtWaiverPaymentAmount').val(waiverPaymentAmount);
+    $('#txtCarRegistraionNumber').val(carRegistraionNumber);
+    $('#txtTransmissionType').val(transmissionType);
+    $('#txtNumberOfPassengers').val(numberOfPassengers);
+    $('#txtFuelType').val(fuelType);
+    $('#txtCarTone').val(carTone);
+    $('#txtPriceForDailyRent').val(priceForDailyRent);
+    $('#txtPriceForMonthlyRent').val(priceForMonthlyRent);
+    $('#txtFreeMileageForPrice').val(freeMileageForPrice);
+    $('#txtPriceForExtraKM').val(priceForExtraKM);
+    $('#txtCurrentMileage').val(currentMileage);
+    $('#txtCarStatus').val(carStatus);
+}

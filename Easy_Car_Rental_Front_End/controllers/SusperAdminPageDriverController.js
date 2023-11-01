@@ -59,6 +59,7 @@ $('#btnDriverFormCancel').click(function () {
     setValuesForDriverFormInputs("", "", "", "", "", "", "", "", "", "", "", "");
 });
 
+
 $('#btnDriverFormGeatAll').click(function () {
     loadRegisteredDrivers();
 });
@@ -85,12 +86,11 @@ function loadDataDriverTableToInput() {
         $('#txtDriverId').val(driverId);
         $('#txtDriverNicNumber').val(driverNicNumber);
         $('#txtDriverName').val(driverName);
-
         $('#txtDriverAddress').val(driverAddress);
         $('#txtDriverEmail').val(driverEmail);
         $('#txtDriverDrivingLicenseNumber').val(driverDrivingLicenseNumber);
-
         $('#txtDriverTelNumber').val(driverTelNumber);
+
         $('#divDvrNicView').val(divDvrNicView);
         $('#divDvrLicenseView').val(divDvrLicenseView);
 

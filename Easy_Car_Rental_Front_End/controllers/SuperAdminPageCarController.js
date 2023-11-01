@@ -61,9 +61,20 @@ function loadAllRegisteredCars() {
                         <td>` + car.carSideViewImgFilePath + `</td>
                         <td>` + car.carInteriorViewImgFilePath + `</td>
                     </tr>`;
-                $('#registeredCarDetailsTable').append(carRegRow)
 
-                loadDataCarTableToInput();
+                if (car.carStatus === "MAINTAIN") {
+                    $('#maintainCarDetailsTable').append(carRegRow);
+                } else if (car.carStatus === "RESERVED") {
+                    $('#reservedCarDetailsTable').append(carRegRow);
+                } else if (car.carStatus === "AVAILABLE") {
+                    $('#availableCarDetailsTable').append(carRegRow);
+                }
+                $('#registeredCarDetailsTable').append(carRegRow);
+
+                loadDataCarTableToInput('registeredCarDetailsTable');
+                loadDataCarTableToInput('maintainCarDetailsTable');
+                loadDataCarTableToInput('reservedCarDetailsTable');
+                loadDataCarTableToInput('availableCarDetailsTable');
                 setValuesForCarFormInputs("", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
             }
         },
@@ -73,8 +84,8 @@ function loadAllRegisteredCars() {
     });
 }
 
-function loadDataCarTableToInput() {
-    $('#registeredCarDetailsTable>tr').click(function () {
+function loadDataCarTableToInput(tableId) {
+    $('#'+ tableId +'>tr').click(function () {
         let carId = $(this).children(":eq(0)").text();
         let carBrand = $(this).children(":eq(1)").text();
         let carType = $(this).children(":eq(2)").text();

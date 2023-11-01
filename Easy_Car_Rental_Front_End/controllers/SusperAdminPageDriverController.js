@@ -43,9 +43,18 @@ function loadRegisteredDrivers() {
                     <td>` + drv.user.userPassword + `</td>
                     <td>` + drv.driverStatus + `</td>
                 </tr>`
+
+                if (drv.driverStatus === "AVAILABLE") {
+                    $('#availableDriverDetailsTable').append(regDriversRow);
+                }
+
+                if (drv.driverStatus === "OCCUPIED") {
+                    $('#occupiedDriverDetailsTable').append(regDriversRow);
+                }
+
                 $('#registeredDriverDetailsTable').append(regDriversRow);
             }
-            loadDataDriverTableToInput();
+            loadDataDriverTableToInput('registeredDriverDetailsTable');
             setValuesForDriverFormInputs("", "", "", "", "", "", "", "", "", "", "", "");
         },
         error: function (err) {
@@ -65,8 +74,8 @@ $('#btnDriverFormGeatAll').click(function () {
 });
 
 /*load table row data to input*/
-function loadDataDriverTableToInput() {
-    $('#registeredDriverDetailsTable>tr').click(function () {
+function loadDataDriverTableToInput(driverTableId) {
+    $('#' + driverTableId + '>tr').click(function () {
         let driverId = $(this).children(":eq(0)").text();
         let driverNicNumber = $(this).children(":eq(1)").text();
         let driverName = $(this).children(":eq(2)").text();

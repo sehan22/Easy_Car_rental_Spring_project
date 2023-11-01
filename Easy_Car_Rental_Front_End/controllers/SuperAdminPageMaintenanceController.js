@@ -35,3 +35,7 @@ $('#btnServiceFormAddToRepair').click(function () {
         }
     });
 });
+
+/*load maintenances*/
+
+

@@ -10,9 +10,19 @@ function loadRegisteredCustomers() {
         success: function (resp) {
             for (let cus of resp.data) {
                 let regCusRow = `<tr><td>` + cus.cusId + `</td><td>` + cus.cusName + `</td><td>` + cus.cusAddress + `</td><td>` + cus.cusEmail + `</td><td>` + cus.cusNicNumber + `</td><td>` + cus.cusDrivingLicenseNumber + `</td><td>` + cus.cusTelNumber + `</td><td>` + cus.cusNicFrontFilePath + `</td><td>` + cus.cusDrivingLicenseFrontFilePath + `</td><td>` + cus.user.status + `</td></tr>`;
-                $('#registeredCustomersTable').append(regCusRow);
+
+                if (cus.user.status === 'PENDING_APPROVAL') {
+                    $('#pendingCustomersTable').append(regCusRow);
+                }
+
+                if (cus.user.status === 'REGISTERED') {
+                    $('#registeredCustomersTable').append(regCusRow);
+                }
+
+                $('#registeredAdnPendingCustomersTable').append(regCusRow);
+
             }
-            loadDataTableRowToInput();
+            loadDataTableRowToInput('registeredAdnPendingCustomersTable');
             setValuesForTextFields("", "", "", "", "", "", "", "", "", "");
         },
         error: function (err) {
@@ -31,8 +41,8 @@ $("#btnCustomerFormClear").click(function () {
 });
 
 /*load data to table row to input*/
-function loadDataTableRowToInput() {
-    $('#registeredCustomersTable>tr').click(function () {
+function loadDataTableRowToInput(customerTableId) {
+    $('#' + customerTableId + '>tr').click(function () {
         let cusId = $(this).children(":eq(0)").text();
         let cusName = $(this).children(":eq(1)").text();
         let cusAddress = $(this).children(":eq(2)").text();

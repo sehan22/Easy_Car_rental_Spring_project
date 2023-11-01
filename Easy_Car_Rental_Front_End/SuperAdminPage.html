@@ -530,7 +530,37 @@
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Registered & Pending Customers</h1>
+                Pending Customers</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>NIC Number</th>
+                            <th>Driving License Number</th>
+                            <th>Contact Number</th>
+                            <th>NIC View</th>
+                            <th>License View</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="pendingCustomersTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Registered Customers</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
                     <table class="table table-bordered table-hover">
@@ -557,26 +587,28 @@
         </div>
 
         <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh; display: none">
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Registered Customers</h1>
+                Registered & Pending Customers</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
+                    <table class="table table-bordered table-hover">
                         <thead style="background-color: #564F6F; font-size: 15px">
                         <tr>
                             <th>Customer Id</th>
                             <th>Customer Name</th>
                             <th>Address</th>
                             <th>Email</th>
-                            <th>Contact Number</th>
                             <th>NIC Number</th>
                             <th>Driving License Number</th>
-                            <th></th>
+                            <th>Contact Number</th>
+                            <th>NIC View</th>
+                            <th>License View</th>
+                            <th>Status</th>
                         </tr>
                         </thead>
-                        <tbody class="bg-light" id="pendingCustomersTable" style="font-size: 15px; color: #564F6F;">
+                        <tbody class="bg-light" id="registeredAdnPendingCustomersTable" style="font-size: 15px; color: #564F6F;">
 
                         </tbody>
                     </table>
@@ -842,6 +874,7 @@
             </div>
         </div>
 
+        <!--Registered Cars-->
         <div class="container rounded-4"
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
@@ -881,21 +914,22 @@
             </div>
         </div>
 
-        <div class="container rounded-4"
+        <!--Maintain Cars-->
+        <div class="container mt-5 rounded-4"
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Reserved Cars</h1>
+                Maintain Cars Cars</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
+                    <table class="table table-bordered text-white table-hover">
                         <thead style="background-color: #564F6F; font-size: 15px">
                         <tr>
                             <th>Car Id</th>
                             <th>Brand</th>
-                            <th>Reg Number</th>
                             <th>Type</th>
                             <th>Waiver Payment</th>
+                            <th>Reg Number</th>
                             <th>Transmission Type</th>
                             <th>Passengers Count</th>
                             <th>Fuel Type</th>
@@ -905,14 +939,94 @@
                             <th>Free Mileage</th>
                             <th>Price For Extra KM</th>
                             <th>Current Mileage</th>
+                            <th>Status</th>
                             <th>Front View</th>
                             <th>Back View</th>
                             <th>Side View</th>
                             <th>Interior View</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="maintainCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Reserved Cars-->
+        <div class="container mt-5 rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Reserved Cars</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white table-hover">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Car Id</th>
+                            <th>Brand</th>
+                            <th>Type</th>
+                            <th>Waiver Payment</th>
+                            <th>Reg Number</th>
+                            <th>Transmission Type</th>
+                            <th>Passengers Count</th>
+                            <th>Fuel Type</th>
+                            <th>Tone</th>
+                            <th>Daily Rate</th>
+                            <th>Monthly Rate</th>
+                            <th>Free Mileage</th>
+                            <th>Price For Extra KM</th>
+                            <th>Current Mileage</th>
                             <th>Status</th>
+                            <th>Front View</th>
+                            <th>Back View</th>
+                            <th>Side View</th>
+                            <th>Interior View</th>
                         </tr>
                         </thead>
                         <tbody class="bg-light" id="reservedCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Available Cars-->
+        <div class="container mt-5 rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Available Cars</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white table-hover">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Car Id</th>
+                            <th>Brand</th>
+                            <th>Type</th>
+                            <th>Waiver Payment</th>
+                            <th>Reg Number</th>
+                            <th>Transmission Type</th>
+                            <th>Passengers Count</th>
+                            <th>Fuel Type</th>
+                            <th>Tone</th>
+                            <th>Daily Rate</th>
+                            <th>Monthly Rate</th>
+                            <th>Free Mileage</th>
+                            <th>Price For Extra KM</th>
+                            <th>Current Mileage</th>
+                            <th>Status</th>
+                            <th>Front View</th>
+                            <th>Back View</th>
+                            <th>Side View</th>
+                            <th>Interior View</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="availableCarDetailsTable" style="font-size: 15px; color: #564F6F;">
 
                         </tbody>
                     </table>
@@ -1100,6 +1214,72 @@
              style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
             <h1 class="text-center ps-3 pt-3"
                 style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Available Drivers</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white table-hover">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Driver Id</th>
+                            <th>Driver NIC Number</th>
+                            <th>Driver Name</th>
+                            <th>Driver Address</th>
+                            <th>Driver Email</th>
+                            <th>Driver License Number</th>
+                            <th>Driver Telephone Number</th>
+                            <th>Driver NIC Image</th>
+                            <th>Driver License Image</th>
+                            <th>Driver UserName</th>
+                            <th>Driver Password</th>
+                            <th>Driver Status</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="availableDriverDetailsTable"
+                               style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
+                Occupied Drivers</h1>
+            <div class="ps-3 pe-3">
+                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
+                    <table class="table table-bordered text-white table-hover">
+                        <thead style="background-color: #564F6F; font-size: 15px">
+                        <tr>
+                            <th>Driver Id</th>
+                            <th>Driver NIC Number</th>
+                            <th>Driver Name</th>
+                            <th>Driver Address</th>
+                            <th>Driver Email</th>
+                            <th>Driver License Number</th>
+                            <th>Driver Telephone Number</th>
+                            <th>Driver NIC Image</th>
+                            <th>Driver License Image</th>
+                            <th>Driver UserName</th>
+                            <th>Driver Password</th>
+                            <th>Driver Status</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bg-light" id="occupiedDriverDetailsTable"
+                               style="font-size: 15px; color: #564F6F;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container rounded-4"
+             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
+            <h1 class="text-center ps-3 pt-3"
+                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
                 Registered Drivers</h1>
             <div class="ps-3 pe-3">
                 <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
@@ -1121,64 +1301,6 @@
                         </tr>
                         </thead>
                         <tbody class="bg-light" id="registeredDriverDetailsTable"
-                               style="font-size: 15px; color: #564F6F;">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
-            <h1 class="text-center ps-3 pt-3"
-                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Occupied Drivers</h1>
-            <div class="ps-3 pe-3">
-                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
-                        <thead style="background-color: #564F6F; font-size: 15px">
-                        <tr>
-                            <th>Driver Id</th>
-                            <th>Driver Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Contact Number</th>
-                            <th>NIC Number</th>
-                            <th>Driving License Number</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-light" id="availableDriverDetailsTable"
-                               style="font-size: 15px; color: #564F6F;">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="container rounded-4"
-             style="margin-top: 100px; box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25); height: 50vh">
-            <h1 class="text-center ps-3 pt-3"
-                style="color: #2D283D; font-family: Roboto; font-size: 20px; font-style: normal; font-weight: 200; line-height: normal; letter-spacing: 1.2px;">
-                Registered Drivers</h1>
-            <div class="ps-3 pe-3">
-                <div class="col-md-12 mt-4" style="height:300px; overflow-y: scroll">
-                    <table class="table table-bordered text-white">
-                        <thead style="background-color: #564F6F; font-size: 15px">
-                        <tr>
-                            <th>Driver Id</th>
-                            <th>Driver Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Contact Number</th>
-                            <th>NIC Number</th>
-                            <th>Driving License Number</th>
-                            <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-light" id="occupiedDriverDetailsTable"
                                style="font-size: 15px; color: #564F6F;">
 
                         </tbody>
@@ -1649,16 +1771,6 @@
                 </div>
             </div>
         </div>-->
-
-
-
-
-
-
-
-
-
-
 
     <!--maintenance-->
     <div class="container-fluid mt-5" id="maintenanceContent" style="height: 10px">

@@ -88,6 +88,10 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void deleteDriver(String driverId, DriverDTO driverDTO) {
+        if (!driverRepo.existsById(driverDTO.getDriverId())) {
+            throw new RuntimeException("Wrong Driver ID.Please Enter Correct ID..!");
+        }
 
+        driverRepo.deleteById(driverId);
     }
 }

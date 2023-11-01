@@ -33,6 +33,22 @@ function loadRegisteredCustomers() {
     });
 }
 
+$("#btnCarFormDelete").click(function () {
+    let carId = $("#txtCarId").val();
+    $.ajax({
+        url: 'http://localhost:8080/easycarrental/car?carId=' + carId + '',
+        method: "delete",
+        dataType:"json",
+        success: function (resp) {
+            alert(resp.message);
+            loadAllRegisteredCars();
+        },
+        error:function (error){
+            alert(JSON.parse(error.responseText).message);
+        }
+    });
+});
+
 $("#btnCustomerGetAll").click(function () {
     loadRegisteredCustomers();
 });

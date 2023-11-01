@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @Transactional
@@ -27,7 +26,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public ArrayList<CustomerDTO> getAllCustomer() {
-        return modelMapper.map(customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {}.getType());
+        return modelMapper.map(customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
+        }.getType());
     }
 
     @Override
@@ -90,6 +90,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteCustomer(String cusId, CustomerDTO customerDTO) {
+        if (!customerRepo.existsById(customerDTO.getCusId())) {
+            throw new RuntimeException("Wrong Customer ID.Please Enter Correct ID..!");
+        }
 
+        customerRepo.deleteById(cusId);
     }
 }

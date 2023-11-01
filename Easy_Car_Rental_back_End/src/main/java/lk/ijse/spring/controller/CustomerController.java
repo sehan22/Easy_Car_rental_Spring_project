@@ -1,9 +1,6 @@
 package lk.ijse.spring.controller;
 
-import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.dto.CustomerImgDTO;
-import lk.ijse.spring.dto.Test;
-import lk.ijse.spring.dto.UserDTO;
+import lk.ijse.spring.dto.*;
 import lk.ijse.spring.service.CustomerService;
 import lk.ijse.spring.service.UserService;
 import lk.ijse.spring.util.ResponseUtil;
@@ -30,5 +27,11 @@ public class CustomerController {
         customerDTO.setUser(userDTO);
         customerService.saveCustomer(customerDTO);
         return new ResponseUtil("OK", "Account Create Successfully!", null);
+    }
+
+    @DeleteMapping(params = {"cusId"})
+    public ResponseUtil deleteCar(@RequestParam String cusId,@ModelAttribute CustomerDTO customerDTO) {
+        customerService.deleteCustomer(cusId, customerDTO);
+        return new ResponseUtil("OK", "Car Delete Successfully..!", cusId);
     }
 }

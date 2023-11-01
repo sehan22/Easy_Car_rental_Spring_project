@@ -32,4 +32,10 @@ public class CarController {
         carService.updateCar(carDTO);
         return new ResponseUtil("OK", "Car Registration Successfully!", carDTO);
     }
+
+    @DeleteMapping(params = {"carId"})
+    public ResponseUtil deleteCar(@RequestParam String carId,@ModelAttribute CarDTO carDTO) {
+        carService.deleteCar(carId, carDTO);
+        return new ResponseUtil("OK", "Car Delete Successfully..!", carId);
+    }
 }

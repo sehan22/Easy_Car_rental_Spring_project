@@ -65,6 +65,23 @@ function loadRegisteredDrivers() {
     });
 }
 
+/*delete customer*/
+$("#btnDriverFormDelete").click(function () {
+    let driverId = $("#txtDriverId").val();
+    $.ajax({
+        url: 'http://localhost:8080/easycarrental/driver?driverId=' + driverId + '',
+        method: "delete",
+        dataType:"json",
+        success: function (resp) {
+            alert(resp.message);
+            loadAllRegisteredCars();
+        },
+        error:function (error){
+            alert(JSON.parse(error.responseText).message);
+        }
+    });
+});
+
 $('#btnDriverFormCancel').click(function () {
     alert("Driver Registrations Canceled!");
     setValuesForDriverFormInputs("", "", "", "", "", "", "", "", "", "", "", "");

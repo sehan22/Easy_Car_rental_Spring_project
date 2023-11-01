@@ -183,6 +183,10 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void deleteCar(String carId, CarDTO carDTO) {
+        if (!carRepo.existsById(carDTO.getCarId())) {
+            throw new RuntimeException("Wrong Customer ID.Please Enter Correct ID..!");
+        }
 
+        carRepo.deleteById(carId);
     }
 }

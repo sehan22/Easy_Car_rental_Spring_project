@@ -46,10 +46,18 @@ public class MaintenanceServiceImpl implements MaintenanceService {
         if (car.getCarStatus().equals("MAINTAIN")) {
             throw new RuntimeException("The car is still being maintained!");
         }
-        maintenanceRepo.save(maintenance);
 
-        /*update car status*/
-        car.setCarStatus("MAINTAIN");
+        if (car.getCarStatus().equals("RESERVED")) {
+            throw new RuntimeException("The car is still reserved!");
+        }
+
+        if (car.getCarStatus().equals("AVAILABLE")) {
+            /*save maintenance*/
+            maintenanceRepo.save(maintenance);
+
+            /*update car status*/
+            car.setCarStatus("MAINTAIN");
+        }
     }
 
     @Override

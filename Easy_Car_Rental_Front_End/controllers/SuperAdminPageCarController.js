@@ -13,6 +13,7 @@ $('#btnCarFormRegisteredNow').click(function () {
         data: carFormData,
         success: function (res) {
             alert(res.message);
+            loadAllRegisteredCars();
         },
         error: function (err) {
             let errMessage = JSON.parse(err.responseText);

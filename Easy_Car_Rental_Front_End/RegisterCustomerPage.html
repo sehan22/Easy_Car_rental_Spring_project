@@ -1794,7 +1794,7 @@
             <div class="row bg-body-tertiary rounded-3 reservationform">
                 <!--rent details-->
                 <div class="col-lg-4 d-flex justify-content-center align-items-center">
-                    <form class="w-75 m-auto text-center custom-input" style="font-size: 15px;">
+                    <form id="rentRequestForm" class="w-75 m-auto text-center custom-input" style="font-size: 15px;">
                         <div class="form-group">
                             <label for="RentRequestId">Rent Request ID</label>
                             <input type="text" class="form-control" id="RentRequestId"
@@ -1822,8 +1822,8 @@
                         </div>
 
                         <div class="form-group mt-2 d-flex justify-content-center mt-4">
-                            <button type="button" class="btn btn-danger">Cancel</button>
-                            <button type="button" class="btn ms-2 btn-primary">Request Now</button>
+                            <button type="button" id="btnRentRequestFormRentCancel" class="btn btn-danger">Cancel</button>
+                            <button type="button" id="btnRentRequestFormRequest" class="btn ms-2 btn-primary">Request Now</button>
                         </div>
                     </form>
                 </div>

@@ -5,11 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -18,13 +17,16 @@ import java.time.LocalTime;
 @ToString
 public class RentRequest {
     @Id
-    private String RentRequestId;
+    private String rentRequestId;
     private LocalTime pickUpTime;
     private LocalDate pickUpDate;
     private LocalDate returnDate;
     private String rentStatus;
-    private String rentStatusDescription;
 
     @ManyToOne
-    private Customer customer;
+    @JoinColumn(name = "cusId",referencedColumnName = "cusId",nullable = false)
+    private Customer cusId;
+
+    @OneToMany(mappedBy = "rentRequest", cascade = CascadeType.ALL)
+    private List<RentDetails> rentDetails;
 }

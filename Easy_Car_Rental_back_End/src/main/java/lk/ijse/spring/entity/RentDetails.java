@@ -11,23 +11,27 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Data
 @Entity
-//@IdClass(RentalDetails_PK.class)
+@IdClass(RentalDetails_PK.class)
 public class RentDetails implements Serializable {
     @Id
-    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "rentRequestId", referencedColumnName = "RentRequestId", nullable = false)
-    private RentRequest rentRequestId;
-
+    private String rentRequestId;
     @Id
-    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "carRegistraionNumber", referencedColumnName = "carRegistraionNumber", nullable = false)
-    private Car carRegistraionNumber;
+    private String carId;
 
-    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "paymentId", referencedColumnName = "paymentId", nullable = false)
-    private Payment paymentId;
+    private String driverId;
 
-    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "driverId", referencedColumnName = "driverId", nullable = true)
-    private Driver driverId;
+    @OneToOne(cascade = {CascadeType.ALL})
+    private Payment payment;
+
+    @ManyToOne
+    @JoinColumn(name = "rentRequestId",referencedColumnName = "rentRequestId",insertable = false,updatable = false)
+    private RentRequest rentRequest;
+
+    @ManyToOne
+    @JoinColumn(name = "carId",referencedColumnName = "carId",insertable = false,updatable = false)
+    private Car car;
+
+    @ManyToOne
+    @JoinColumn(name = "driverId",referencedColumnName = "driverId",insertable = false, updatable = false)
+    private Driver driver;
 }

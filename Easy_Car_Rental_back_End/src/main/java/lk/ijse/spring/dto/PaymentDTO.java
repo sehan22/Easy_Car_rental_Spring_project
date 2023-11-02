@@ -15,13 +15,13 @@ import java.time.LocalTime;
 @ToString
 public class PaymentDTO {
     private String paymentId;
-    private LocalDate paymentDate;
-    private LocalTime paymentTime;
-    private int distance;
-    private Double waiverPaymentAmount;
-    private Double extraMileagePerKM;
-    private Double lossDamageWaiverPayment;
-    private Double waiverPaymentBalance;
+    private String paymentDate;
+    private String paymentTime;
+    private String distance;
+    private String waiverPaymentAmount;
+    private String extraMileagePerKM;
+    private String lossDamageWaiverPayment;
+    private String waiverPaymentBalance;
     private String paymentStatus;
     private MultipartFile waiverPaymentBillFilePath;
 }

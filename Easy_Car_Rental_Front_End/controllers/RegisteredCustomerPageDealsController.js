@@ -105,7 +105,6 @@ function loadAllRegisteredCarsForDeals() {
                     let cars = $(resp.data)
 
                     for (let i = 0; i < cars.length; i++) {
-                        console.log("wada")
                         if (cars[i].carId === carCardClick) {
                             let cardCarId = cars[i].carId;
                             // console.log(cardCarId)
@@ -124,8 +123,6 @@ function loadAllRegisteredCarsForDeals() {
                             let cardCurrentMileage = cars[i].currentMileage;
                             let cardCarStatus = cars[i].carStatus;
 
-                            alert("hi");
-
                             let row =
                                 `<tr>
                                     <td class="visually-hidden">${cardCarId}</td>
@@ -133,7 +130,7 @@ function loadAllRegisteredCarsForDeals() {
                                     <td><input class="form-check-input form-check form-switch border rounded" type="checkbox" id="flexSwitchCheckDefault"></td>
                                     <td>${cardWaiverPaymentAmount}</td>
                                     <td><input type="file" class="form-control" id="inputWaiverBillImg"></td>
-                                    <td><button type="button" class="btn btn-danger carRentRequestDelete">Remove</button></td>
+                                    <td><button type="button" class="btn btn-outline-secondary carRentRequestDelete">Remove</button></td>
                                 </tr>`;
                             $('#rentRequestsTable').append(row);
                         }
@@ -147,3 +144,68 @@ function loadAllRegisteredCarsForDeals() {
         }
     });
 }
+
+$("#btnRentRequestFormRequest").click(function () {
+    console.log($("#rentRequestsTable").parent().parent().children(":eq(0)").children(":eq(0)").text())
+    console.log("Clicked");
+    let rentDetails = [];
+    for (let i = 0; i < $("#rentRequestsTable tr").length; i++) {
+
+        let plusOne = i + 1;
+        let rentRequestId = $("#RentRequestId").val();
+
+        let payment = {
+            paymentId: "P00-001",
+            paymentDate: null,
+            paymentTime: null,
+            distance: null,
+            waiverPaymentAmount: null,
+            extraMileagePerKM: null,
+            lossDamageWaiverPayment: null,
+            waiverPaymentBalance: null,
+            paymentStatus: null,
+            waiverPaymentBillFilePath: null
+        }
+
+        var rentDetail = {
+            rentRequestId: "RR0-001",
+            carId: "CR00-002",
+            driverId: "DRI-001",
+            payment: payment
+        }
+        rentDetails.push(rentDetail);
+    }
+
+    let rentRequestId = $("#RentRequestId").val();
+    let pickUpTime = $("#pickUpTime").val();
+    let pickUpDate = $("#pickUpDate").val();
+    let returnDate = $("#returnDate").val();
+    let rentStatus = "PENDING";
+    let cusId = "C00-001";
+
+    let rentRequest = {
+        rentRequestId: rentRequestId,
+        pickUpTime: pickUpTime,
+        pickUpDate: pickUpDate,
+        returnDate: returnDate,
+        rentStatus: rentStatus,
+        cusId: cusId,
+        rentDetails: rentDetails
+    }
+    // console.log(rentDetails)
+    console.log(rentRequest)
+
+    $.ajax({
+        url: 'http://localhost:8080/easycarrental/rent',
+        method: "POST",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify(rentRequest),
+        success: function (res) {
+            alert(res.message);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});

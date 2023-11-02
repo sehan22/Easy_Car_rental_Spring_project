@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.meta.CustomerIngDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.User;
 import lk.ijse.spring.repo.CustomerRepo;
@@ -13,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 @Service
@@ -25,8 +28,8 @@ public class CustomerServiceImpl implements CustomerService {
     ModelMapper modelMapper;
 
     @Override
-    public ArrayList<CustomerDTO> getAllCustomer() {
-        return modelMapper.map(customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
+    public ArrayList<CustomerIngDTO> getAllCustomer() {
+        return modelMapper.map(customerRepo.findAll(), new TypeToken<ArrayList<CustomerIngDTO>>() {
         }.getType());
     }
 
@@ -35,7 +38,30 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = modelMapper.map(customerDTO, Customer.class);
         customer.setUser(new User(customer.getUser().getUserName(), customer.getUser().getUserPassword(), "CUSTOMER", "PENDING_APPROVAL"));
 
-        if (customerRepo.existsById(customerDTO.getCusId())) {
+
+        try {
+            String path = System.getProperty("user.dir");
+            Path projectPath = Paths.get(path).getParent().getParent().getParent().resolve("/home/sehan-ranaweera/Documents/My GitHub Repositories/Easy_Car_Rental_Spring_Project/Easy_Car_Rental_With_Spring_AAD_Final_Project/Easy_Car_Rental_Front_End");
+
+            File file = new File(projectPath + "/uploads");
+            System.out.println("\n\n\n" + projectPath + "\n\n\n");
+            file.mkdir();
+
+            System.out.println(customerDTO.getCusNicFrontFilePath());
+            System.out.println(customerDTO.getCusDrivingLicenseFrontFilePath());
+
+            customerDTO.getCusNicFrontFilePath().transferTo(new File(file.getAbsolutePath() + "/" + customerDTO.getCusNicFrontFilePath().getOriginalFilename()));
+            customerDTO.getCusDrivingLicenseFrontFilePath().transferTo(new File(file.getAbsolutePath() + "/" + customerDTO.getCusDrivingLicenseFrontFilePath().getOriginalFilename()));
+
+            customer.setCusNicFrontFilePath("/uploads/" + customerDTO.getCusNicFrontFilePath().getOriginalFilename());
+            customer.setCusDrivingLicenseFrontFilePath("/uploads/" + customerDTO.getCusDrivingLicenseFrontFilePath().getOriginalFilename());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("\n\n\n\n" + customer);
+        customerRepo.save(customer);
+/*        if (customerRepo.existsById(customerDTO.getCusId())) {
             throw new RuntimeException("Customer ID Duplicated.");
         } else if (customerRepo.existsById(customerDTO.getUser().getUserName())) {
             throw new RuntimeException("This username is already taken.");
@@ -80,7 +106,8 @@ public class CustomerServiceImpl implements CustomerService {
 //            e.printStackTrace();
             System.out.println(e);
             System.out.println("ihdfbsdif");
-        }
+        }*/
+
     }
 
     @Override

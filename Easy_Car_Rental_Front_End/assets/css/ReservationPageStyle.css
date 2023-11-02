@@ -1,5 +1,5 @@
 .reservationform {
-    height: 140vh;
+    height: 60vh;
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
     margin-top: 100px;
 }
@@ -53,4 +53,9 @@
 
 .totalDetails h5 {
     display: inline-block;
+}
+
+.custom-input input::placeholder {
+    font-size: 18px;
+    color: #666;
 }

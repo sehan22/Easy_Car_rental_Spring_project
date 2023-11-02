@@ -20,14 +20,14 @@ public class WebRootConfig {
         return new ModelMapper();
     }
 
-    @Bean
-    public CommonsMultipartResolver multipartResolver() {
-        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-
-        resolver.setMaxUploadSize(10 * 1024 * 1024);
-
-        resolver.setMaxInMemorySize(10240);
-
-        return resolver;
-    }
+//    @Bean
+//    public CommonsMultipartResolver multipartResolver() {
+//        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+//
+//        resolver.setMaxUploadSize(10 * 1024 * 1024);
+//
+//        resolver.setMaxInMemorySize(10240);
+//
+//        return resolver;
+//    }
 }

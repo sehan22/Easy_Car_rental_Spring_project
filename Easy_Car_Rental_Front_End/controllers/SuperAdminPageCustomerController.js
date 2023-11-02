@@ -1,15 +1,33 @@
 loadRegisteredCustomers();
 
+var cusFile1;
+
 /*get all registered customers functions*/
 function loadRegisteredCustomers() {
     $('#registeredCustomersTable').empty();
+    $('#pendingCustomersTable').empty();
+    $('#registeredAdnPendingCustomersTable').empty();
 
     $.ajax({
         url: 'http://localhost:8080/easycarrental/customer',
         dataType: 'json',
         success: function (resp) {
             for (let cus of resp.data) {
-                let regCusRow = `<tr><td>` + cus.cusId + `</td><td>` + cus.cusName + `</td><td>` + cus.cusAddress + `</td><td>` + cus.cusEmail + `</td><td>` + cus.cusNicNumber + `</td><td>` + cus.cusDrivingLicenseNumber + `</td><td>` + cus.cusTelNumber + `</td><td>` + cus.cusNicFrontFilePath + `</td><td>` + cus.cusDrivingLicenseFrontFilePath + `</td><td>` + cus.user.status + `</td></tr>`;
+                let regCusRow = `<tr>
+                    <td>` + cus.cusId + `</td>
+                    <td>` + cus.cusName + `</td>
+                    <td>` + cus.cusAddress + `</td>
+                    <td>` + cus.cusEmail + `</td>
+                    <td>` + cus.cusNicNumber + `</td>
+                    <td>` + cus.cusDrivingLicenseNumber + `</td>
+                    <td>` + cus.cusTelNumber + `</td>
+                    <td><img src="${cus.cusNicFrontFilePath}" width="150px" height="100px" style="object-fit: cover"></td>
+                    <td><img src="${cus.cusDrivingLicenseFrontFilePath}" width="120px" height="100px" style="object-fit: cover"></td>
+                    <td>` + cus.user.status + `</td>
+                    </tr>`;
+
+                loadDataTableRowToInput('pendingCustomersTable');
+
 
                 if (cus.user.status === 'PENDING_APPROVAL') {
                     $('#pendingCustomersTable').append(regCusRow);
@@ -33,6 +51,7 @@ function loadRegisteredCustomers() {
     });
 }
 
+/*delete customer*/
 $("#btnCarFormDelete").click(function () {
     let carId = $("#txtCarId").val();
     $.ajax({
@@ -59,7 +78,7 @@ $("#btnCustomerFormClear").click(function () {
 });
 
 /*load data to table row to input*/
-function loadDataTableRowToInput(customerTableId) {
+function loadDataTableRowToInput(customerTableId, cusNicFrontFilePath, cusDrivingLicensePath) {
     $('#' + customerTableId + '>tr').click(function () {
         let cusId = $(this).children(":eq(0)").text();
         let cusName = $(this).children(":eq(1)").text();
@@ -80,9 +99,12 @@ function loadDataTableRowToInput(customerTableId) {
         $('#txtCusDrivingLicenseNumber').val(cusDrivingLicenseNumber);
         $('#txtCusTelNumber').val(cusTelNumber);
 
+        console.log(cusNicFrontFilePath,cusDrivingLicensePath)
+
         //Image not working (not correct method)
-        $('#divCusNicView').val(cusNicFrontFilePath);
-        $('#divCusLicenseView').val(cusNicFrontFilePath);
+        $('#divCusNicView').css('background-image', "url( "+ cusNicFrontFilePath +")");
+        $('#divCusLicenseView').css('background-image', "url( "+ cusDrivingLicensePath +")");
+
 
         $('#txtCusAccountStatus').val(cusStatus);
     });

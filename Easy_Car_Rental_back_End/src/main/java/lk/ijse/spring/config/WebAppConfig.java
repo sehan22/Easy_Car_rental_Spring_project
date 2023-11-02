@@ -11,8 +11,19 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"lk.ijse.spring.controller", "lk.ijse.spring.advisor"})
-public class WebAppConfig {
+public class WebAppConfig implements WebMvcConfigurer {
     public WebAppConfig() {
-        System.out.println("WebAppConfig : Instantiated");
+        System.out.println("WebAppConfig : Instantiated\n\n\n\n=================");
+    }
+
+    @Bean
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+        return multipartResolver;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/uploads/**").addResourceLocations("/uploads/");
     }
 }

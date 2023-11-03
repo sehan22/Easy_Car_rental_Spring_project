@@ -105,47 +105,48 @@ function loadAllRegisteredCarsForDeals() {
                     </div>
                 </div>`);
 
-                }}
+                }
+            }
 
-                $('.btnAddToReservation').click(function () {
-                    let carCardClick = $(this).parent().parent().children(":eq(0)").children(":eq(0)").text();
-                    console.log(carCardClick);
+            $('.btnAddToReservation').click(function () {
+                let carCardClick = $(this).parent().parent().children(":eq(0)").children(":eq(0)").text();
+                console.log(carCardClick);
+                console.log("============")
 
-                    let cars = $(resp.data)
+                let cars = $(resp.data)
 
-                    for (let i = 0; i < cars.length; i++) {
-                        if (cars[i].carId === carCardClick) {
-                            let cardCarId = cars[i].carId;
-                            // console.log(cardCarId)
-                            let cardCarBrand = cars[i].carBrand;
-                            let cardCarType = cars[i].carType;
-                            let cardWaiverPaymentAmount = cars[i].waiverPaymentAmount;
-                            let cardCarRegistraionNumber = cars[i].carRegistraionNumber;
-                            let cardTransmissionType = cars[i].transmissionType;
-                            let cardNumberOfPassengers = cars[i].numberOfPassengers;
-                            let cardFuelType = cars[i].fuelType;
-                            let cardCarTone = cars[i].carTone;
-                            let cardPriceForDailyRent = cars[i].priceForDailyRent;
-                            let cardPriceForMonthlyRent = cars[i].priceForMonthlyRent;
-                            let cardFreeMileageForPrice = cars[i].freeMileageForPrice;
-                            let cardPriceForExtraKM = cars[i].priceForExtraKM;
-                            let cardCurrentMileage = cars[i].currentMileage;
-                            let cardCarStatus = cars[i].carStatus;
+                for (let i = 0; i < cars.length; i++) {
+                    if (cars[i].carId === carCardClick) {
+                        let cardCarId = cars[i].carId;
+                        // console.log(cardCarId)
+                        let cardCarBrand = cars[i].carBrand;
+                        let cardCarType = cars[i].carType;
+                        let cardWaiverPaymentAmount = cars[i].waiverPaymentAmount;
+                        let cardCarRegistraionNumber = cars[i].carRegistraionNumber;
+                        let cardTransmissionType = cars[i].transmissionType;
+                        let cardNumberOfPassengers = cars[i].numberOfPassengers;
+                        let cardFuelType = cars[i].fuelType;
+                        let cardCarTone = cars[i].carTone;
+                        let cardPriceForDailyRent = cars[i].priceForDailyRent;
+                        let cardPriceForMonthlyRent = cars[i].priceForMonthlyRent;
+                        let cardFreeMileageForPrice = cars[i].freeMileageForPrice;
+                        let cardPriceForExtraKM = cars[i].priceForExtraKM;
+                        let cardCurrentMileage = cars[i].currentMileage;
+                        let cardCarStatus = cars[i].carStatus;
 
-                            let row =
-                                `<tr>
+                        let row =
+                            `<tr>
                                     <td class="visually-hidden">${cardCarId}</td>
                                     <td>${cardCarBrand}</td>
                                     <td><input class="form-check-input form-check form-switch border rounded" type="checkbox" id="flexSwitchCheckDefault"></td>
                                     <td>${cardWaiverPaymentAmount}</td>
-                                    <td><input type="file" class="form-control" id="inputWaiverBillImg"></td>
                                     <td><button type="button" class="btn btn-outline-secondary carRentRequestDelete">Remove</button></td>
                                 </tr>`;
-                            alert("Add to Resrvation Successfully");
-                            $('#rentRequestsTable').append(row);
-                        }
+                        alert("Add to Resrvation Successfully");
+                        $('#rentRequestsTable').append(row);
                     }
-                });
+                }
+            });
 
         },
         error: function (err) {
@@ -155,16 +156,24 @@ function loadAllRegisteredCarsForDeals() {
 }
 
 $("#btnRentRequestFormRequest").click(function () {
-    console.log($("#rentRequestsTable").parent().parent().children(":eq(0)").children(":eq(0)").text())
     console.log("Clicked");
     let rentDetails = [];
-    for (let i = 0; i < $("#rentRequestsTable tr").length; i++) {
 
-        let plusOne = i + 1;
+    let i = 1;
+
+
+    $("#rentRequestsTable > tr").each(function () {
+        let carId = $(this).find('td').eq(0).text();
+        console.log(carId);
+
         let rentRequestId = $("#RentRequestId").val();
 
+        var currentDate = new Date();
+        var dateString = currentDate.toLocaleDateString();
+        var timeString = currentDate.toLocaleTimeString();
+
         let payment = {
-            paymentId: "P00-001",
+            paymentId: "P00-00" + i,
             paymentDate: null,
             paymentTime: null,
             distance: null,
@@ -175,15 +184,16 @@ $("#btnRentRequestFormRequest").click(function () {
             paymentStatus: null,
             waiverPaymentBillFilePath: null
         }
+        i = i+1;
 
         var rentDetail = {
-            rentRequestId: "R00-001",
-            carId: "CR00-002",
+            rentRequestId: rentRequestId,
+            carId: carId,
             driverId: "DRI-001",
             payment: payment
         }
         rentDetails.push(rentDetail);
-    }
+    });
 
     let rentRequestId = $("#RentRequestId").val();
     let pickUpTime = $("#pickUpTime").val();

@@ -1,6 +1,11 @@
 loadAllRegisteredCarsForDeals();
+getCustomerIdFromUserName();
 
 function loadAllRegisteredCarsForDeals() {
+    var data1 = localStorage.getItem("customerNameDB");
+
+    $("#loginOrSignUpButtonText").text(data);
+
     $('#registeredCarDetailsTable').empty();
 
     $.ajax({
@@ -155,6 +160,26 @@ function loadAllRegisteredCarsForDeals() {
     });
 }
 
+function getCustomerIdFromUserName() {
+    /*ajax for customer id search from name*/
+    var customerUserName = localStorage.getItem("customerNameDB");
+
+    $.ajax({
+        url: `http://localhost:8080/Back_End_war/customer?userName=${customerUserName}`,
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (resp) {
+            let customer = resp.data;
+            console.log("customer id for username",customer.cusId);
+
+        },
+        error: function (ob, statusText, error) {
+
+        }
+    });
+}
+
 $("#btnRentRequestFormRequest").click(function () {
     console.log("Clicked");
     let rentDetails = [];
@@ -184,7 +209,7 @@ $("#btnRentRequestFormRequest").click(function () {
             paymentStatus: null,
             waiverPaymentBillFilePath: null
         }
-        i = i+1;
+        i = i + 1;
 
         var rentDetail = {
             rentRequestId: rentRequestId,

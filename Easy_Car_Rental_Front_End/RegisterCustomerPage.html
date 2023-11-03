@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/indexStyle.css">
     <link rel="stylesheet" href="assets/css/ReservationPageStyle.css">
+
+    <style>
+        #loginOrSignUpButton,#loginOrSignUpButtonText {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -52,7 +58,13 @@
 
             <div class="navbar-collapse justify-content-center">
                 <form class="d-flex justify-content-end text-end" role="search">
-                    <button class="btn jus" type="button" id="loginOrSignUpButton">SEHAN</button>
+                    <button class="btn jus w-100" type="button" id="loginOrSignUpButton">
+                        <img class="w-25" src="assets/images/usernamebuttonid.png" style="margin-left: -20px" alt="">
+                        <a href="#"
+                           style="text-decoration: none; color: #D1D7E0;">
+                            <h6 class="w-50 ms-1" id="loginOrSignUpButtonText" style="font-size: 18px"></h6>
+                        </a>
+                        </button>
                 </form>
             </div>
         </div>
@@ -1898,7 +1910,7 @@
                             <th style="width: 15%">Amount</th>
                         </tr>
                         </thead>
-                        <tbody class="bg-light" id="rentCarDetailsTable" style="font-size: 15px; color: #564F6F;">
+                        <tbody class="bg-light" id="rentCarDetailsForCustomerTable" style="font-size: 15px; color: #564F6F;">
 
                         </tbody>
                     </table>
@@ -2576,5 +2588,6 @@
 <script src="assets/js/bootstrap.bundle.js"></script>
 <script src="controllers/DashBoardController.js"></script>
 <script src="controllers/RegisteredCustomerPageDealsController.js"></script>
+<!--<script src="RegisterCustomerPage.html"></script>-->
 </body>
 </html>

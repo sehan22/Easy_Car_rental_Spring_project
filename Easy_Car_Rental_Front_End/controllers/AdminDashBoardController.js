@@ -28,6 +28,8 @@ adminAccountContent
 initiateUI();
 
 function initiateUI() {
+    var data = localStorage.getItem("customerNameDB");
+
     clearAll();
     $("#dashBoardContent").css("display", "block");
     setTheLastView();

@@ -34,4 +34,10 @@ public class CustomerController {
         customerService.deleteCustomer(cusId, customerDTO);
         return new ResponseUtil("OK", "Car Delete Successfully..!", cusId);
     }
+
+    @GetMapping(params = {"userName"})
+    public ResponseUtil customerFindByUsername(String userName) {
+        System.out.println(userName);
+        return new ResponseUtil("Ok", "Customer Id Loaded Successfully", customerService.getCustomerByUser_UserName(userName));
+    }
 }

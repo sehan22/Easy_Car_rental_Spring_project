@@ -21,8 +21,8 @@ function loadRegisteredCustomers() {
                     <td>` + cus.cusNicNumber + `</td>
                     <td>` + cus.cusDrivingLicenseNumber + `</td>
                     <td>` + cus.cusTelNumber + `</td>
-                    <td><img src="${cus.cusNicFrontFilePath}" width="150px" height="100px" style="object-fit: cover"></td>
-                    <td><img src="${cus.cusDrivingLicenseFrontFilePath}" width="120px" height="100px" style="object-fit: cover"></td>
+                    <td>` + cus.cusNicFrontFilePath + `</td>
+                    <td>` + cus.cusDrivingLicenseFrontFilePath + `</td>
                     <td>` + cus.user.status + `</td>
                     </tr>`;
 
@@ -102,6 +102,8 @@ function loadDataTableRowToInput(customerTableId, cusNicFrontFilePath, cusDrivin
         console.log(cusNicFrontFilePath,cusDrivingLicensePath)
 
         //Image not working (not correct method)
+
+        console.log(cusNicFrontFilePath)
         $('#divCusNicView').css('background-image', "url( "+ cusNicFrontFilePath +")");
         $('#divCusLicenseView').css('background-image', "url( "+ cusDrivingLicensePath +")");
 

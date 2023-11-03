@@ -78,9 +78,10 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO getCustomerByUser_UserName(String userName) {
-        return null;
-        /*modelMapper.map(customerRepo.getCustomerByUser_UserName(userName),
-                new TypeToken<CustomerDTO>()
-                );*/
+        System.out.println(userName);
+        Customer customerByUserUserName = customerRepo.getCustomerByUser_UserName(userName);
+        CustomerDTO customerDTO = modelMapper.map(customerByUserUserName, CustomerDTO.class);
+
+        return customerDTO;
     }
 }

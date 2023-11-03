@@ -4,7 +4,7 @@ getCustomerIdFromUserName();
 function loadAllRegisteredCarsForDeals() {
     var data1 = localStorage.getItem("customerNameDB");
 
-    $("#loginOrSignUpButtonText").text(data);
+    $("#loginOrSignUpButtonText").text(data1);
 
     $('#registeredCarDetailsTable').empty();
 
@@ -162,94 +162,97 @@ function loadAllRegisteredCarsForDeals() {
 
 function getCustomerIdFromUserName() {
     /*ajax for customer id search from name*/
+
+}
+
+$("#btnRentRequestFormRequest").click(function () {
     var customerUserName = localStorage.getItem("customerNameDB");
 
     $.ajax({
-        url: `http://localhost:8080/Back_End_war/customer?userName=${customerUserName}`,
+        url: `http://localhost:8080/easycarrental/customer?userName=${customerUserName}`,
         method: "GET",
         contentType: "application/json",
         dataType: "json",
         success: function (resp) {
             let customer = resp.data;
-            console.log("customer id for username",customer.cusId);
+            console.log("customer id for username", customer.cusId);
 
+            console.log("Clicked");
+            let rentDetails = [];
+
+            let i = 1;
+
+
+            $("#rentRequestsTable > tr").each(function () {
+
+
+                let carId = $(this).find('td').eq(0).text();
+                console.log(carId);
+
+                let rentRequestId = $("#RentRequestId").val();
+
+                var currentDate = new Date();
+                var dateString = currentDate.toLocaleDateString();
+                var timeString = currentDate.toLocaleTimeString();
+
+                let payment = {
+                    paymentId: "P00-00" + i,
+                    paymentDate: null,
+                    paymentTime: null,
+                    distance: null,
+                    waiverPaymentAmount: null,
+                    extraMileagePerKM: null,
+                    lossDamageWaiverPayment: null,
+                    waiverPaymentBalance: null,
+                    paymentStatus: null,
+                    waiverPaymentBillFilePath: null
+                }
+                i = i + 1;
+
+                var rentDetail = {
+                    rentRequestId: rentRequestId,
+                    carId: carId,
+                    driverId: "DRI-001",
+                    payment: payment
+                }
+                rentDetails.push(rentDetail);
+            });
+
+            let rentRequestId = $("#RentRequestId").val();
+            let pickUpTime = $("#pickUpTime").val();
+            let pickUpDate = $("#pickUpDate").val();
+            let returnDate = $("#returnDate").val();
+            let rentStatus = "PENDING";
+            let cusId = customer.cusId;
+
+            let rentRequest = {
+                rentRequestId: rentRequestId,
+                pickUpTime: pickUpTime,
+                pickUpDate: pickUpDate,
+                returnDate: returnDate,
+                rentStatus: rentStatus,
+                cusId: cusId,
+                rentDetails: rentDetails
+            }
+
+            console.log(rentRequest)
+
+            $.ajax({
+                url: 'http://localhost:8080/easycarrental/rent',
+                method: "POST",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify(rentRequest),
+                success: function (res) {
+                    alert(res.message);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
         },
         error: function (ob, statusText, error) {
-
-        }
-    });
-}
-
-$("#btnRentRequestFormRequest").click(function () {
-    console.log("Clicked");
-    let rentDetails = [];
-
-    let i = 1;
-
-
-    $("#rentRequestsTable > tr").each(function () {
-        let carId = $(this).find('td').eq(0).text();
-        console.log(carId);
-
-        let rentRequestId = $("#RentRequestId").val();
-
-        var currentDate = new Date();
-        var dateString = currentDate.toLocaleDateString();
-        var timeString = currentDate.toLocaleTimeString();
-
-        let payment = {
-            paymentId: "P00-00" + i,
-            paymentDate: null,
-            paymentTime: null,
-            distance: null,
-            waiverPaymentAmount: null,
-            extraMileagePerKM: null,
-            lossDamageWaiverPayment: null,
-            waiverPaymentBalance: null,
-            paymentStatus: null,
-            waiverPaymentBillFilePath: null
-        }
-        i = i + 1;
-
-        var rentDetail = {
-            rentRequestId: rentRequestId,
-            carId: carId,
-            driverId: "DRI-001",
-            payment: payment
-        }
-        rentDetails.push(rentDetail);
-    });
-
-    let rentRequestId = $("#RentRequestId").val();
-    let pickUpTime = $("#pickUpTime").val();
-    let pickUpDate = $("#pickUpDate").val();
-    let returnDate = $("#returnDate").val();
-    let rentStatus = "PENDING";
-    let cusId = "C00-001";
-
-    let rentRequest = {
-        rentRequestId: rentRequestId,
-        pickUpTime: pickUpTime,
-        pickUpDate: pickUpDate,
-        returnDate: returnDate,
-        rentStatus: rentStatus,
-        cusId: cusId,
-        rentDetails: rentDetails
-    }
-
-    console.log(rentRequest)
-
-    $.ajax({
-        url: 'http://localhost:8080/easycarrental/rent',
-        method: "POST",
-        contentType: "application/json",
-        dataType: "json",
-        data: JSON.stringify(rentRequest),
-        success: function (res) {
-            alert(res.message);
-        },
-        error: function (error) {
-            console.log(error);
+            console.error(error)
         }
     });
 });

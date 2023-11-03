@@ -7,6 +7,8 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -18,8 +20,8 @@ import java.time.LocalTime;
 public class Payment {
     @Id
     private String paymentId;
-    private LocalDate paymentDate;
-    private LocalTime paymentTime;
+    private Date paymentDate;
+    private Time paymentTime;
     private int distance;
     private Double waiverPaymentAmount;
     private Double extraMileagePerKM;

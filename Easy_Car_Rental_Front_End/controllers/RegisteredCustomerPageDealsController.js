@@ -12,14 +12,35 @@ function loadAllRegisteredCarsForDeals() {
 
                 if (car.carStatus === "AVAILABLE") {
                     $('#carIdContainer').append(`<div class="carCard col-lg-4 mb-5" style="width: 30%; height: 580px">
-                    <img class="h-50 w-100 rounded-bottom-5 rounded-top-4"
-                         src="assets/images/index/home/thirdContainer/i8car.png"
-                         style="object-fit: scale-down; background: rgba(255, 255, 255, 0.5)">
+                    <div id="carouselExample" class="carousel slideh h-50 w-100 rounded-bottom-5 rounded-top-4" style="object-fit: scale-down; background: rgba(255, 255, 255, 0.5)">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="${car.carFrontViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="${car.carBackViewImgFilePath}" class="d-block w-100" style="object-fit: scale-down" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="${car.carSideViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                            </div>   
+                                <div class="carousel-item">
+                                <img src="${car.carInteriorViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
                     <div style="margin-top: -50px">
                         <div class="w-100">
                             <h2 class="visually-hidden">` + car.carId + `</h2>
-                            <h2 class="text-center carCarTitle">BMW i8 Special Edition</h2>
+                            <h2 class="text-center carCarTitle">` + car.carBrand + `</h2>
                         </div>
 
                         <div>
@@ -45,23 +66,10 @@ function loadAllRegisteredCarsForDeals() {
                         <div>
                             <ul class="carCarToneList text-center" style="margin-left: -30px">
                                 <li>
-                                    <h4 class="carCarToneListTopic">Tone</h4>
+                                    <h4 class="carCarToneListTopic">Waiver Payment</h4>
                                 </li>
-
                                 <li>
-                                    <img src="assets/images/index/home/thirdContainer/whiteDot.png" alt="">
-                                </li>
-
-                                <li>
-                                    <img src="assets/images/index/home/thirdContainer/refDot.png" alt="">
-                                </li>
-
-                                <li>
-                                    <img src="assets/images/index/home/thirdContainer/blueDot.png" alt="">
-                                </li>
-
-                                <li>
-                                    <img src="assets/images/index/home/thirdContainer/greyDot.png" alt="">
+                                    <h4 style="font-weight: 700">Rs. ` + car.waiverPaymentAmount + `</h4>
                                 </li>
                             </ul>
                         </div>
@@ -97,7 +105,8 @@ function loadAllRegisteredCarsForDeals() {
                     </div>
                 </div>`);
 
-                }
+                }}
+
                 $('.btnAddToReservation').click(function () {
                     let carCardClick = $(this).parent().parent().children(":eq(0)").children(":eq(0)").text();
                     console.log(carCardClick);
@@ -132,11 +141,11 @@ function loadAllRegisteredCarsForDeals() {
                                     <td><input type="file" class="form-control" id="inputWaiverBillImg"></td>
                                     <td><button type="button" class="btn btn-outline-secondary carRentRequestDelete">Remove</button></td>
                                 </tr>`;
+                            alert("Add to Resrvation Successfully");
                             $('#rentRequestsTable').append(row);
                         }
                     }
                 });
-            }
 
         },
         error: function (err) {
@@ -168,7 +177,7 @@ $("#btnRentRequestFormRequest").click(function () {
         }
 
         var rentDetail = {
-            rentRequestId: "RR0-001",
+            rentRequestId: "R00-001",
             carId: "CR00-002",
             driverId: "DRI-001",
             payment: payment
@@ -192,7 +201,7 @@ $("#btnRentRequestFormRequest").click(function () {
         cusId: cusId,
         rentDetails: rentDetails
     }
-    // console.log(rentDetails)
+
     console.log(rentRequest)
 
     $.ajax({

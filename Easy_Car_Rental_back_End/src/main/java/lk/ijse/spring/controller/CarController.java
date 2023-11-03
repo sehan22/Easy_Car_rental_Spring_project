@@ -21,7 +21,7 @@ public class CarController {
 
     @PostMapping
     public ResponseUtil saveCar(@ModelAttribute CarDTO carDTO) {
-        System.out.println(carDTO.toString());
+        System.out.println("\n\n\n"+carDTO.toString()+"\n\n\n");
         carService.saveCar(carDTO);
         return new ResponseUtil("OK", "Car Registration Successfully!", null);
     }
@@ -29,7 +29,7 @@ public class CarController {
     @PutMapping
     public ResponseUtil updateCar(@ModelAttribute CarDTO carDTO) {
         System.out.println(carDTO.toString());
-        carService.updateCar(carDTO);
+//        carService.updateCar(carDTO);
         return new ResponseUtil("OK", "Car Registration Successfully!", carDTO);
     }
 

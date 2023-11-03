@@ -20,7 +20,7 @@ public class RentalController {
 
     @PostMapping
     public ResponseUtil saveRentRequest(@RequestBody RentRequestDTO rentRequestDTO) {
-        System.out.println("\n\n\n\n"+rentRequestDTO);
+        System.out.println("\n\n\n\n"+rentRequestDTO+"\n\n\n\n");
         rentRequestService.saveRentRequests(rentRequestDTO);
         return new ResponseUtil("OK", "OK", rentRequestDTO);
     }

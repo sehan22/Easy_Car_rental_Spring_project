@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
@@ -18,9 +20,9 @@ import java.util.List;
 public class RentRequest {
     @Id
     private String rentRequestId;
-    private LocalTime pickUpTime;
-    private LocalDate pickUpDate;
-    private LocalDate returnDate;
+    private String pickUpTime;
+    private String pickUpDate;
+    private String returnDate;
     private String rentStatus;
 
     @ManyToOne

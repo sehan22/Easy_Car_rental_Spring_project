@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CarDTO;
+import lk.ijse.spring.dto.meta.CarImgDTO;
 import lk.ijse.spring.entity.Car;
 import lk.ijse.spring.repo.CarRepo;
 import lk.ijse.spring.service.CarService;
@@ -12,6 +13,8 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 @Service
@@ -24,8 +27,8 @@ public class CarServiceImpl implements CarService {
     ModelMapper modelMapper;
 
     @Override
-    public ArrayList<CarDTO> getAllCars() {
-        return modelMapper.map(carRepo.findAll(), new TypeToken<ArrayList<CarDTO>>() {
+    public ArrayList<CarImgDTO> getAllCars() {
+        return modelMapper.map(carRepo.findAll(), new TypeToken<ArrayList<CarImgDTO>>() {
         }.getType());
     }
 
@@ -33,76 +36,103 @@ public class CarServiceImpl implements CarService {
     public void saveCar(CarDTO carDTO) {
         Car car = modelMapper.map(carDTO, Car.class);
 
-//        if (carRepo.existsById(carDTO.getCarId())) {
-//            throw new RuntimeException("Car ID Duplicated.");
-//        }
-
         try {
             String path = System.getProperty("user.dir");
-            File file = new File(path + "/uploads/car/carFrontViewImages");
-            File file2 = new File(path + "/uploads/car/carBackViewImages");
-            File file3 = new File(path + "/uploads/car/carSideViewImages");
-            File file4 = new File(path + "/uploads/car/carInteriorViewImages");
+            Path projectPath = Paths.get(path).getParent().getParent().getParent().resolve("/home/sehan-ranaweera/Documents/My GitHub Repositories/Easy_Car_Rental_Spring_Project/Easy_Car_Rental_With_Spring_AAD_Final_Project/Easy_Car_Rental_Front_End");
 
-            if (!file.exists()) {
-                file.mkdirs();
-                System.out.println("Directory 'carFrontViewImages' created.");
-            }
+            File file = new File(projectPath + "/uploads");
+            System.out.println("\n\n\n" + projectPath + "\n\n\n");
+            file.mkdir();
 
-            if (!file2.exists()) {
-                file2.mkdirs();
-                System.out.println("Directory 'carBackViewImages' created.");
-            }
+            System.out.println(carDTO.getCarFrontViewImgFilePath());
+            System.out.println(carDTO.getCarBackViewImgFilePath());
+            System.out.println(carDTO.getCarSideViewImgFilePath());
+            System.out.println(carDTO.getCarInteriorViewImgFilePath());
 
-            if (!file3.exists()) {
-                file3.mkdirs();
-                System.out.println("Directory 'carSideViewImages' created.");
-            }
+            carDTO.getCarFrontViewImgFilePath().transferTo(new File(file.getAbsolutePath() + "/" + carDTO.getCarFrontViewImgFilePath().getOriginalFilename()));
+            carDTO.getCarBackViewImgFilePath().transferTo(new File(file.getAbsolutePath() + "/" + carDTO.getCarBackViewImgFilePath().getOriginalFilename()));
+            carDTO.getCarSideViewImgFilePath().transferTo(new File(file.getAbsolutePath() + "/" + carDTO.getCarSideViewImgFilePath().getOriginalFilename()));
+            carDTO.getCarInteriorViewImgFilePath().transferTo(new File(file.getAbsolutePath() + "/" + carDTO.getCarInteriorViewImgFilePath().getOriginalFilename()));
 
-            if (!file4.exists()) {
-                file4.mkdirs();
-                System.out.println("Directory 'carInteriorViewImages' created.");
-            }
-
-
-            File frontFile = new File(file.getAbsolutePath() + "/" + carDTO.getCarFrontViewImgFilePath().getOriginalFilename());
-            if (frontFile.exists()) {
-                throw new RuntimeException("File 'carFrontViewImages/" + frontFile.getName() + "' already exists.");
-            } else {
-                carDTO.getCarFrontViewImgFilePath().transferTo(frontFile);
-                car.setCarFrontViewImgFilePath("uploads/car/carFrontViewImages/" + frontFile.getName());
-            }
-
-            File backFile = new File(file2.getAbsolutePath() + "/" + carDTO.getCarBackViewImgFilePath().getOriginalFilename());
-            if (backFile.exists()) {
-                throw new RuntimeException("File 'carBackViewImages/" + backFile.getName() + "' already exists.");
-            } else {
-                carDTO.getCarBackViewImgFilePath().transferTo(backFile);
-                car.setCarBackViewImgFilePath("uploads/car/carBackViewImages/" + backFile.getName());
-            }
-
-            File sideFile = new File(file3.getAbsolutePath() + "/" + carDTO.getCarSideViewImgFilePath().getOriginalFilename());
-            if (sideFile.exists()) {
-                throw new RuntimeException("File 'carSideViewImages/" + sideFile.getName() + "' already exists.");
-            } else {
-                carDTO.getCarSideViewImgFilePath().transferTo(sideFile);
-                car.setCarSideViewImgFilePath("uploads/car/carSideViewImages/" + sideFile.getName());
-            }
-
-            File interiorFile = new File(file4.getAbsolutePath() + "/" + carDTO.getCarInteriorViewImgFilePath().getOriginalFilename());
-            if (interiorFile.exists()) {
-                throw new RuntimeException("File 'carInteriorViewImages/" + interiorFile.getName() + "' already exists.");
-            } else {
-                carDTO.getCarInteriorViewImgFilePath().transferTo(interiorFile);
-                car.setCarInteriorViewImgFilePath("uploads/car/carInteriorViewImages/" + interiorFile.getName());
-            }
-
-            System.out.println(car);
-            carRepo.save(car);
+            car.setCarFrontViewImgFilePath("/uploads/" + carDTO.getCarFrontViewImgFilePath().getOriginalFilename());
+            car.setCarBackViewImgFilePath("/uploads/" + carDTO.getCarBackViewImgFilePath().getOriginalFilename());
+            car.setCarSideViewImgFilePath("/uploads/" + carDTO.getCarSideViewImgFilePath().getOriginalFilename());
+            car.setCarInteriorViewImgFilePath("/uploads/" + carDTO.getCarInteriorViewImgFilePath().getOriginalFilename());
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println(e);
+            throw new RuntimeException(e);
         }
+
+        carRepo.save(car);
+///*        if (carRepo.existsById(carDTO.getCarId())) {
+//            throw new RuntimeException("Car ID Duplicated.");
+//        }*/
+//
+///*        try {
+//            String path = System.getProperty("user.dir");
+//            File file = new File(path + "/uploads/car/carFrontViewImages");
+//            File file2 = new File(path + "/uploads/car/carBackViewImages");
+//            File file3 = new File(path + "/uploads/car/carSideViewImages");
+//            File file4 = new File(path + "/uploads/car/carInteriorViewImages");
+//
+//            if (!file.exists()) {
+//                file.mkdirs();
+//                System.out.println("Directory 'carFrontViewImages' created.");
+//            }
+//
+//            if (!file2.exists()) {
+//                file2.mkdirs();
+//                System.out.println("Directory 'carBackViewImages' created.");
+//            }
+//
+//            if (!file3.exists()) {
+//                file3.mkdirs();
+//                System.out.println("Directory 'carSideViewImages' created.");
+//            }
+//
+//            if (!file4.exists()) {
+//                file4.mkdirs();
+//                System.out.println("Directory 'carInteriorViewImages' created.");
+//            }
+//
+//
+//            File frontFile = new File(file.getAbsolutePath() + "/" + carDTO.getCarFrontViewImgFilePath().getOriginalFilename());
+//            if (frontFile.exists()) {
+//                throw new RuntimeException("File 'carFrontViewImages/" + frontFile.getName() + "' already exists.");
+//            } else {
+//                carDTO.getCarFrontViewImgFilePath().transferTo(frontFile);
+//                car.setCarFrontViewImgFilePath("uploads/car/carFrontViewImages/" + frontFile.getName());
+//            }
+//
+//            File backFile = new File(file2.getAbsolutePath() + "/" + carDTO.getCarBackViewImgFilePath().getOriginalFilename());
+//            if (backFile.exists()) {
+//                throw new RuntimeException("File 'carBackViewImages/" + backFile.getName() + "' already exists.");
+//            } else {
+//                carDTO.getCarBackViewImgFilePath().transferTo(backFile);
+//                car.setCarBackViewImgFilePath("uploads/car/carBackViewImages/" + backFile.getName());
+//            }
+//
+//            File sideFile = new File(file3.getAbsolutePath() + "/" + carDTO.getCarSideViewImgFilePath().getOriginalFilename());
+//            if (sideFile.exists()) {
+//                throw new RuntimeException("File 'carSideViewImages/" + sideFile.getName() + "' already exists.");
+//            } else {
+//                carDTO.getCarSideViewImgFilePath().transferTo(sideFile);
+//                car.setCarSideViewImgFilePath("uploads/car/carSideViewImages/" + sideFile.getName());
+//            }
+//
+//            File interiorFile = new File(file4.getAbsolutePath() + "/" + carDTO.getCarInteriorViewImgFilePath().getOriginalFilename());
+//            if (interiorFile.exists()) {
+//                throw new RuntimeException("File 'carInteriorViewImages/" + interiorFile.getName() + "' already exists.");
+//            } else {
+//                carDTO.getCarInteriorViewImgFilePath().transferTo(interiorFile);
+//                car.setCarInteriorViewImgFilePath("uploads/car/carInteriorViewImages/" + interiorFile.getName());
+//            }
+//
+//            System.out.println(car);
+//            carRepo.save(car);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            System.out.println(e);
+//        }*/
     }
 
     @Override

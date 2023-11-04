@@ -214,7 +214,7 @@ $("#btnRentRequestFormRequest").click(function () {
                 var rentDetail = {
                     rentRequestId: rentRequestId,
                     carId: carId,
-                    driverId: "DRI-001",
+                    driverId: null,
                     payment: payment
                 }
                 rentDetails.push(rentDetail);

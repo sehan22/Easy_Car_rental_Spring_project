@@ -161,10 +161,14 @@ function loadDataCarTableToInput(tableId) {
         $('#txtCurrentMileage').val(currentMileage);
         $('#txtCarStatus').val(carStatus);
 
-        $('#carFrontView').val(carFrontViewImgFilePath);
-        $('#carBackView').val(carBackViewImgFilePath);
-        $('#carSideView').val(carSideViewImgFilePath);
-        $('#carInteriorView').val(carInteriorViewImgFilePath);
+        $('#carFrontView').css('background-image', "url( "+ carFrontViewImgFilePath +")");
+        $('#carFrontView').css('background-size', 'cover');
+        $('#carBackView').css('background-image', "url( "+ carBackViewImgFilePath +")");
+        $('#carBackView').css('background-size', 'cover');
+        $('#carSideView').css('background-image', "url( "+ carSideViewImgFilePath +")");
+        $('#carSideView').css('background-size', 'cover');
+        $('#carInteriorView').css('background-image', "url( "+ carInteriorViewImgFilePath +")");
+        $('#carInteriorView').css('background-size', 'cover');
     });
 }
 
@@ -184,4 +188,9 @@ function setValuesForCarFormInputs(carId, carBrand, carType, waiverPaymentAmount
     $('#txtPriceForExtraKM').val(priceForExtraKM);
     $('#txtCurrentMileage').val(currentMileage);
     $('#txtCarStatus').val(carStatus);
+
+    $('#carFrontView').css('background-image', "");
+    $('#carBackView').css('background-image', "");
+    $('#carSideView').css('background-image', "");
+    $('#carInteriorView').css('background-image', "");
 }

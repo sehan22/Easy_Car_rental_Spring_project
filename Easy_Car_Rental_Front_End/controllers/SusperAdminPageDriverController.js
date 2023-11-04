@@ -22,6 +22,8 @@ $("#btnDriverFormRegisterNow").click(function () {
 
 /*load Registered Drivers*/
 function loadRegisteredDrivers() {
+    $('#availableDriverDetailsTable').empty();
+    $('#occupiedDriverDetailsTable').empty();
     $('#registeredDriverDetailsTable').empty();
 
     $.ajax({
@@ -29,6 +31,7 @@ function loadRegisteredDrivers() {
         dataType: 'json',
         success: function (resp) {
             for (let drv of resp.data) {
+                console.log(drv.driverNicFrontFilePath, drv.driverDrivingLicenseFrontFilePath);
                 let regDriversRow = `<tr>
                     <td>` + drv.driverId + `</td>
                     <td>` + drv.driverNicNumber + `</td>
@@ -119,8 +122,11 @@ function loadDataDriverTableToInput(driverTableId) {
         $('#txtDriverDrivingLicenseNumber').val(driverDrivingLicenseNumber);
         $('#txtDriverTelNumber').val(driverTelNumber);
 
-        $('#divDvrNicView').val(divDvrNicView);
-        $('#divDvrLicenseView').val(divDvrLicenseView);
+
+        $('#divDvrNicView').css('background-image', "url( "+ divDvrNicView +")");
+        $('#divDvrNicView').css('background-size', 'cover');
+        $('#divDvrLicenseView').css('background-image', "url( "+ divDvrLicenseView +")");
+        $('#divDvrLicenseView').css('background-size', 'cover');
 
         $('#txtDriverUserName').val(driverUserName);
         $('#txtDriverUserPassword').val(driverPassword);
@@ -139,6 +145,8 @@ function setValuesForDriverFormInputs(driverId, driverNicNumber, driverName, dri
     $('#txtDriverUserName').val(driverUserName);
     $('#txtDriverUserPassword').val(driverPassword);
     $('#txtDriverStatus').val(driverStatus);
+    $('#divDvrNicView').css('background-image', "");
+    $('#divDvrLicenseView').css('background-image', "");
 }
 
 

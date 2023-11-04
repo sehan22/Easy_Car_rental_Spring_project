@@ -1,8 +1,7 @@
 package lk.ijse.spring.service.impl;
 
-import lk.ijse.spring.dto.MaintenanceDTO;
+import lk.ijse.spring.dto.RentDetailsDTO;
 import lk.ijse.spring.dto.RentRequestDTO;
-import lk.ijse.spring.dto.UserDTO;
 import lk.ijse.spring.entity.RentRequest;
 import lk.ijse.spring.repo.RentRequestRepo;
 import lk.ijse.spring.service.RentRequestService;
@@ -24,7 +23,7 @@ public class RentDetailsServiceImpl implements RentRequestService {
     ModelMapper modelMapper;
 
     @Override
-    public ArrayList<RentRequestDTO> getAllRentRequest() {
+    public ArrayList<RentRequestDTO> getAllRentRequests() {
         return modelMapper.map(rentRequestRepo.findAll(), new TypeToken<ArrayList<RentRequestDTO>>() {
         }.getType());
     }

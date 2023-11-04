@@ -15,7 +15,7 @@ public class RentalController {
 
     @GetMapping
     public ResponseUtil getAllRentalRequests() {
-        return new ResponseUtil("OK", "Successfully Loaded!", rentRequestService.getAllRentRequest());
+        return new ResponseUtil("OK", "Successfully Loaded!", rentRequestService.getAllRentRequests());
     }
 
     @PostMapping

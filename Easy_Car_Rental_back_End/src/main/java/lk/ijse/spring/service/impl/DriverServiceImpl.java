@@ -1,6 +1,7 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.DriverDTO;
+import lk.ijse.spring.dto.meta.DriverImgDTO;
 import lk.ijse.spring.entity.Driver;
 import lk.ijse.spring.entity.User;
 import lk.ijse.spring.repo.DriverRepo;
@@ -13,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 @Service
@@ -25,8 +28,8 @@ public class DriverServiceImpl implements DriverService {
     ModelMapper modelMapper;
 
     @Override
-    public ArrayList<DriverDTO> getAllCustomer() {
-        return modelMapper.map(driverRepo.findAll(), new TypeToken<ArrayList<DriverDTO>>() {
+    public ArrayList<DriverImgDTO> getAllCustomer() {
+        return modelMapper.map(driverRepo.findAll(), new TypeToken<ArrayList<DriverImgDTO>>() {
         }.getType());
     }
 
@@ -35,50 +38,28 @@ public class DriverServiceImpl implements DriverService {
         Driver driver = modelMapper.map(driverDTO, Driver.class);
         driver.setUser(new User(driver.getUser().getUserName(), driver.getUser().getUserPassword(), "DRIVER", "ACTIVE"));
 
-        if (driverRepo.existsById(driverDTO.getDriverId())) {
-            throw new RuntimeException("Driver ID Duplicated.");
-        } else if (driverRepo.existsById(driverDTO.getUser().getUserName())) {
-            throw new RuntimeException("This username is already taken.");
-        }
-
         try {
             String path = System.getProperty("user.dir");
-            File file = new File(path + "/uploads/driver/nicImages");
-            File file2 = new File(path + "/uploads/driver/drivingLicenseImages");
+            Path projectPath = Paths.get(path).getParent().getParent().getParent().resolve("/home/sehan-ranaweera/Documents/My GitHub Repositories/Easy_Car_Rental_Spring_Project/Easy_Car_Rental_With_Spring_AAD_Final_Project/Easy_Car_Rental_Front_End");
 
-            if (!file.exists()) {
-                file.mkdirs();
-                System.out.println("Directory 'nicImages' created.");
-            }
+            File file = new File(projectPath + "/uploads");
+            System.out.println("\n\n\n" + projectPath + "\n\n\n");
+            file.mkdir();
 
-            if (!file2.exists()) {
-                file2.mkdirs();
-                System.out.println("Directory 'drivingLicenseImages' created.");
-            }
+            System.out.println(driverDTO.getDriverNicFrontFilePath());
+            System.out.println(driverDTO.getDriverDrivingLicenseFrontFilePath());
 
+            driverDTO.getDriverNicFrontFilePath().transferTo(new File(file.getAbsolutePath() + "/" + driverDTO.getDriverNicFrontFilePath().getOriginalFilename()));
+            driverDTO.getDriverDrivingLicenseFrontFilePath().transferTo(new File(file.getAbsolutePath() + "/" + driverDTO.getDriverDrivingLicenseFrontFilePath().getOriginalFilename()));
 
-            File nicFile = new File(file.getAbsolutePath() + "/" + driverDTO.getDriverNicFrontFilePath().getOriginalFilename());
-            if (nicFile.exists()) {
-                throw new RuntimeException("File 'nicImages/" + nicFile.getName() + "' already exists.");
-            } else {
-                driverDTO.getDriverNicFrontFilePath().transferTo(nicFile);
-                driver.setDriverNicFrontFilePath("uploads/driver/nicImages/" + nicFile.getName());
-            }
-
-            File licenseFile = new File(file2.getAbsolutePath() + "/" + driverDTO.getDriverDrivingLicenseFrontFilePath().getOriginalFilename());
-            if (licenseFile.exists()) {
-                throw new RuntimeException("File 'drivingLicenseImages/" + licenseFile.getName() + "' already exists.");
-            } else {
-                driverDTO.getDriverDrivingLicenseFrontFilePath().transferTo(licenseFile);
-                driver.setDriverDrivingLicenseFrontFilePath("uploads/driver/drivingLicenseImages/" + licenseFile.getName());
-            }
-
-            System.out.println(driver);
-            driverRepo.save(driver);
+            driver.setDriverNicFrontFilePath("/uploads/" + driverDTO.getDriverNicFrontFilePath().getOriginalFilename());
+            driver.setDriverDrivingLicenseFrontFilePath("/uploads/" + driverDTO.getDriverDrivingLicenseFrontFilePath().getOriginalFilename());
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println(e);
+            throw new RuntimeException(e);
         }
+
+        System.out.println("\n\n\n\n" + driver);
+        driverRepo.save(driver);
     }
 
     @Override

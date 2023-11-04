@@ -121,4 +121,6 @@ function setValuesForTextFields(cusId, cusName, cusAddress, cusEmail, cusNicNumb
     $('#txtCusDrivingLicenseNumber').val(cusDrivingLicenseNumber);
     $('#txtCusTelNumber').val(cusTelNumber);
     $('#txtCusAccountStatus').val(cusStatus);
+    $('#divCusNicView').css('background-image', "");
+    $('#divCusLicenseView').css('background-image', "");
 }

@@ -17,35 +17,27 @@ function loadAllRegisteredCarsForDeals() {
 
                 if (car.carStatus === "AVAILABLE") {
                     $('#carIdContainer').append(`<div class="carCard col-lg-4 mb-5" style="width: 30%; height: 580px">
-                    <div id="carouselExample" class="carousel slideh h-50 w-100 rounded-bottom-5 rounded-top-4" style="object-fit: scale-down; background: rgba(255, 255, 255, 0.5)">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="${car.carFrontViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                    <div id="carouselExample" class="carousel slideh w-100 rounded-top-2" data-bs-ride="carousel" style="height: 45%; background: rgba(255, 255, 255, 0.5)">
+                        <div class="carousel-inner w-100 mt-3 rounded-1" style="height: 210px">
+                            <div class="carousel-item active h-100">
+                                <img src="${car.carFrontViewImgFilePath}" style="object-fit: scale-down;" class="d-block w-100 h-100; bg-light" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="${car.carBackViewImgFilePath}" class="d-block w-100" style="object-fit: scale-down" alt="...">
+                                <img src="${car.carBackViewImgFilePath}" style="object-fit: scale-down;" class="d-block w-100 h-100; bg-light" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="${car.carSideViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                                <img src="${car.carSideViewImgFilePath}" style="object-fit: scale-down;" class="d-block w-100 h-100; bg-light" alt="...">
                             </div>   
                                 <div class="carousel-item">
-                                <img src="${car.carInteriorViewImgFilePath}" style="object-fit: scale-down" class="d-block w-100" alt="...">
+                                <img src="${car.carInteriorViewImgFilePath}" style="object-fit: scale-down;" class="d-block w-100 h-100; bg-light" alt="...">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
 
-                    <div style="margin-top: -50px">
+                    <div style="margin-top: -40px">
                         <div class="w-100">
                             <h2 class="visually-hidden">` + car.carId + `</h2>
-                            <h2 class="text-center carCarTitle">` + car.carBrand + `</h2>
+                            <h2 class="text-center carCarTitle text-bg-secondary" style="font-weight: 600">` + car.carBrand + `</h2>
                         </div>
 
                         <div>
@@ -74,7 +66,7 @@ function loadAllRegisteredCarsForDeals() {
                                     <h4 class="carCarToneListTopic">Waiver Payment</h4>
                                 </li>
                                 <li>
-                                    <h4 style="font-weight: 700">Rs. ` + car.waiverPaymentAmount + `</h4>
+                                    <h4 style="font-weight: 700">Rs. ` + car.waiverPaymentAmount + `.00</h4>
                                 </li>
                             </ul>
                         </div>
@@ -102,8 +94,8 @@ function loadAllRegisteredCarsForDeals() {
                         </div>
 
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btnGradientPurple btnAddToReservation"
-                                    style="color: #D1D7E0; margin-top: -5px">
+                            <button type="button" class="btn btn-secondary btnAddToReservation"
+                                    style="color: #D1D7E0; margin-top: -5px; font-weight: 900">
                                 Book Now
                                 <img src="assets/images/index/banner/Arrow_Left_SM.png"></button>
                         </div>
@@ -111,6 +103,14 @@ function loadAllRegisteredCarsForDeals() {
                 </div>`);
 
                 }
+            }
+
+            /*reservation table row delete*/
+            function removeRow() {
+                $('.carRentRequestDelete').off('click');
+                $('.carRentRequestDelete').click(function () {
+                    $(this).closest('tr').remove();
+                });
             }
 
             $('.btnAddToReservation').click(function () {
@@ -149,6 +149,8 @@ function loadAllRegisteredCarsForDeals() {
                                 </tr>`;
                         alert("Add to Resrvation Successfully");
                         $('#rentRequestsTable').append(row);
+
+                        removeRow();
                     }
                 }
             });
